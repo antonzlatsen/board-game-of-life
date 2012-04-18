@@ -4,6 +4,8 @@
  */
 package boardgame;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author Don
@@ -2634,4 +2636,42 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel topRightAlt2;
     private javax.swing.JPanel topRightAlt3;
     // End of variables declaration//GEN-END:variables
+
+
+
+    public void setjLabel1(String jLabel1) {
+        this.jLabel1.setText(jLabel1);
+    }
+
+    public void setjLabel2(String jLabel2) {
+        this.jLabel2.setText(jLabel2);
+    }
+
+    public void setjLabel3(String jLabel3) {
+        this.jLabel3.setText(jLabel3);
+    }
+
+    public void setjLabel4(String jLabel4) {
+        this.jLabel4.setText(jLabel4);
+    }
+
+    public void setjLabel5(String jLabel5) {
+        this.jLabel5.setText(jLabel5);
+    }
+
+    public void setjLabel6(String jLabel6) {
+        this.jLabel6.setText(jLabel6);
+    }
+
+    
+    
+    
+    
+    
 }
+
+
+
+
+
+
