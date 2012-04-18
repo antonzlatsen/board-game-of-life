@@ -164,6 +164,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel1.setName("botLeft24");
         jPanel1.setPreferredSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -181,6 +182,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel2.setName("botLeft22");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -197,6 +199,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(204, 204, 255));
         jPanel8.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel8.setName("botLeft2");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -213,7 +216,7 @@ public class board extends javax.swing.JFrame {
 
         PANELOMG.setBackground(new java.awt.Color(204, 204, 255));
         PANELOMG.setMinimumSize(new java.awt.Dimension(50, 50));
-        PANELOMG.setName("");
+        PANELOMG.setName("botLeft26");
 
         javax.swing.GroupLayout PANELOMGLayout = new javax.swing.GroupLayout(PANELOMG);
         PANELOMG.setLayout(PANELOMGLayout);
@@ -230,6 +233,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel10.setBackground(new java.awt.Color(204, 204, 255));
         jPanel10.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel10.setName("botLeft5");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -246,6 +250,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel11.setBackground(new java.awt.Color(0, 153, 153));
         jPanel11.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel11.setName("botLeft25");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -262,6 +267,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel12.setBackground(new java.awt.Color(204, 204, 255));
         jPanel12.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel12.setName("botLeft23");
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -278,6 +284,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel13.setBackground(new java.awt.Color(204, 204, 255));
         jPanel13.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel13.setName("botLeft18");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -294,6 +301,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 255));
         jPanel14.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel14.setName("botLeft1");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -310,6 +318,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel15.setBackground(new java.awt.Color(204, 204, 255));
         jPanel15.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel15.setName("botLeft27");
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -326,6 +335,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel16.setBackground(new java.awt.Color(0, 153, 153));
         jPanel16.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel16.setName("botLeft4");
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -342,6 +352,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel18.setBackground(new java.awt.Color(204, 204, 255));
         jPanel18.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel18.setName("botLeft13");
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -358,6 +369,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel19.setBackground(new java.awt.Color(204, 204, 255));
         jPanel19.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel19.setName("botLeft11");
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -374,6 +386,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel20.setBackground(new java.awt.Color(0, 153, 153));
         jPanel20.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel20.setName("botLeft16");
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -390,6 +403,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel21.setBackground(new java.awt.Color(102, 255, 0));
         jPanel21.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel21.setName("botLeft12");
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
@@ -406,6 +420,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel22.setBackground(new java.awt.Color(204, 204, 255));
         jPanel22.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel22.setName("botLeft10");
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
@@ -422,6 +437,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel23.setBackground(new java.awt.Color(0, 153, 153));
         jPanel23.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel23.setName("botLeft9");
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
@@ -438,6 +454,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel24.setBackground(new java.awt.Color(204, 204, 255));
         jPanel24.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel24.setName("botLeft7");
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
@@ -454,6 +471,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel25.setBackground(new java.awt.Color(204, 204, 255));
         jPanel25.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel25.setName("botLeft14");
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
@@ -470,6 +488,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel26.setBackground(new java.awt.Color(0, 153, 153));
         jPanel26.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel26.setName("botLeft6");
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
@@ -486,6 +505,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel27.setBackground(new java.awt.Color(204, 204, 255));
         jPanel27.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel27.setName("botLeft8");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -502,6 +522,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel28.setBackground(new java.awt.Color(204, 204, 255));
         jPanel28.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel28.setName("botLeft15");
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -1452,6 +1473,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel61.setBackground(new java.awt.Color(204, 204, 255));
         jPanel61.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel61.setName("botLeft3");
 
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
         jPanel61.setLayout(jPanel61Layout);
@@ -1468,6 +1490,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel62.setBackground(new java.awt.Color(0, 153, 153));
         jPanel62.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel62.setName("botLeft20");
 
         javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
         jPanel62.setLayout(jPanel62Layout);
@@ -1484,6 +1507,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel93.setBackground(new java.awt.Color(204, 204, 255));
         jPanel93.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel93.setName("botLeft21");
 
         javax.swing.GroupLayout jPanel93Layout = new javax.swing.GroupLayout(jPanel93);
         jPanel93.setLayout(jPanel93Layout);
@@ -1500,6 +1524,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel94.setBackground(new java.awt.Color(0, 153, 153));
         jPanel94.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel94.setName("botLeft19");
 
         javax.swing.GroupLayout jPanel94Layout = new javax.swing.GroupLayout(jPanel94);
         jPanel94.setLayout(jPanel94Layout);
@@ -1516,6 +1541,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel95.setBackground(new java.awt.Color(204, 204, 255));
         jPanel95.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel95.setName("botLeft17");
 
         javax.swing.GroupLayout jPanel95Layout = new javax.swing.GroupLayout(jPanel95);
         jPanel95.setLayout(jPanel95Layout);
