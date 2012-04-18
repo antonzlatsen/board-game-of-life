@@ -107,7 +107,6 @@ public class board extends javax.swing.JFrame {
         middle35 = new javax.swing.JPanel();
         middle36 = new javax.swing.JPanel();
         middle1 = new javax.swing.JPanel();
-        jProgressBar1 = new javax.swing.JProgressBar();
         botLeft3 = new javax.swing.JPanel();
         botLeft20 = new javax.swing.JPanel();
         botLeft21 = new javax.swing.JPanel();
@@ -143,6 +142,7 @@ public class board extends javax.swing.JFrame {
         jPanel123 = new javax.swing.JPanel();
         jPanel124 = new javax.swing.JPanel();
         jPanel125 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel126 = new javax.swing.JPanel();
         jPanel127 = new javax.swing.JPanel();
         jPanel128 = new javax.swing.JPanel();
@@ -165,13 +165,22 @@ public class board extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        jProgressBar2 = new javax.swing.JProgressBar();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Game of Life!");
+        setBackground(new java.awt.Color(153, 153, 153));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(java.awt.Color.white);
         setMinimumSize(new java.awt.Dimension(1280, 820));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         botLeft24.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft24.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft24.setName("botLeft24");
         botLeft24.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -180,16 +189,17 @@ public class board extends javax.swing.JFrame {
         botLeft24.setLayout(botLeft24Layout);
         botLeft24Layout.setHorizontalGroup(
             botLeft24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 46, Short.MAX_VALUE)
         );
         botLeft24Layout.setVerticalGroup(
             botLeft24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 46, Short.MAX_VALUE)
         );
 
         getContentPane().add(botLeft24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
         botLeft22.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft22.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft22.setName("botLeft22");
 
@@ -207,6 +217,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
 
         botLeft2.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft2.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft2.setName("botLeft2");
 
@@ -224,6 +235,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, -1, -1));
 
         botLeft26.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft26.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft26.setName("botLeft26");
 
@@ -241,6 +253,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
         botLeft5.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft5.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft5.setName("botLeft5");
 
@@ -258,6 +271,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
 
         botLeft25.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft25.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft25.setName("botLeft25");
 
@@ -275,6 +289,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
         botLeft23.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft23.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft23.setName("botLeft23");
 
@@ -292,6 +307,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
 
         botLeft18.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft18.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft18.setName("botLeft18");
 
@@ -309,6 +325,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 700, -1, -1));
 
         botLeft1.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft1.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft1.setName("botLeft1");
 
@@ -326,6 +343,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, -1));
 
         botLeft27.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft27.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft27.setName("botLeft27");
 
@@ -343,6 +361,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
         botLeft4.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft4.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft4.setName("botLeft4");
 
@@ -360,6 +379,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
 
         botLeft13.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft13.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft13.setName("botLeft13");
 
@@ -377,6 +397,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 700, -1, -1));
 
         botLeft11.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft11.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft11.setName("botLeft11");
 
@@ -394,6 +415,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 640, -1, -1));
 
         botLeft16.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft16.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft16.setName("botLeft16");
 
@@ -411,6 +433,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, -1, -1));
 
         botLeft12.setBackground(new java.awt.Color(102, 255, 0));
+        botLeft12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft12.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft12.setName("botLeft12");
 
@@ -428,6 +451,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 700, -1, -1));
 
         botLeft10.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft10.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft10.setName("botLeft10");
 
@@ -445,6 +469,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, -1, -1));
 
         botLeft9.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft9.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft9.setName("botLeft9");
 
@@ -462,6 +487,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, -1));
 
         botLeft7.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft7.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft7.setName("botLeft7");
 
@@ -479,6 +505,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
 
         botLeft14.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft14.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft14.setName("botLeft14");
 
@@ -496,6 +523,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 700, -1, -1));
 
         botLeft6.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft6.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft6.setName("botLeft6");
 
@@ -513,6 +541,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 580, -1, -1));
 
         botLeft8.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft8.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft8.setName("botLeft8");
 
@@ -530,6 +559,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 580, -1, -1));
 
         botLeft15.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft15.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft15.setName("botLeft15");
 
@@ -547,6 +577,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 640, -1, -1));
 
         topRight4.setBackground(new java.awt.Color(204, 204, 255));
+        topRight4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight4.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight4Layout = new javax.swing.GroupLayout(topRight4);
@@ -563,6 +594,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 40, -1, -1));
 
         topRight12.setBackground(new java.awt.Color(204, 204, 255));
+        topRight12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight12.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight12Layout = new javax.swing.GroupLayout(topRight12);
@@ -579,6 +611,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 280, -1, -1));
 
         topRight5.setBackground(new java.awt.Color(0, 153, 153));
+        topRight5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight5.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight5Layout = new javax.swing.GroupLayout(topRight5);
@@ -595,6 +628,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 40, -1, -1));
 
         topRight10.setBackground(new java.awt.Color(0, 153, 153));
+        topRight10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight10.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight10Layout = new javax.swing.GroupLayout(topRight10);
@@ -611,6 +645,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 280, -1, -1));
 
         topRight9.setBackground(new java.awt.Color(204, 204, 255));
+        topRight9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight9.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight9Layout = new javax.swing.GroupLayout(topRight9);
@@ -627,6 +662,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 280, -1, -1));
 
         topLeft1.setBackground(new java.awt.Color(102, 255, 0));
+        topLeft1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft1.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft1Layout = new javax.swing.GroupLayout(topLeft1);
@@ -643,6 +679,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, -1, -1));
 
         topRight6.setBackground(new java.awt.Color(0, 153, 153));
+        topRight6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight6.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight6Layout = new javax.swing.GroupLayout(topRight6);
@@ -659,6 +696,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 100, -1, -1));
 
         topLeft19.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft19.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft19Layout = new javax.swing.GroupLayout(topLeft19);
@@ -675,6 +713,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
 
         topRight8.setBackground(new java.awt.Color(204, 204, 255));
+        topRight8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight8.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight8Layout = new javax.swing.GroupLayout(topRight8);
@@ -691,6 +730,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 220, -1, -1));
 
         topRight7.setBackground(new java.awt.Color(204, 204, 255));
+        topRight7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight7.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight7Layout = new javax.swing.GroupLayout(topRight7);
@@ -707,6 +747,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 160, -1, -1));
 
         topLeft21.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft21.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft21Layout = new javax.swing.GroupLayout(topLeft21);
@@ -723,6 +764,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft21, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, -1));
 
         topLeft18.setBackground(new java.awt.Color(0, 153, 153));
+        topLeft18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft18.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft18Layout = new javax.swing.GroupLayout(topLeft18);
@@ -739,6 +781,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
 
         topLeft20.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft20.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft20Layout = new javax.swing.GroupLayout(topLeft20);
@@ -755,6 +798,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
 
         topLeft22.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft22.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft22Layout = new javax.swing.GroupLayout(topLeft22);
@@ -771,6 +815,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, -1));
 
         topRight15.setBackground(new java.awt.Color(204, 204, 255));
+        topRight15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight15.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight15Layout = new javax.swing.GroupLayout(topRight15);
@@ -787,6 +832,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight15, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 160, -1, -1));
 
         topRight14.setBackground(new java.awt.Color(102, 255, 0));
+        topRight14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight14.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight14Layout = new javax.swing.GroupLayout(topRight14);
@@ -803,6 +849,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 220, -1, -1));
 
         topRight1.setBackground(new java.awt.Color(255, 0, 0));
+        topRight1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight1.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight1Layout = new javax.swing.GroupLayout(topRight1);
@@ -819,6 +866,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 40, -1, -1));
 
         topRight16.setBackground(new java.awt.Color(0, 153, 153));
+        topRight16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight16.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight16Layout = new javax.swing.GroupLayout(topRight16);
@@ -835,6 +883,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight16, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 100, -1, -1));
 
         topLeft17.setBackground(new java.awt.Color(0, 153, 153));
+        topLeft17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft17.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft17Layout = new javax.swing.GroupLayout(topLeft17);
@@ -851,6 +900,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
         topRight13.setBackground(new java.awt.Color(204, 204, 255));
+        topRight13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight13.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight13Layout = new javax.swing.GroupLayout(topRight13);
@@ -867,6 +917,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight13, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 280, -1, -1));
 
         topRight2.setBackground(new java.awt.Color(204, 204, 255));
+        topRight2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight2.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight2Layout = new javax.swing.GroupLayout(topRight2);
@@ -883,6 +934,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 40, -1, -1));
 
         middle12.setBackground(new java.awt.Color(204, 204, 255));
+        middle12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle12.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle12Layout = new javax.swing.GroupLayout(middle12);
@@ -899,6 +951,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, -1, -1));
 
         middle8.setBackground(new java.awt.Color(204, 204, 255));
+        middle8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle8.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle8Layout = new javax.swing.GroupLayout(middle8);
@@ -915,6 +968,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
 
         middle6.setBackground(new java.awt.Color(204, 204, 255));
+        middle6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle6.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle6Layout = new javax.swing.GroupLayout(middle6);
@@ -931,6 +985,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
 
         middle17.setBackground(new java.awt.Color(204, 204, 255));
+        middle17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle17.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle17Layout = new javax.swing.GroupLayout(middle17);
@@ -947,6 +1002,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle17, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, -1, -1));
 
         middle14.setBackground(new java.awt.Color(204, 204, 255));
+        middle14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle14.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle14Layout = new javax.swing.GroupLayout(middle14);
@@ -963,6 +1019,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle14, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, -1, -1));
 
         middle23.setBackground(new java.awt.Color(204, 204, 255));
+        middle23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle23.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle23Layout = new javax.swing.GroupLayout(middle23);
@@ -979,6 +1036,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle23, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, -1, -1));
 
         middle2.setBackground(new java.awt.Color(102, 255, 0));
+        middle2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle2.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle2Layout = new javax.swing.GroupLayout(middle2);
@@ -995,6 +1053,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
 
         middle7.setBackground(new java.awt.Color(204, 204, 255));
+        middle7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle7.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle7Layout = new javax.swing.GroupLayout(middle7);
@@ -1011,6 +1070,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
 
         middle4.setBackground(new java.awt.Color(204, 204, 255));
+        middle4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle4.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle4Layout = new javax.swing.GroupLayout(middle4);
@@ -1027,6 +1087,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
 
         middle25.setBackground(new java.awt.Color(255, 0, 0));
+        middle25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle25.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle25Layout = new javax.swing.GroupLayout(middle25);
@@ -1042,11 +1103,17 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(middle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("BUTTON TEXT :D");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 170, 110));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setText("Spinner");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 50));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
+        middle3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle3.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle3Layout = new javax.swing.GroupLayout(middle3);
@@ -1063,6 +1130,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
 
         middle9.setBackground(new java.awt.Color(204, 204, 255));
+        middle9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle9.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle9Layout = new javax.swing.GroupLayout(middle9);
@@ -1079,6 +1147,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, -1, -1));
 
         middle11.setBackground(new java.awt.Color(204, 204, 255));
+        middle11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle11.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle11Layout = new javax.swing.GroupLayout(middle11);
@@ -1095,6 +1164,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle11, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
 
         middle13.setBackground(new java.awt.Color(204, 204, 255));
+        middle13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle13.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle13Layout = new javax.swing.GroupLayout(middle13);
@@ -1111,6 +1181,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, -1, -1));
 
         middle18.setBackground(new java.awt.Color(204, 204, 255));
+        middle18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle18.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle18Layout = new javax.swing.GroupLayout(middle18);
@@ -1144,6 +1215,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 170, 110));
 
         middle5.setBackground(new java.awt.Color(204, 204, 255));
+        middle5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle5.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle5Layout = new javax.swing.GroupLayout(middle5);
@@ -1160,6 +1232,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
 
         middle10.setBackground(new java.awt.Color(204, 204, 255));
+        middle10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle10.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle10Layout = new javax.swing.GroupLayout(middle10);
@@ -1176,6 +1249,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, -1, -1));
 
         middle21.setBackground(new java.awt.Color(204, 204, 255));
+        middle21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle21.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle21Layout = new javax.swing.GroupLayout(middle21);
@@ -1192,6 +1266,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle21, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 320, -1, -1));
 
         middle19.setBackground(new java.awt.Color(204, 204, 255));
+        middle19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle19.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle19Layout = new javax.swing.GroupLayout(middle19);
@@ -1208,6 +1283,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle19, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, -1, -1));
 
         middle15.setBackground(new java.awt.Color(204, 204, 255));
+        middle15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle15.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle15Layout = new javax.swing.GroupLayout(middle15);
@@ -1224,6 +1300,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle15, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, -1, -1));
 
         middle16.setBackground(new java.awt.Color(204, 204, 255));
+        middle16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle16.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle16Layout = new javax.swing.GroupLayout(middle16);
@@ -1240,6 +1317,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 500, -1, -1));
 
         middle20.setBackground(new java.awt.Color(204, 204, 255));
+        middle20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle20.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle20Layout = new javax.swing.GroupLayout(middle20);
@@ -1256,6 +1334,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle20, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 500, -1, -1));
 
         middle22.setBackground(new java.awt.Color(204, 204, 255));
+        middle22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle22.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle22Layout = new javax.swing.GroupLayout(middle22);
@@ -1272,6 +1351,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle22, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 440, -1, -1));
 
         middle24.setBackground(new java.awt.Color(204, 204, 255));
+        middle24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle24.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle24Layout = new javax.swing.GroupLayout(middle24);
@@ -1288,6 +1368,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle24, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, -1, -1));
 
         middle26.setBackground(new java.awt.Color(204, 204, 255));
+        middle26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle26.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle26Layout = new javax.swing.GroupLayout(middle26);
@@ -1304,6 +1385,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle26, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 320, -1, -1));
 
         middle27.setBackground(new java.awt.Color(204, 204, 255));
+        middle27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle27.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle27Layout = new javax.swing.GroupLayout(middle27);
@@ -1320,6 +1402,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle27, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 260, -1, -1));
 
         middle28.setBackground(new java.awt.Color(204, 204, 255));
+        middle28.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle28.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle28Layout = new javax.swing.GroupLayout(middle28);
@@ -1336,6 +1419,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle28, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, -1, -1));
 
         middle29.setBackground(new java.awt.Color(204, 204, 255));
+        middle29.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle29.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle29Layout = new javax.swing.GroupLayout(middle29);
@@ -1352,6 +1436,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle29, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, -1, -1));
 
         middle30.setBackground(new java.awt.Color(204, 204, 255));
+        middle30.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle30.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle30Layout = new javax.swing.GroupLayout(middle30);
@@ -1368,6 +1453,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle30, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, -1, -1));
 
         middle31.setBackground(new java.awt.Color(204, 204, 255));
+        middle31.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle31.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle31Layout = new javax.swing.GroupLayout(middle31);
@@ -1384,6 +1470,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle31, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 20, -1, -1));
 
         middle32.setBackground(new java.awt.Color(204, 204, 255));
+        middle32.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle32.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle32Layout = new javax.swing.GroupLayout(middle32);
@@ -1400,6 +1487,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle32, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, -1, -1));
 
         middle33.setBackground(new java.awt.Color(102, 255, 0));
+        middle33.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle33.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle33Layout = new javax.swing.GroupLayout(middle33);
@@ -1416,6 +1504,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle33, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, -1));
 
         middle34.setBackground(new java.awt.Color(204, 204, 255));
+        middle34.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle34.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle34Layout = new javax.swing.GroupLayout(middle34);
@@ -1432,6 +1521,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle34, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, -1, -1));
 
         middle35.setBackground(new java.awt.Color(204, 204, 255));
+        middle35.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle35.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle35Layout = new javax.swing.GroupLayout(middle35);
@@ -1448,6 +1538,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle35, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
 
         middle36.setBackground(new java.awt.Color(255, 0, 0));
+        middle36.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle36.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle36Layout = new javax.swing.GroupLayout(middle36);
@@ -1464,6 +1555,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(middle36, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
 
         middle1.setBackground(new java.awt.Color(102, 255, 0));
+        middle1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle1.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout middle1Layout = new javax.swing.GroupLayout(middle1);
@@ -1478,9 +1570,9 @@ public class board extends javax.swing.JFrame {
         );
 
         getContentPane().add(middle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 20));
 
         botLeft3.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft3.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft3.setName("botLeft3");
 
@@ -1498,6 +1590,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, -1, -1));
 
         botLeft20.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft20.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft20.setName("botLeft20");
 
@@ -1515,6 +1608,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
 
         botLeft21.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft21.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft21.setName("botLeft21");
 
@@ -1532,6 +1626,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
 
         botLeft19.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft19.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft19.setName("botLeft19");
 
@@ -1549,6 +1644,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 700, -1, -1));
 
         botLeft17.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft17.setMinimumSize(new java.awt.Dimension(50, 50));
         botLeft17.setName("botLeft17");
 
@@ -1566,6 +1662,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(botLeft17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 700, -1, -1));
 
         topLeft2.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft2.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft2Layout = new javax.swing.GroupLayout(topLeft2);
@@ -1582,6 +1679,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, -1, -1));
 
         topLeft3.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft3.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft3Layout = new javax.swing.GroupLayout(topLeft3);
@@ -1598,6 +1696,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, -1, -1));
 
         topLeft4.setBackground(new java.awt.Color(0, 153, 153));
+        topLeft4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft4.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft4Layout = new javax.swing.GroupLayout(topLeft4);
@@ -1614,6 +1713,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, -1, -1));
 
         topLeft5.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft5.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft5Layout = new javax.swing.GroupLayout(topLeft5);
@@ -1630,6 +1730,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
 
         topLeft6.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft6.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft6Layout = new javax.swing.GroupLayout(topLeft6);
@@ -1646,6 +1747,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, -1));
 
         topLeft7.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft7.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft7Layout = new javax.swing.GroupLayout(topLeft7);
@@ -1662,6 +1764,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
 
         topLeft8.setBackground(new java.awt.Color(0, 153, 153));
+        topLeft8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft8.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft8Layout = new javax.swing.GroupLayout(topLeft8);
@@ -1678,6 +1781,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
 
         topLeft9.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft9.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft9Layout = new javax.swing.GroupLayout(topLeft9);
@@ -1694,6 +1798,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
         topLeft10.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft10.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft10Layout = new javax.swing.GroupLayout(topLeft10);
@@ -1710,6 +1815,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
         topLeft11.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft11.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft11Layout = new javax.swing.GroupLayout(topLeft11);
@@ -1726,6 +1832,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         topLeft12.setBackground(new java.awt.Color(0, 153, 153));
+        topLeft12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft12.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft12Layout = new javax.swing.GroupLayout(topLeft12);
@@ -1742,6 +1849,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         topLeft13.setBackground(new java.awt.Color(255, 0, 0));
+        topLeft13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft13.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft13Layout = new javax.swing.GroupLayout(topLeft13);
@@ -1758,6 +1866,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
         topLeft14.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft14.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft14Layout = new javax.swing.GroupLayout(topLeft14);
@@ -1774,6 +1883,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         topLeft15.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft15.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft15Layout = new javax.swing.GroupLayout(topLeft15);
@@ -1790,6 +1900,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         topLeft16.setBackground(new java.awt.Color(0, 153, 153));
+        topLeft16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft16.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topLeft16Layout = new javax.swing.GroupLayout(topLeft16);
@@ -1806,6 +1917,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topLeft16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         topRightAlt3.setBackground(new java.awt.Color(204, 204, 255));
+        topRightAlt3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRightAlt3.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRightAlt3Layout = new javax.swing.GroupLayout(topRightAlt3);
@@ -1822,6 +1934,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRightAlt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 220, -1, -1));
 
         topRight3.setBackground(new java.awt.Color(204, 204, 255));
+        topRight3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight3.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight3Layout = new javax.swing.GroupLayout(topRight3);
@@ -1838,6 +1951,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 40, -1, -1));
 
         topRightAlt1.setBackground(new java.awt.Color(0, 153, 153));
+        topRightAlt1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRightAlt1.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRightAlt1Layout = new javax.swing.GroupLayout(topRightAlt1);
@@ -1854,6 +1968,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRightAlt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 100, -1, -1));
 
         topRightAlt2.setBackground(new java.awt.Color(0, 153, 153));
+        topRightAlt2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRightAlt2.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRightAlt2Layout = new javax.swing.GroupLayout(topRightAlt2);
@@ -1870,6 +1985,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRightAlt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 160, -1, -1));
 
         jPanel115.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel115.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel115.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel115Layout = new javax.swing.GroupLayout(jPanel115);
@@ -1886,6 +2002,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 700, -1, -1));
 
         topRight11.setBackground(new java.awt.Color(204, 204, 255));
+        topRight11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight11.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout topRight11Layout = new javax.swing.GroupLayout(topRight11);
@@ -1902,6 +2019,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(topRight11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 280, -1, -1));
 
         jPanel117.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel117.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel117.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel117Layout = new javax.swing.GroupLayout(jPanel117);
@@ -1918,6 +2036,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 580, -1, -1));
 
         jPanel118.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel118.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel118.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel118Layout = new javax.swing.GroupLayout(jPanel118);
@@ -1934,6 +2053,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 580, -1, -1));
 
         jPanel119.setBackground(new java.awt.Color(102, 255, 0));
+        jPanel119.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel119.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel119Layout = new javax.swing.GroupLayout(jPanel119);
@@ -1950,6 +2070,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 640, -1, -1));
 
         jPanel120.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel120.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel120.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel120Layout = new javax.swing.GroupLayout(jPanel120);
@@ -1966,6 +2087,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 700, -1, -1));
 
         jPanel121.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel121.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel121.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel121Layout = new javax.swing.GroupLayout(jPanel121);
@@ -1982,6 +2104,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 700, -1, -1));
 
         jPanel122.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel122.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel122.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel122Layout = new javax.swing.GroupLayout(jPanel122);
@@ -1998,6 +2121,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 700, -1, -1));
 
         jPanel123.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel123.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel123.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel123Layout = new javax.swing.GroupLayout(jPanel123);
@@ -2014,6 +2138,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 640, -1, -1));
 
         jPanel124.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel124.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel124.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel124Layout = new javax.swing.GroupLayout(jPanel124);
@@ -2030,6 +2155,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 580, -1, -1));
 
         jPanel125.setBackground(new java.awt.Color(102, 255, 0));
+        jPanel125.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel125.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel125Layout = new javax.swing.GroupLayout(jPanel125);
@@ -2045,7 +2171,13 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(jPanel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 460, -1, -1));
 
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jLabel8.setText("Life counter");
+        jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 100, 30));
+
         jPanel126.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel126.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel126.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel126Layout = new javax.swing.GroupLayout(jPanel126);
@@ -2062,6 +2194,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 460, -1, -1));
 
         jPanel127.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel127.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel127.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel127Layout = new javax.swing.GroupLayout(jPanel127);
@@ -2078,6 +2211,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 460, -1, -1));
 
         jPanel128.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel128.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel128.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel128Layout = new javax.swing.GroupLayout(jPanel128);
@@ -2094,6 +2228,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 460, -1, -1));
 
         jPanel129.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel129.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel129.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel129Layout = new javax.swing.GroupLayout(jPanel129);
@@ -2110,6 +2245,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 460, -1, -1));
 
         jPanel130.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel130.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel130.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel130Layout = new javax.swing.GroupLayout(jPanel130);
@@ -2126,6 +2262,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 520, -1, -1));
 
         jPanel131.setBackground(new java.awt.Color(102, 255, 0));
+        jPanel131.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel131.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel131Layout = new javax.swing.GroupLayout(jPanel131);
@@ -2142,6 +2279,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 580, -1, -1));
 
         jPanel132.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel132.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel132.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel132Layout = new javax.swing.GroupLayout(jPanel132);
@@ -2158,6 +2296,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 640, -1, -1));
 
         jPanel133.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel133.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel133.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel133Layout = new javax.swing.GroupLayout(jPanel133);
@@ -2174,6 +2313,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 700, -1, -1));
 
         jPanel135.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel135.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel135.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel135Layout = new javax.swing.GroupLayout(jPanel135);
@@ -2190,6 +2330,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 700, -1, -1));
 
         jPanel134.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel134.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel134.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel134Layout = new javax.swing.GroupLayout(jPanel134);
@@ -2206,6 +2347,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 520, -1, -1));
 
         jPanel136.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel136.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel136.setMinimumSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout jPanel136Layout = new javax.swing.GroupLayout(jPanel136);
@@ -2228,6 +2370,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 40, 30));
 
         jPanel9.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -2258,7 +2401,7 @@ public class board extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -2279,18 +2422,31 @@ public class board extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel6)
-                        .addGap(0, 19, Short.MAX_VALUE))
+                        .addGap(0, 17, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
                 .addContainerGap())
         );
 
         getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 360, 180));
 
-        jButton4.setText("jButton4");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 180, 50));
+        jProgressBar2.setValue(20);
+        getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 234, 170, 20));
+
+        jButton5.setText("Option 2");
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 770, 120, -1));
+
+        jButton6.setText("Option 1");
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 770, 120, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/old_paper.jpg"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2364,13 +2520,16 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel115;
     private javax.swing.JPanel jPanel117;
     private javax.swing.JPanel jPanel118;
@@ -2394,7 +2553,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel136;
     private javax.swing.JPanel jPanel68;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel middle1;
