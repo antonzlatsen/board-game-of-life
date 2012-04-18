@@ -21,7 +21,7 @@ public class BoardGame {
             
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new board().setVisible(true);
+                new startScreen().setVisible(true);
             }
         });
         }

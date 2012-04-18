@@ -26,28 +26,28 @@ public class board extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        PANELOMG = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        jPanel13 = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        jPanel18 = new javax.swing.JPanel();
-        jPanel19 = new javax.swing.JPanel();
-        jPanel20 = new javax.swing.JPanel();
-        jPanel21 = new javax.swing.JPanel();
-        jPanel22 = new javax.swing.JPanel();
-        jPanel23 = new javax.swing.JPanel();
-        jPanel24 = new javax.swing.JPanel();
-        jPanel25 = new javax.swing.JPanel();
-        jPanel26 = new javax.swing.JPanel();
-        jPanel27 = new javax.swing.JPanel();
-        jPanel28 = new javax.swing.JPanel();
+        botLeft24 = new javax.swing.JPanel();
+        botLeft22 = new javax.swing.JPanel();
+        botLeft2 = new javax.swing.JPanel();
+        botLeft26 = new javax.swing.JPanel();
+        botLeft5 = new javax.swing.JPanel();
+        botLeft25 = new javax.swing.JPanel();
+        botLeft23 = new javax.swing.JPanel();
+        botLeft18 = new javax.swing.JPanel();
+        botLeft1 = new javax.swing.JPanel();
+        botLeft27 = new javax.swing.JPanel();
+        botLeft4 = new javax.swing.JPanel();
+        botLeft13 = new javax.swing.JPanel();
+        botLeft11 = new javax.swing.JPanel();
+        botLeft16 = new javax.swing.JPanel();
+        botLeft12 = new javax.swing.JPanel();
+        botLeft10 = new javax.swing.JPanel();
+        botLeft9 = new javax.swing.JPanel();
+        botLeft7 = new javax.swing.JPanel();
+        botLeft14 = new javax.swing.JPanel();
+        botLeft6 = new javax.swing.JPanel();
+        botLeft8 = new javax.swing.JPanel();
+        botLeft15 = new javax.swing.JPanel();
         topRight4 = new javax.swing.JPanel();
         topRight12 = new javax.swing.JPanel();
         topRight5 = new javax.swing.JPanel();
@@ -108,11 +108,11 @@ public class board extends javax.swing.JFrame {
         middle36 = new javax.swing.JPanel();
         middle1 = new javax.swing.JPanel();
         jProgressBar1 = new javax.swing.JProgressBar();
-        jPanel61 = new javax.swing.JPanel();
-        jPanel62 = new javax.swing.JPanel();
-        jPanel93 = new javax.swing.JPanel();
-        jPanel94 = new javax.swing.JPanel();
-        jPanel95 = new javax.swing.JPanel();
+        botLeft3 = new javax.swing.JPanel();
+        botLeft20 = new javax.swing.JPanel();
+        botLeft21 = new javax.swing.JPanel();
+        botLeft19 = new javax.swing.JPanel();
+        botLeft17 = new javax.swing.JPanel();
         topLeft2 = new javax.swing.JPanel();
         topLeft3 = new javax.swing.JPanel();
         topLeft4 = new javax.swing.JPanel();
@@ -157,385 +157,394 @@ public class board extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1280, 800));
+        setMinimumSize(new java.awt.Dimension(1280, 820));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel1.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel1.setName("botLeft24");
-        jPanel1.setPreferredSize(new java.awt.Dimension(50, 50));
+        botLeft24.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft24.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft24.setName("botLeft24");
+        botLeft24.setPreferredSize(new java.awt.Dimension(50, 50));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft24Layout = new javax.swing.GroupLayout(botLeft24);
+        botLeft24.setLayout(botLeft24Layout);
+        botLeft24Layout.setHorizontalGroup(
+            botLeft24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
-
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel2.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel2.setName("botLeft22");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft24Layout.setVerticalGroup(
+            botLeft24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
+        getContentPane().add(botLeft24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
-        jPanel8.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel8.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel8.setName("botLeft2");
+        botLeft22.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft22.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft22.setName("botLeft22");
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft22Layout = new javax.swing.GroupLayout(botLeft22);
+        botLeft22.setLayout(botLeft22Layout);
+        botLeft22Layout.setHorizontalGroup(
+            botLeft22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, -1, -1));
-
-        PANELOMG.setBackground(new java.awt.Color(204, 204, 255));
-        PANELOMG.setMinimumSize(new java.awt.Dimension(50, 50));
-        PANELOMG.setName("botLeft26");
-
-        javax.swing.GroupLayout PANELOMGLayout = new javax.swing.GroupLayout(PANELOMG);
-        PANELOMG.setLayout(PANELOMGLayout);
-        PANELOMGLayout.setHorizontalGroup(
-            PANELOMGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        PANELOMGLayout.setVerticalGroup(
-            PANELOMGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft22Layout.setVerticalGroup(
+            botLeft22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(PANELOMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
+        getContentPane().add(botLeft22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
 
-        jPanel10.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel10.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel10.setName("botLeft5");
+        botLeft2.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft2.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft2.setName("botLeft2");
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft2Layout = new javax.swing.GroupLayout(botLeft2);
+        botLeft2.setLayout(botLeft2Layout);
+        botLeft2Layout.setHorizontalGroup(
+            botLeft2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
-
-        jPanel11.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel11.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel11.setName("botLeft25");
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft2Layout.setVerticalGroup(
+            botLeft2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+        getContentPane().add(botLeft2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, -1, -1));
 
-        jPanel12.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel12.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel12.setName("botLeft23");
+        botLeft26.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft26.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft26.setName("botLeft26");
 
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft26Layout = new javax.swing.GroupLayout(botLeft26);
+        botLeft26.setLayout(botLeft26Layout);
+        botLeft26Layout.setHorizontalGroup(
+            botLeft26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
-
-        jPanel13.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel13.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel13.setName("botLeft18");
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft26Layout.setVerticalGroup(
+            botLeft26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 700, -1, -1));
+        getContentPane().add(botLeft26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
 
-        jPanel14.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel14.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel14.setName("botLeft1");
+        botLeft5.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft5.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft5.setName("botLeft5");
 
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft5Layout = new javax.swing.GroupLayout(botLeft5);
+        botLeft5.setLayout(botLeft5Layout);
+        botLeft5Layout.setHorizontalGroup(
+            botLeft5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, -1));
-
-        jPanel15.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel15.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel15.setName("botLeft27");
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft5Layout.setVerticalGroup(
+            botLeft5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
+        getContentPane().add(botLeft5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
 
-        jPanel16.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel16.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel16.setName("botLeft4");
+        botLeft25.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft25.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft25.setName("botLeft25");
 
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft25Layout = new javax.swing.GroupLayout(botLeft25);
+        botLeft25.setLayout(botLeft25Layout);
+        botLeft25Layout.setHorizontalGroup(
+            botLeft25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
-
-        jPanel18.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel18.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel18.setName("botLeft13");
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft25Layout.setVerticalGroup(
+            botLeft25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 700, -1, -1));
+        getContentPane().add(botLeft25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
-        jPanel19.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel19.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel19.setName("botLeft11");
+        botLeft23.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft23.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft23.setName("botLeft23");
 
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft23Layout = new javax.swing.GroupLayout(botLeft23);
+        botLeft23.setLayout(botLeft23Layout);
+        botLeft23Layout.setHorizontalGroup(
+            botLeft23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 640, -1, -1));
-
-        jPanel20.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel20.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel20.setName("botLeft16");
-
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft23Layout.setVerticalGroup(
+            botLeft23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, -1, -1));
+        getContentPane().add(botLeft23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
 
-        jPanel21.setBackground(new java.awt.Color(102, 255, 0));
-        jPanel21.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel21.setName("botLeft12");
+        botLeft18.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft18.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft18.setName("botLeft18");
 
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft18Layout = new javax.swing.GroupLayout(botLeft18);
+        botLeft18.setLayout(botLeft18Layout);
+        botLeft18Layout.setHorizontalGroup(
+            botLeft18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 700, -1, -1));
-
-        jPanel22.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel22.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel22.setName("botLeft10");
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft18Layout.setVerticalGroup(
+            botLeft18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, -1, -1));
+        getContentPane().add(botLeft18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 700, -1, -1));
 
-        jPanel23.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel23.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel23.setName("botLeft9");
+        botLeft1.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft1.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft1.setName("botLeft1");
 
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft1Layout = new javax.swing.GroupLayout(botLeft1);
+        botLeft1.setLayout(botLeft1Layout);
+        botLeft1Layout.setHorizontalGroup(
+            botLeft1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, -1));
-
-        jPanel24.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel24.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel24.setName("botLeft7");
-
-        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
-        jPanel24.setLayout(jPanel24Layout);
-        jPanel24Layout.setHorizontalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel24Layout.setVerticalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft1Layout.setVerticalGroup(
+            botLeft1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
+        getContentPane().add(botLeft1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, -1));
 
-        jPanel25.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel25.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel25.setName("botLeft14");
+        botLeft27.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft27.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft27.setName("botLeft27");
 
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft27Layout = new javax.swing.GroupLayout(botLeft27);
+        botLeft27.setLayout(botLeft27Layout);
+        botLeft27Layout.setHorizontalGroup(
+            botLeft27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 700, -1, -1));
-
-        jPanel26.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel26.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel26.setName("botLeft6");
-
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft27Layout.setVerticalGroup(
+            botLeft27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 580, -1, -1));
+        getContentPane().add(botLeft27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
-        jPanel27.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel27.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel27.setName("botLeft8");
+        botLeft4.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft4.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft4.setName("botLeft4");
 
-        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
-        jPanel27.setLayout(jPanel27Layout);
-        jPanel27Layout.setHorizontalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft4Layout = new javax.swing.GroupLayout(botLeft4);
+        botLeft4.setLayout(botLeft4Layout);
+        botLeft4Layout.setHorizontalGroup(
+            botLeft4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel27Layout.setVerticalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 580, -1, -1));
-
-        jPanel28.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel28.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel28.setName("botLeft15");
-
-        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
-        jPanel28.setLayout(jPanel28Layout);
-        jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft4Layout.setVerticalGroup(
+            botLeft4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 640, -1, -1));
+        getContentPane().add(botLeft4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
+
+        botLeft13.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft13.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft13.setName("botLeft13");
+
+        javax.swing.GroupLayout botLeft13Layout = new javax.swing.GroupLayout(botLeft13);
+        botLeft13.setLayout(botLeft13Layout);
+        botLeft13Layout.setHorizontalGroup(
+            botLeft13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft13Layout.setVerticalGroup(
+            botLeft13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 700, -1, -1));
+
+        botLeft11.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft11.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft11.setName("botLeft11");
+
+        javax.swing.GroupLayout botLeft11Layout = new javax.swing.GroupLayout(botLeft11);
+        botLeft11.setLayout(botLeft11Layout);
+        botLeft11Layout.setHorizontalGroup(
+            botLeft11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft11Layout.setVerticalGroup(
+            botLeft11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 640, -1, -1));
+
+        botLeft16.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft16.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft16.setName("botLeft16");
+
+        javax.swing.GroupLayout botLeft16Layout = new javax.swing.GroupLayout(botLeft16);
+        botLeft16.setLayout(botLeft16Layout);
+        botLeft16Layout.setHorizontalGroup(
+            botLeft16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft16Layout.setVerticalGroup(
+            botLeft16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, -1, -1));
+
+        botLeft12.setBackground(new java.awt.Color(102, 255, 0));
+        botLeft12.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft12.setName("botLeft12");
+
+        javax.swing.GroupLayout botLeft12Layout = new javax.swing.GroupLayout(botLeft12);
+        botLeft12.setLayout(botLeft12Layout);
+        botLeft12Layout.setHorizontalGroup(
+            botLeft12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft12Layout.setVerticalGroup(
+            botLeft12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 700, -1, -1));
+
+        botLeft10.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft10.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft10.setName("botLeft10");
+
+        javax.swing.GroupLayout botLeft10Layout = new javax.swing.GroupLayout(botLeft10);
+        botLeft10.setLayout(botLeft10Layout);
+        botLeft10Layout.setHorizontalGroup(
+            botLeft10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft10Layout.setVerticalGroup(
+            botLeft10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, -1, -1));
+
+        botLeft9.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft9.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft9.setName("botLeft9");
+
+        javax.swing.GroupLayout botLeft9Layout = new javax.swing.GroupLayout(botLeft9);
+        botLeft9.setLayout(botLeft9Layout);
+        botLeft9Layout.setHorizontalGroup(
+            botLeft9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft9Layout.setVerticalGroup(
+            botLeft9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, -1));
+
+        botLeft7.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft7.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft7.setName("botLeft7");
+
+        javax.swing.GroupLayout botLeft7Layout = new javax.swing.GroupLayout(botLeft7);
+        botLeft7.setLayout(botLeft7Layout);
+        botLeft7Layout.setHorizontalGroup(
+            botLeft7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft7Layout.setVerticalGroup(
+            botLeft7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
+
+        botLeft14.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft14.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft14.setName("botLeft14");
+
+        javax.swing.GroupLayout botLeft14Layout = new javax.swing.GroupLayout(botLeft14);
+        botLeft14.setLayout(botLeft14Layout);
+        botLeft14Layout.setHorizontalGroup(
+            botLeft14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft14Layout.setVerticalGroup(
+            botLeft14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 700, -1, -1));
+
+        botLeft6.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft6.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft6.setName("botLeft6");
+
+        javax.swing.GroupLayout botLeft6Layout = new javax.swing.GroupLayout(botLeft6);
+        botLeft6.setLayout(botLeft6Layout);
+        botLeft6Layout.setHorizontalGroup(
+            botLeft6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft6Layout.setVerticalGroup(
+            botLeft6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 580, -1, -1));
+
+        botLeft8.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft8.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft8.setName("botLeft8");
+
+        javax.swing.GroupLayout botLeft8Layout = new javax.swing.GroupLayout(botLeft8);
+        botLeft8.setLayout(botLeft8Layout);
+        botLeft8Layout.setHorizontalGroup(
+            botLeft8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft8Layout.setVerticalGroup(
+            botLeft8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 580, -1, -1));
+
+        botLeft15.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft15.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft15.setName("botLeft15");
+
+        javax.swing.GroupLayout botLeft15Layout = new javax.swing.GroupLayout(botLeft15);
+        botLeft15.setLayout(botLeft15Layout);
+        botLeft15Layout.setHorizontalGroup(
+            botLeft15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft15Layout.setVerticalGroup(
+            botLeft15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 640, -1, -1));
 
         topRight4.setBackground(new java.awt.Color(204, 204, 255));
         topRight4.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -551,7 +560,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 40, -1, -1));
+        getContentPane().add(topRight4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 40, -1, -1));
 
         topRight12.setBackground(new java.awt.Color(204, 204, 255));
         topRight12.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -567,7 +576,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight12, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 280, -1, -1));
+        getContentPane().add(topRight12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 280, -1, -1));
 
         topRight5.setBackground(new java.awt.Color(0, 153, 153));
         topRight5.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -583,7 +592,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 40, -1, -1));
+        getContentPane().add(topRight5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 40, -1, -1));
 
         topRight10.setBackground(new java.awt.Color(0, 153, 153));
         topRight10.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -599,7 +608,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 280, -1, -1));
+        getContentPane().add(topRight10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 280, -1, -1));
 
         topRight9.setBackground(new java.awt.Color(204, 204, 255));
         topRight9.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -615,7 +624,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 280, -1, -1));
+        getContentPane().add(topRight9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 280, -1, -1));
 
         topLeft1.setBackground(new java.awt.Color(102, 255, 0));
         topLeft1.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -647,7 +656,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 100, -1, -1));
+        getContentPane().add(topRight6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 100, -1, -1));
 
         topLeft19.setBackground(new java.awt.Color(204, 204, 255));
         topLeft19.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -679,7 +688,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 220, -1, -1));
+        getContentPane().add(topRight8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 220, -1, -1));
 
         topRight7.setBackground(new java.awt.Color(204, 204, 255));
         topRight7.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -695,7 +704,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 160, -1, -1));
+        getContentPane().add(topRight7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 160, -1, -1));
 
         topLeft21.setBackground(new java.awt.Color(204, 204, 255));
         topLeft21.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -775,7 +784,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight15, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 160, -1, -1));
+        getContentPane().add(topRight15, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 160, -1, -1));
 
         topRight14.setBackground(new java.awt.Color(102, 255, 0));
         topRight14.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -791,7 +800,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight14, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 220, -1, -1));
+        getContentPane().add(topRight14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 220, -1, -1));
 
         topRight1.setBackground(new java.awt.Color(255, 0, 0));
         topRight1.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -807,7 +816,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, -1, -1));
+        getContentPane().add(topRight1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 40, -1, -1));
 
         topRight16.setBackground(new java.awt.Color(0, 153, 153));
         topRight16.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -823,7 +832,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight16, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 100, -1, -1));
+        getContentPane().add(topRight16, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 100, -1, -1));
 
         topLeft17.setBackground(new java.awt.Color(0, 153, 153));
         topLeft17.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -855,7 +864,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight13, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 280, -1, -1));
+        getContentPane().add(topRight13, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 280, -1, -1));
 
         topRight2.setBackground(new java.awt.Color(204, 204, 255));
         topRight2.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -871,7 +880,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 40, -1, -1));
+        getContentPane().add(topRight2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 40, -1, -1));
 
         middle12.setBackground(new java.awt.Color(204, 204, 255));
         middle12.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -887,7 +896,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 450, -1, -1));
+        getContentPane().add(middle12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, -1, -1));
 
         middle8.setBackground(new java.awt.Color(204, 204, 255));
         middle8.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -903,7 +912,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, -1, -1));
+        getContentPane().add(middle8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
 
         middle6.setBackground(new java.awt.Color(204, 204, 255));
         middle6.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -919,7 +928,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
+        getContentPane().add(middle6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
 
         middle17.setBackground(new java.awt.Color(204, 204, 255));
         middle17.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -935,7 +944,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle17, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 210, -1, -1));
+        getContentPane().add(middle17, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, -1, -1));
 
         middle14.setBackground(new java.awt.Color(204, 204, 255));
         middle14.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -951,7 +960,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle14, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 450, -1, -1));
+        getContentPane().add(middle14, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, -1, -1));
 
         middle23.setBackground(new java.awt.Color(204, 204, 255));
         middle23.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -967,7 +976,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle23, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, -1, -1));
+        getContentPane().add(middle23, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 380, -1, -1));
 
         middle2.setBackground(new java.awt.Color(102, 255, 0));
         middle2.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -983,7 +992,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, -1, -1));
+        getContentPane().add(middle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
 
         middle7.setBackground(new java.awt.Color(204, 204, 255));
         middle7.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -999,7 +1008,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, -1, -1));
+        getContentPane().add(middle7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
 
         middle4.setBackground(new java.awt.Color(204, 204, 255));
         middle4.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1015,7 +1024,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, -1, -1));
+        getContentPane().add(middle4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
 
         middle25.setBackground(new java.awt.Color(255, 0, 0));
         middle25.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1031,11 +1040,11 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, -1, -1));
+        getContentPane().add(middle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("BUTTON TEXT :D");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, 170, 110));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 170, 110));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
         middle3.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1051,7 +1060,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
+        getContentPane().add(middle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
 
         middle9.setBackground(new java.awt.Color(204, 204, 255));
         middle9.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1067,7 +1076,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, -1, -1));
+        getContentPane().add(middle9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, -1, -1));
 
         middle11.setBackground(new java.awt.Color(204, 204, 255));
         middle11.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1083,7 +1092,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle11, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, -1, -1));
+        getContentPane().add(middle11, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
 
         middle13.setBackground(new java.awt.Color(204, 204, 255));
         middle13.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1099,7 +1108,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 90, -1, -1));
+        getContentPane().add(middle13, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, -1, -1));
 
         middle18.setBackground(new java.awt.Color(204, 204, 255));
         middle18.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1115,7 +1124,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle18, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 510, -1, -1));
+        getContentPane().add(middle18, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 500, -1, -1));
 
         jPanel68.setBackground(new java.awt.Color(153, 51, 0));
         jPanel68.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1132,7 +1141,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 110, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 170, 110));
+        getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 170, 110));
 
         middle5.setBackground(new java.awt.Color(204, 204, 255));
         middle5.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1148,7 +1157,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, -1, -1));
+        getContentPane().add(middle5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
 
         middle10.setBackground(new java.awt.Color(204, 204, 255));
         middle10.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1164,7 +1173,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, -1, -1));
+        getContentPane().add(middle10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, -1, -1));
 
         middle21.setBackground(new java.awt.Color(204, 204, 255));
         middle21.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1180,7 +1189,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle21, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 330, -1, -1));
+        getContentPane().add(middle21, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 320, -1, -1));
 
         middle19.setBackground(new java.awt.Color(204, 204, 255));
         middle19.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1196,7 +1205,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle19, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 270, -1, -1));
+        getContentPane().add(middle19, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, -1, -1));
 
         middle15.setBackground(new java.awt.Color(204, 204, 255));
         middle15.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1212,7 +1221,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle15, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 150, -1, -1));
+        getContentPane().add(middle15, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, -1, -1));
 
         middle16.setBackground(new java.awt.Color(204, 204, 255));
         middle16.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1228,7 +1237,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 510, -1, -1));
+        getContentPane().add(middle16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 500, -1, -1));
 
         middle20.setBackground(new java.awt.Color(204, 204, 255));
         middle20.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1244,7 +1253,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle20, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 510, -1, -1));
+        getContentPane().add(middle20, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 500, -1, -1));
 
         middle22.setBackground(new java.awt.Color(204, 204, 255));
         middle22.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1260,7 +1269,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle22, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 450, -1, -1));
+        getContentPane().add(middle22, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 440, -1, -1));
 
         middle24.setBackground(new java.awt.Color(204, 204, 255));
         middle24.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1276,7 +1285,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle24, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, -1, -1));
+        getContentPane().add(middle24, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, -1, -1));
 
         middle26.setBackground(new java.awt.Color(204, 204, 255));
         middle26.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1292,7 +1301,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle26, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 330, -1, -1));
+        getContentPane().add(middle26, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 320, -1, -1));
 
         middle27.setBackground(new java.awt.Color(204, 204, 255));
         middle27.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1308,7 +1317,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle27, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, -1, -1));
+        getContentPane().add(middle27, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 260, -1, -1));
 
         middle28.setBackground(new java.awt.Color(204, 204, 255));
         middle28.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1324,7 +1333,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle28, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 210, -1, -1));
+        getContentPane().add(middle28, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, -1, -1));
 
         middle29.setBackground(new java.awt.Color(204, 204, 255));
         middle29.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1340,7 +1349,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle29, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 150, -1, -1));
+        getContentPane().add(middle29, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, -1, -1));
 
         middle30.setBackground(new java.awt.Color(204, 204, 255));
         middle30.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1356,7 +1365,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle30, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, -1, -1));
+        getContentPane().add(middle30, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, -1, -1));
 
         middle31.setBackground(new java.awt.Color(204, 204, 255));
         middle31.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1372,7 +1381,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle31, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 30, -1, -1));
+        getContentPane().add(middle31, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 20, -1, -1));
 
         middle32.setBackground(new java.awt.Color(204, 204, 255));
         middle32.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1388,7 +1397,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle32, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 30, -1, -1));
+        getContentPane().add(middle32, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, -1, -1));
 
         middle33.setBackground(new java.awt.Color(102, 255, 0));
         middle33.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1404,7 +1413,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle33, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 30, -1, -1));
+        getContentPane().add(middle33, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, -1));
 
         middle34.setBackground(new java.awt.Color(204, 204, 255));
         middle34.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1420,7 +1429,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle34, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, -1, -1));
+        getContentPane().add(middle34, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, -1, -1));
 
         middle35.setBackground(new java.awt.Color(204, 204, 255));
         middle35.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1436,7 +1445,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle35, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, -1, -1));
+        getContentPane().add(middle35, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
 
         middle36.setBackground(new java.awt.Color(255, 0, 0));
         middle36.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1452,7 +1461,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle36, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+        getContentPane().add(middle36, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
 
         middle1.setBackground(new java.awt.Color(102, 255, 0));
         middle1.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1468,93 +1477,93 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(middle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, -1, -1));
-        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 170, 20));
+        getContentPane().add(middle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
+        getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 20));
 
-        jPanel61.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel61.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel61.setName("botLeft3");
+        botLeft3.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft3.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft3.setName("botLeft3");
 
-        javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
-        jPanel61.setLayout(jPanel61Layout);
-        jPanel61Layout.setHorizontalGroup(
-            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft3Layout = new javax.swing.GroupLayout(botLeft3);
+        botLeft3.setLayout(botLeft3Layout);
+        botLeft3Layout.setHorizontalGroup(
+            botLeft3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel61Layout.setVerticalGroup(
-            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, -1, -1));
-
-        jPanel62.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel62.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel62.setName("botLeft20");
-
-        javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
-        jPanel62.setLayout(jPanel62Layout);
-        jPanel62Layout.setHorizontalGroup(
-            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel62Layout.setVerticalGroup(
-            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft3Layout.setVerticalGroup(
+            botLeft3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
+        getContentPane().add(botLeft3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, -1, -1));
 
-        jPanel93.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel93.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel93.setName("botLeft21");
+        botLeft20.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft20.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft20.setName("botLeft20");
 
-        javax.swing.GroupLayout jPanel93Layout = new javax.swing.GroupLayout(jPanel93);
-        jPanel93.setLayout(jPanel93Layout);
-        jPanel93Layout.setHorizontalGroup(
-            jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft20Layout = new javax.swing.GroupLayout(botLeft20);
+        botLeft20.setLayout(botLeft20Layout);
+        botLeft20Layout.setHorizontalGroup(
+            botLeft20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel93Layout.setVerticalGroup(
-            jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
-
-        jPanel94.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel94.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel94.setName("botLeft19");
-
-        javax.swing.GroupLayout jPanel94Layout = new javax.swing.GroupLayout(jPanel94);
-        jPanel94.setLayout(jPanel94Layout);
-        jPanel94Layout.setHorizontalGroup(
-            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        jPanel94Layout.setVerticalGroup(
-            jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft20Layout.setVerticalGroup(
+            botLeft20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 700, -1, -1));
+        getContentPane().add(botLeft20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
 
-        jPanel95.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel95.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel95.setName("botLeft17");
+        botLeft21.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft21.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft21.setName("botLeft21");
 
-        javax.swing.GroupLayout jPanel95Layout = new javax.swing.GroupLayout(jPanel95);
-        jPanel95.setLayout(jPanel95Layout);
-        jPanel95Layout.setHorizontalGroup(
-            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout botLeft21Layout = new javax.swing.GroupLayout(botLeft21);
+        botLeft21.setLayout(botLeft21Layout);
+        botLeft21Layout.setHorizontalGroup(
+            botLeft21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-        jPanel95Layout.setVerticalGroup(
-            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        botLeft21Layout.setVerticalGroup(
+            botLeft21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 700, -1, -1));
+        getContentPane().add(botLeft21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
+
+        botLeft19.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft19.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft19.setName("botLeft19");
+
+        javax.swing.GroupLayout botLeft19Layout = new javax.swing.GroupLayout(botLeft19);
+        botLeft19.setLayout(botLeft19Layout);
+        botLeft19Layout.setHorizontalGroup(
+            botLeft19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft19Layout.setVerticalGroup(
+            botLeft19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 700, -1, -1));
+
+        botLeft17.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft17.setMinimumSize(new java.awt.Dimension(50, 50));
+        botLeft17.setName("botLeft17");
+
+        javax.swing.GroupLayout botLeft17Layout = new javax.swing.GroupLayout(botLeft17);
+        botLeft17.setLayout(botLeft17Layout);
+        botLeft17Layout.setHorizontalGroup(
+            botLeft17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        botLeft17Layout.setVerticalGroup(
+            botLeft17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(botLeft17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 700, -1, -1));
 
         topLeft2.setBackground(new java.awt.Color(204, 204, 255));
         topLeft2.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1810,7 +1819,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRightAlt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 220, -1, -1));
+        getContentPane().add(topRightAlt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 220, -1, -1));
 
         topRight3.setBackground(new java.awt.Color(204, 204, 255));
         topRight3.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1826,7 +1835,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 40, -1, -1));
+        getContentPane().add(topRight3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 40, -1, -1));
 
         topRightAlt1.setBackground(new java.awt.Color(0, 153, 153));
         topRightAlt1.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1842,7 +1851,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRightAlt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 100, -1, -1));
+        getContentPane().add(topRightAlt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 100, -1, -1));
 
         topRightAlt2.setBackground(new java.awt.Color(0, 153, 153));
         topRightAlt2.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1858,7 +1867,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRightAlt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 160, -1, -1));
+        getContentPane().add(topRightAlt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 160, -1, -1));
 
         jPanel115.setBackground(new java.awt.Color(204, 204, 255));
         jPanel115.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -1890,7 +1899,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(topRight11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 280, -1, -1));
+        getContentPane().add(topRight11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 280, -1, -1));
 
         jPanel117.setBackground(new java.awt.Color(204, 204, 255));
         jPanel117.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -2213,25 +2222,72 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jPanel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 700, -1, -1));
 
         jButton2.setText(">");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 40, 30));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 40, 30));
 
         jButton3.setText(">");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 40, 30));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 40, 30));
 
         jPanel9.setBackground(new java.awt.Color(204, 204, 204));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setText("jLabel2");
+
+        jLabel3.setText("jLabel3");
+
+        jLabel4.setText("jLabel4");
+
+        jLabel5.setText("jLabel5");
+
+        jLabel6.setText("jLabel6");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 170, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel6)
+                        .addGap(0, 19, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 360, 170));
+        getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 360, 180));
+
+        jButton4.setText("jButton4");
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 180, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2278,18 +2334,47 @@ public class board extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel PANELOMG;
+    private javax.swing.JPanel botLeft1;
+    private javax.swing.JPanel botLeft10;
+    private javax.swing.JPanel botLeft11;
+    private javax.swing.JPanel botLeft12;
+    private javax.swing.JPanel botLeft13;
+    private javax.swing.JPanel botLeft14;
+    private javax.swing.JPanel botLeft15;
+    private javax.swing.JPanel botLeft16;
+    private javax.swing.JPanel botLeft17;
+    private javax.swing.JPanel botLeft18;
+    private javax.swing.JPanel botLeft19;
+    private javax.swing.JPanel botLeft2;
+    private javax.swing.JPanel botLeft20;
+    private javax.swing.JPanel botLeft21;
+    private javax.swing.JPanel botLeft22;
+    private javax.swing.JPanel botLeft23;
+    private javax.swing.JPanel botLeft24;
+    private javax.swing.JPanel botLeft25;
+    private javax.swing.JPanel botLeft26;
+    private javax.swing.JPanel botLeft27;
+    private javax.swing.JPanel botLeft3;
+    private javax.swing.JPanel botLeft4;
+    private javax.swing.JPanel botLeft5;
+    private javax.swing.JPanel botLeft6;
+    private javax.swing.JPanel botLeft7;
+    private javax.swing.JPanel botLeft8;
+    private javax.swing.JPanel botLeft9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel115;
     private javax.swing.JPanel jPanel117;
     private javax.swing.JPanel jPanel118;
     private javax.swing.JPanel jPanel119;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel120;
     private javax.swing.JPanel jPanel121;
     private javax.swing.JPanel jPanel122;
@@ -2300,7 +2385,6 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel127;
     private javax.swing.JPanel jPanel128;
     private javax.swing.JPanel jPanel129;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel130;
     private javax.swing.JPanel jPanel131;
     private javax.swing.JPanel jPanel132;
@@ -2308,30 +2392,11 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel134;
     private javax.swing.JPanel jPanel135;
     private javax.swing.JPanel jPanel136;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel61;
-    private javax.swing.JPanel jPanel62;
     private javax.swing.JPanel jPanel68;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPanel jPanel93;
-    private javax.swing.JPanel jPanel94;
-    private javax.swing.JPanel jPanel95;
     private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel middle1;
     private javax.swing.JPanel middle10;
     private javax.swing.JPanel middle11;
