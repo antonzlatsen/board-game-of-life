@@ -13,6 +13,11 @@ import javax.swing.JLabel;
  */
 public class board extends javax.swing.JFrame {
 
+    //Creating variables here
+    private boolean valcanoActive = false; 
+    private int valcanoTotal =0;
+    
+    
     /**
      * Creates new form board
      */
@@ -89,8 +94,10 @@ public class board extends javax.swing.JFrame {
         middle13 = new javax.swing.JPanel();
         middle18 = new javax.swing.JPanel();
         valcano = new javax.swing.JPanel();
-        labValcano = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        progressValcano = new javax.swing.JProgressBar();
+        btnValcano = new javax.swing.JButton();
+        labValcanoInfo = new javax.swing.JLabel();
+        labValcanoPay = new javax.swing.JLabel();
         middle5 = new javax.swing.JPanel();
         middle10 = new javax.swing.JPanel();
         middle21 = new javax.swing.JPanel();
@@ -1211,27 +1218,50 @@ public class board extends javax.swing.JFrame {
         valcano.setMinimumSize(new java.awt.Dimension(50, 50));
         valcano.setName("bigbeells");
 
-        labValcano.setText("Spin Until the valcano Erupts");
-        labValcano.setToolTipText("");
+        progressValcano.setForeground(new java.awt.Color(255, 102, 0));
+        progressValcano.setMaximum(15);
+        progressValcano.setToolTipText("");
+
+        btnValcano.setText("Erupt!!");
+        btnValcano.setToolTipText("");
+        btnValcano.setEnabled(false);
+        btnValcano.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                onErupt(evt);
+            }
+        });
+
+        labValcanoInfo.setText("Spin until Valcano Erupts!!");
+
+        labValcanoPay.setText("Pay");
 
         javax.swing.GroupLayout valcanoLayout = new javax.swing.GroupLayout(valcano);
         valcano.setLayout(valcanoLayout);
         valcanoLayout.setHorizontalGroup(
             valcanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(progressValcano, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
             .addGroup(valcanoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labValcano)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(valcanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labValcanoInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(valcanoLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(btnValcano)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(labValcanoPay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         valcanoLayout.setVerticalGroup(
             valcanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valcanoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(labValcano)
-                .addContainerGap())
+                .addComponent(progressValcano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labValcanoInfo)
+                .addGap(5, 5, 5)
+                .addComponent(btnValcano)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labValcanoPay)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         getContentPane().add(valcano, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 170, 110));
@@ -2472,11 +2502,40 @@ public class board extends javax.swing.JFrame {
 
     private void onClickSpinner(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onClickSpinner
         // TODO add your handling code here:
-        
+        if(spinner.isEnabled()){
         int randomNum = 1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
+        
+        if(randomNum==1){
+            valcanoActive =true;
+            btnValcano.setEnabled(true);
+            spinner.setEnabled(false);
+        }
+        }
     }//GEN-LAST:event_onClickSpinner
+
+    private void onErupt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onErupt
+        // TODO add your handling code here:
+        
+        int rand;
+        if(valcanoActive==true){
+            btnValcano.setEnabled(true);
+            rand = 1 + (int)(Math.random()*10);
+            valcanoTotal +=rand;
+            System.out.println(valcanoTotal);
+            progressValcano.setValue(valcanoTotal);
+            labValcanoPay.setText(""+(valcanoTotal*1000)+" Thousand");
+            
+            if(valcanoTotal>15){
+                btnValcano.setEnabled(false);
+                valcanoActive=false;
+                valcanoTotal=0;
+                progressValcano.setValue(0);
+                spinner.setEnabled(true);
+            }     
+        }
+    }//GEN-LAST:event_onErupt
 
     /**
      * @param args the command line arguments
@@ -2547,6 +2606,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel botLeft7;
     private javax.swing.JPanel botLeft8;
     private javax.swing.JPanel botLeft9;
+    private javax.swing.JButton btnValcano;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
@@ -2581,11 +2641,11 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel135;
     private javax.swing.JPanel jPanel136;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JLabel labValcano;
+    private javax.swing.JLabel labValcanoInfo;
+    private javax.swing.JLabel labValcanoPay;
     private javax.swing.JPanel middle1;
     private javax.swing.JPanel middle10;
     private javax.swing.JPanel middle11;
@@ -2622,6 +2682,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel middle7;
     private javax.swing.JPanel middle8;
     private javax.swing.JPanel middle9;
+    private javax.swing.JProgressBar progressValcano;
     private javax.swing.JButton spinner;
     private javax.swing.JPanel topLeft1;
     private javax.swing.JPanel topLeft10;
