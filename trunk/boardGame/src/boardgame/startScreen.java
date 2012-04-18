@@ -124,19 +124,31 @@ public class startScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * runs a few bits and pieces when the button at the bottom of the form is
+     * clicked.
+     *
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
+
+                /**
+                 * @TODO make the labels copy across to the new form
+                 */
+                //  sets the game board to be visable
                 new board().setVisible(true);
+
+                //  disposes the current form - in this case it is the
+                //  start form when the user selects players and such.
                 dispose();
             }
         });
     }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
