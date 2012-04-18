@@ -1098,6 +1098,7 @@ public class board extends javax.swing.JFrame {
 
         jPanel68.setBackground(new java.awt.Color(153, 51, 0));
         jPanel68.setMinimumSize(new java.awt.Dimension(50, 50));
+        jPanel68.setName("bigbeells");
 
         javax.swing.GroupLayout jPanel68Layout = new javax.swing.GroupLayout(jPanel68);
         jPanel68.setLayout(jPanel68Layout);
