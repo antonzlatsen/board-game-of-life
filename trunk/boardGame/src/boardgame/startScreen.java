@@ -4,6 +4,9 @@
  */
 package boardgame;
 
+import javax.swing.JTextField;
+import javax.swing.*;
+
 /**
  *
  * @author Don
@@ -15,6 +18,7 @@ public class startScreen extends javax.swing.JFrame {
      */
     public startScreen() {
         initComponents();
+
     }
 
     /**
@@ -27,8 +31,7 @@ public class startScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        spnNumberOfPlayers = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
@@ -41,27 +44,29 @@ public class startScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Welcome to the \"Game Of Life\"");
+        jLabel1.setText("\"Game Of Life\"");
 
-        jLabel2.setText("Please select how many players are playing and input their names");
-
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(2, 2, 6, 1));
-        jSpinner1.setMaximumSize(new java.awt.Dimension(0, 0));
+        spnNumberOfPlayers.setModel(new javax.swing.SpinnerNumberModel(2, 2, 6, 1));
+        spnNumberOfPlayers.setMaximumSize(new java.awt.Dimension(0, 0));
+        spnNumberOfPlayers.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                onChangeNumber2(evt);
+            }
+        });
+        spnNumberOfPlayers.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                onChangeNumber1(evt);
+            }
+        });
 
         jLabel3.setText("Players");
 
-        jTextField1.setText("Player 1");
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-
-        jTextField2.setText("Player 2");
-
-        jTextField3.setText("Player 3");
-
-        jTextField4.setText("Player 4");
-
-        jTextField5.setText("Player 5");
-
-        jTextField6.setText("Player 6");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Start Game");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -76,36 +81,35 @@ public class startScreen extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField1)
+                    .addComponent(jTextField2)
+                    .addComponent(jTextField3)
+                    .addComponent(jTextField4)
+                    .addComponent(jTextField5)
+                    .addComponent(jTextField6)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField1)))
-                    .addComponent(jLabel2))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(spnNumberOfPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(38, 38, 38)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(spnNumberOfPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -116,8 +120,8 @@ public class startScreen extends javax.swing.JFrame {
                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -134,32 +138,179 @@ public class startScreen extends javax.swing.JFrame {
 
             public void run() {
 
-                /**
-                 * @TODO make the labels copy across to the new form
-                 */
-                //  sets the game board to be visable
-                new board().setVisible(true);
+                board myBoard = new board();
+             
+                
+                if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")))
+                {
+                    myBoard.setjLabel1(jTextField1.getText());
+                    myBoard.setjLabel2(jTextField2.getText());
 
+                    if (jTextField3 != null)
+                    {
+                        myBoard.setjLabel3(jTextField3.getText());
+                    }
+                    if (jTextField4 != null)
+                    {
+                        myBoard.setjLabel4(jTextField4.getText());
+                    }
+                    if (jTextField5 != null)
+                    {
+                        myBoard.setjLabel5(jTextField5.getText());
+                    }
+                    if (jTextField6 != null)
+                    {
+                        myBoard.setjLabel6(jTextField6.getText());
+                    }
+                    
+                    myBoard.setVisible(true);
+                    dispose();
+                }
+                else
+                {
+                    System.out.println("NO");
+                }
+               
+                
+                
+                
                 //  disposes the current form - in this case it is the
                 //  start form when the user selects players and such.
-                dispose();
+                
             }
         });
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        
+    }//GEN-LAST:event_jTextField1ActionPerformed
+    
+    private void onChangeNumber2(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_onChangeNumber2
+        int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
+        
+        //System.out.println("number of players =" + numberOfPlayers);
+        
+        if (numberOfPlayers == 2)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(false);
+            jTextField4.setEnabled(false);
+            jTextField3.setEnabled(false);
+        }
+        
+        if (numberOfPlayers == 3)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(false);
+            jTextField4.setEnabled(false);
+            jTextField3.setEnabled(true);
+        }
+        
+        if (numberOfPlayers == 4)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(false);
+            jTextField4.setEnabled(true);
+            jTextField3.setEnabled(true);
+        }
+        
+        if (numberOfPlayers == 5)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(true);
+            jTextField4.setEnabled(true);
+            jTextField3.setEnabled(true);
+        }
+        
+        if (numberOfPlayers == 6)
+        {
+            jTextField6.setEnabled(true);
+            jTextField5.setEnabled(true);
+            jTextField4.setEnabled(true);
+            jTextField3.setEnabled(true);
+        }
+    }//GEN-LAST:event_onChangeNumber2
+
+    private void onChangeNumber1(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_onChangeNumber1
+        int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
+        
+        //System.out.println("number of players =" + numberOfPlayers);
+        
+        if (numberOfPlayers == 2)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(false);
+            jTextField4.setEnabled(false);
+            jTextField3.setEnabled(false);
+        }
+        
+        if (numberOfPlayers == 3)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(false);
+            jTextField4.setEnabled(false);
+            jTextField3.setEnabled(true);
+        }
+        
+        if (numberOfPlayers == 4)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(false);
+            jTextField4.setEnabled(true);
+            jTextField3.setEnabled(true);
+        }
+        
+        if (numberOfPlayers == 5)
+        {
+            jTextField6.setEnabled(false);
+            jTextField5.setEnabled(true);
+            jTextField4.setEnabled(true);
+            jTextField3.setEnabled(true);
+        }
+        
+        if (numberOfPlayers == 6)
+        {
+            jTextField6.setEnabled(true);
+            jTextField5.setEnabled(true);
+            jTextField4.setEnabled(true);
+            jTextField3.setEnabled(true);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_onChangeNumber1
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JSpinner spnNumberOfPlayers;
     // End of variables declaration//GEN-END:variables
+
+
+
 }
+
+
+
+
