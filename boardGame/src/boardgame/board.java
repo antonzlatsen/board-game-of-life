@@ -4,6 +4,7 @@
  */
 package boardgame;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 
 /**
@@ -81,13 +82,15 @@ public class board extends javax.swing.JFrame {
         middle7 = new javax.swing.JPanel();
         middle4 = new javax.swing.JPanel();
         middle25 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        spinner = new javax.swing.JButton();
         middle3 = new javax.swing.JPanel();
         middle9 = new javax.swing.JPanel();
         middle11 = new javax.swing.JPanel();
         middle13 = new javax.swing.JPanel();
         middle18 = new javax.swing.JPanel();
-        jPanel68 = new javax.swing.JPanel();
+        valcano = new javax.swing.JPanel();
+        labValcano = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
         middle5 = new javax.swing.JPanel();
         middle10 = new javax.swing.JPanel();
         middle21 = new javax.swing.JPanel();
@@ -1105,14 +1108,19 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(middle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("Spinner");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        spinner.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        spinner.setText("Spinner");
+        spinner.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                onClickSpinner(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 50));
+        spinner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                spinnerActionPerformed(evt);
+            }
+        });
+        getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 50));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
         middle3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1199,22 +1207,34 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(middle18, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 500, -1, -1));
 
-        jPanel68.setBackground(new java.awt.Color(153, 51, 0));
-        jPanel68.setMinimumSize(new java.awt.Dimension(50, 50));
-        jPanel68.setName("bigbeells");
+        valcano.setBackground(new java.awt.Color(153, 51, 0));
+        valcano.setMinimumSize(new java.awt.Dimension(50, 50));
+        valcano.setName("bigbeells");
 
-        javax.swing.GroupLayout jPanel68Layout = new javax.swing.GroupLayout(jPanel68);
-        jPanel68.setLayout(jPanel68Layout);
-        jPanel68Layout.setHorizontalGroup(
-            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 170, Short.MAX_VALUE)
+        labValcano.setText("Spin Until the valcano Erupts");
+        labValcano.setToolTipText("");
+
+        javax.swing.GroupLayout valcanoLayout = new javax.swing.GroupLayout(valcano);
+        valcano.setLayout(valcanoLayout);
+        valcanoLayout.setHorizontalGroup(
+            valcanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(valcanoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labValcano)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
-        jPanel68Layout.setVerticalGroup(
-            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 110, Short.MAX_VALUE)
+        valcanoLayout.setVerticalGroup(
+            valcanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valcanoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addComponent(labValcano)
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 170, 110));
+        getContentPane().add(valcano, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 170, 110));
 
         middle5.setBackground(new java.awt.Color(204, 204, 255));
         middle5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2446,9 +2466,17 @@ public class board extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void spinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinnerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_spinnerActionPerformed
+
+    private void onClickSpinner(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onClickSpinner
+        // TODO add your handling code here:
+        
+        int randomNum = 1 + (int)(Math.random()*10);
+        
+        spinner.setText(""+randomNum);
+    }//GEN-LAST:event_onClickSpinner
 
     /**
      * @param args the command line arguments
@@ -2519,7 +2547,6 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel botLeft7;
     private javax.swing.JPanel botLeft8;
     private javax.swing.JPanel botLeft9;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
@@ -2553,11 +2580,12 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel134;
     private javax.swing.JPanel jPanel135;
     private javax.swing.JPanel jPanel136;
-    private javax.swing.JPanel jPanel68;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel labValcano;
     private javax.swing.JPanel middle1;
     private javax.swing.JPanel middle10;
     private javax.swing.JPanel middle11;
@@ -2594,6 +2622,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel middle7;
     private javax.swing.JPanel middle8;
     private javax.swing.JPanel middle9;
+    private javax.swing.JButton spinner;
     private javax.swing.JPanel topLeft1;
     private javax.swing.JPanel topLeft10;
     private javax.swing.JPanel topLeft11;
@@ -2635,6 +2664,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel topRightAlt1;
     private javax.swing.JPanel topRightAlt2;
     private javax.swing.JPanel topRightAlt3;
+    private javax.swing.JPanel valcano;
     // End of variables declaration//GEN-END:variables
 
 
@@ -2661,6 +2691,11 @@ public class board extends javax.swing.JFrame {
 
     public void setjLabel6(String jLabel6) {
         this.jLabel6.setText(jLabel6);
+    }
+    
+    //returns the value of the spinner as a string
+    public String getSpinner() {
+        return spinner.getText();
     }
 
     
