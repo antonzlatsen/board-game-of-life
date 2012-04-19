@@ -2797,6 +2797,15 @@ public class board extends javax.swing.JFrame {
         return topRightIsland;
     }
 
+
+    public JPanel[] getMiddleIsland(){
+        
+        JPanel middleIslandArray[] = {middle1,middle2,middle3,middle4,middle5,middle6,middle7,middle8,middle9,middle10,
+            middle11,middle12,middle13,middle14,middle15,middle16,middle17,middle18,middle19,middle20,
+            middle21,middle22,middle23,middle24,middle25,middle26,middle27,middle28,middle29,middle30,
+            middle31,middle32,middle33,middle34,middle35,middle36};
+        return middleIslandArray;
+        }
     
     
     
