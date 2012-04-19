@@ -15,7 +15,7 @@ public class BoardGame {
      */
         public static void main(String args[]) {
             
-            System.out.println("hello world");
+        boardgame.startScreen.myBoard.setVisible(true);
             
             
             
