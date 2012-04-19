@@ -6,6 +6,7 @@ package boardgame;
 
 import javax.swing.JTextField;
 import javax.swing.*;
+import java.util.*;
 
 /**
  *
@@ -13,6 +14,9 @@ import javax.swing.*;
  */
 public class startScreen extends javax.swing.JFrame {
 
+    //declare variables 
+    public static board myBoard = new board();
+    
     /**
      * Creates new form startScreen
      */
@@ -138,29 +142,16 @@ public class startScreen extends javax.swing.JFrame {
 
             public void run() {
 
-                board myBoard = new board();
-             
+                
+                
+                JLabel labels[] = {myBoard.getjLabel1(),myBoard.getjLabel2(),myBoard.getjLabel3(),myBoard.getjLabel4(),myBoard.getjLabel5(),myBoard.getjLabel6()};
+                JTextField textFields[] = {jTextField1,jTextField2,jTextField3,jTextField4,jTextField5,jTextField6};
                 
                 if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")))
                 {
-                    myBoard.setjLabel1(jTextField1.getText());
-                    myBoard.setjLabel2(jTextField2.getText());
-
-                    if (jTextField3 != null)
-                    {
-                        myBoard.setjLabel3(jTextField3.getText());
-                    }
-                    if (jTextField4 != null)
-                    {
-                        myBoard.setjLabel4(jTextField4.getText());
-                    }
-                    if (jTextField5 != null)
-                    {
-                        myBoard.setjLabel5(jTextField5.getText());
-                    }
-                    if (jTextField6 != null)
-                    {
-                        myBoard.setjLabel6(jTextField6.getText());
+                    int spinnerValue = (int) spnNumberOfPlayers.getValue();
+                    for(int i=0; i<spinnerValue;i++){
+                        labels[i].setText(textFields[i].getText());
                     }
                     
                     myBoard.setVisible(true);
