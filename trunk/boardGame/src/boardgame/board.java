@@ -8,7 +8,7 @@ import javax.swing.*;
 
 /**
  *
- * @author Don
+ * @author Team Liquid
  */
 public class board extends javax.swing.JFrame {
 
@@ -73,7 +73,6 @@ public class board extends javax.swing.JFrame {
         topRight15 = new javax.swing.JPanel();
         topRight14 = new javax.swing.JPanel();
         topRight1 = new javax.swing.JPanel();
-        lblPlayer1 = new javax.swing.JLabel();
         topRight16 = new javax.swing.JPanel();
         topLeft17 = new javax.swing.JPanel();
         topRight13 = new javax.swing.JPanel();
@@ -181,6 +180,13 @@ public class board extends javax.swing.JFrame {
         jProgressBar2 = new javax.swing.JProgressBar();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        Start = new javax.swing.JPanel();
+        lblPlayer1 = new javax.swing.JLabel();
+        lblPlayer2 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         jLabel9.setText("jLabel9");
@@ -906,21 +912,15 @@ public class board extends javax.swing.JFrame {
         topRight1.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight1.setMinimumSize(new java.awt.Dimension(54, 54));
 
-        lblPlayer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_5.png"))); // NOI18N
-
         javax.swing.GroupLayout topRight1Layout = new javax.swing.GroupLayout(topRight1);
         topRight1.setLayout(topRight1Layout);
         topRight1Layout.setHorizontalGroup(
             topRight1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(topRight1Layout.createSequentialGroup()
-                .addComponent(lblPlayer1)
-                .addGap(0, 36, Short.MAX_VALUE))
+            .addGap(0, 50, Short.MAX_VALUE)
         );
         topRight1Layout.setVerticalGroup(
             topRight1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(topRight1Layout.createSequentialGroup()
-                .addComponent(lblPlayer1)
-                .addGap(0, 36, Short.MAX_VALUE))
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
         getContentPane().add(topRight1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 40, 54, 54));
@@ -2604,6 +2604,60 @@ public class board extends javax.swing.JFrame {
         jButton6.setText("Option 1");
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 770, 120, -1));
 
+        Start.setBackground(new java.awt.Color(204, 204, 204));
+
+        lblPlayer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_5.png"))); // NOI18N
+
+        lblPlayer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_1.png"))); // NOI18N
+        lblPlayer2.setText("jLabel10");
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_2.png"))); // NOI18N
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_3.png"))); // NOI18N
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_4.png"))); // NOI18N
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_6.png"))); // NOI18N
+
+        javax.swing.GroupLayout StartLayout = new javax.swing.GroupLayout(Start);
+        Start.setLayout(StartLayout);
+        StartLayout.setHorizontalGroup(
+            StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StartLayout.createSequentialGroup()
+                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblPlayer1)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel13))
+                .addGap(35, 35, 35)
+                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(StartLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(StartLayout.createSequentialGroup()
+                        .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                            .addComponent(lblPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 36, 36))))
+        );
+        StartLayout.setVerticalGroup(
+            StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StartLayout.createSequentialGroup()
+                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblPlayer1)
+                    .addComponent(lblPlayer2))
+                .addGap(25, 25, 25)
+                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12))
+                .addGap(18, 18, 18)
+                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14))
+                .addGap(0, 18, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 110, 110));
+
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/old_paper.jpg"))); // NOI18N
         jLabel7.setMaximumSize(new java.awt.Dimension(54, 54));
         jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -2619,7 +2673,7 @@ public class board extends javax.swing.JFrame {
         
         spinner.setText(""+randomNum);
         
-        BoardGame.missionControl.movePlayer(randomNum);
+        BoardGame.missionControl.checkTile(randomNum);
         
         if(randomNum==1){
             valcanoActive =true;
@@ -2644,6 +2698,7 @@ public class board extends javax.swing.JFrame {
             labValcanoPay.setText(""+(valcanoTotal*1000)+" Thousand");
             
             if(valcanoTotal>15){
+                BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(valcanoTotal*1000);
                 btnValcano.setEnabled(false);
                 valcanoActive=false;
                 valcanoTotal=0;
@@ -2695,6 +2750,7 @@ public class board extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Start;
     private javax.swing.JPanel botLeft1;
     private javax.swing.JPanel botLeft10;
     private javax.swing.JPanel botLeft11;
@@ -2749,6 +2805,10 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -2764,6 +2824,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JLabel labValcanoInfo;
     private javax.swing.JLabel labValcanoPay;
     private javax.swing.JLabel lblPlayer1;
+    private javax.swing.JLabel lblPlayer2;
     private javax.swing.JPanel middle1;
     private javax.swing.JPanel middle10;
     private javax.swing.JPanel middle11;
@@ -2941,8 +3002,11 @@ public class board extends javax.swing.JFrame {
         return middleIslandArray;
         }
 
-    public JLabel getLblPlayer1() {
-        return lblPlayer1;
+    public JLabel[] getLblPlayers(){
+        
+        JLabel[] labels = {lblPlayer1,lblPlayer2,jLabel11,jLabel12,jLabel13,jLabel14};
+        
+        return labels;
     }
     
     

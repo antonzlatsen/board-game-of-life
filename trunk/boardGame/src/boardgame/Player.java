@@ -21,7 +21,10 @@ public class Player {
     *   position will show where the player is on his/her island
     **********************************************************
     */
-    private int island, position; 
+    private int island, position, money, spinToWin; 
+    private boolean pet=false; 
+    private boolean baby=false;
+    private boolean spouse=false;
     
     
     /*********************************************************
@@ -41,6 +44,11 @@ public class Player {
         //  should set the player position to tile 1            
         //  ie - the first tile of the set                      
         position=1;
+        
+        //starting value 10K
+        money = 10000;
+        
+        spinToWin=0;
        
     }
     
@@ -76,6 +84,39 @@ public class Player {
     {
         this.position = updatedPosition;
     }
+    
+    public void adjustMoney(int value){
+        this.money+=value;
+    }
+    
+    public void setSpinToWin(int value){
+        this.spinToWin=value;
+    }
+
+    public boolean isBaby() {
+        return baby;
+    }
+
+    public void setBaby(boolean baby) {
+        this.baby = baby;
+    }
+
+    public boolean isPet() {
+        return pet;
+    }
+
+    public void setPet(boolean pet) {
+        this.pet = pet;
+    }
+
+    public boolean isSpouse() {
+        return spouse;
+    }
+
+    public void setSpouse(boolean spouse) {
+        this.spouse = spouse;
+    }
+    
     
     
 }
