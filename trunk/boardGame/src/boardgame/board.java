@@ -1184,11 +1184,6 @@ public class board extends javax.swing.JFrame {
                 onClickSpinner(evt);
             }
         });
-        spinner.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                spinnerActionPerformed(evt);
-            }
-        });
         getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 50));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
@@ -2617,10 +2612,6 @@ public class board extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void spinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinnerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_spinnerActionPerformed
-
     private void onClickSpinner(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onClickSpinner
         // TODO add your handling code here:
         if(spinner.isEnabled()){
@@ -2628,7 +2619,7 @@ public class board extends javax.swing.JFrame {
         
         spinner.setText(""+randomNum);
         
-        BoardGame.playerMove();
+        BoardGame.missionControl.movePlayer(randomNum);
         
         if(randomNum==1){
             valcanoActive =true;
