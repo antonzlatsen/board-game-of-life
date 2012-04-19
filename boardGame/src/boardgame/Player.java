@@ -40,7 +40,7 @@ public class Player {
     */
     public Player(){
         // not used at the moment                               
-        island=1; 
+        island=2; 
         //  should set the player position to tile 1            
         //  ie - the first tile of the set                      
         position=1;
@@ -87,6 +87,10 @@ public class Player {
     
     public void adjustMoney(int value){
         this.money+=value;
+    }
+    
+    public int getMoney(){
+        return this.money;
     }
     
     public void setSpinToWin(int value){
