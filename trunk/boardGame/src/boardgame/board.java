@@ -2771,9 +2771,23 @@ public class board extends javax.swing.JFrame {
     
     public JPanel[] getTopLeftIsland(){
         
-        JPanel topLeftIsland[] = {topLeft1,topLeft2,topLeft3,topLeft4};
+        JPanel topLeftIsland[] = {topLeft1,topLeft2,topLeft3,topLeft4,topLeft5,topLeft6,topLeft7,topLeft8,topLeft9,topLeft10,topLeft11,topLeft12,topLeft13,topLeft14,topLeft15,topLeft16,topLeft17,topLeft18,topLeft19,topLeft20,topLeft21,topLeft22};
         
         return topLeftIsland;
+    }
+    
+    public JPanel[] getBottomLeftIsland(){
+        
+        JPanel bottomLeft[] = {botLeft1,botLeft2,botLeft3,botLeft4, botLeft5, botLeft6, botLeft7, botLeft8, botLeft9, botLeft10, botLeft11, botLeft12, botLeft13, botLeft14, botLeft15, botLeft16, botLeft17, botLeft18, botLeft19, botLeft20, botLeft21, botLeft22, botLeft23, botLeft24, botLeft25, botLeft26, botLeft27};
+        
+        return bottomLeft;
+    }
+    
+     public JPanel[] getBottomRightIsland(){
+        
+        JPanel BottomRightIsland[] = {bottomRight1,bottomRight2,bottomRight3,bottomRight4,bottomRight5,bottomRight6,bottomRight7,bottomRight8,bottomRight9,bottomRight10,bottomRight11,bottomRight12,bottomRight13,bottomRight14,bottomRight15,bottomRight16,bottomRight17,bottomRight18,bottomRight19,bottomRight20,bottomRight21};
+        
+        return BottomRightIsland;
     }
 
         public JPanel[] getTopRightIsland(){
