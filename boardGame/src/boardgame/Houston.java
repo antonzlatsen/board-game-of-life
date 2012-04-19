@@ -1,9 +1,10 @@
 
 package boardgame;
 import javax.swing.*;
+import java.awt.Color;
 /**
  *
- * @author Don
+ * @author Team Liquid
  */
 public class Houston {
     
@@ -14,6 +15,13 @@ public class Houston {
     public Player player_4 = new Player();
     public Player player_5 = new Player();
     public Player player_6 = new Player();
+    
+    public Player [] players = {player_1,player_2,player_3,player_4,player_5,player_6};
+    
+    private JLabel[] lblPlayers = startScreen.myBoard.getLblPlayers();
+    
+    //variables to determine turn
+    public int playerTurn =0;
     
     // Variables used in calcs later
     //int mathVar
@@ -54,25 +62,37 @@ public class Houston {
     {
         //  Creates some variables
         //  two ints for use in position setting
-        int oldPlayerPos; 
-        int newPlayerPos; 
-        int moreMathShit;
+        int oldPlayerPos, moreMathShit,newPlayerPos,playerIsland;
+        newPlayerPos=0;
+        JPanel playerIslandArray [] = systemIslanMiddleArray;
                 
         //  grabs the current player position
         //  NB - Should be 1 on the first run
-        oldPlayerPos = player_1.getPosition();
+        oldPlayerPos = players[playerTurn].getPosition();
+        
+        //get what island the player is on
+        playerIsland = players[playerTurn].getIsland();
+        
+        //depending on what island the player is on set the array to be modified
+        if(playerIsland==1)
+            playerIslandArray = systemIslanMiddleArray;
+        else if(playerIsland==2)
+            playerIslandArray = systemIslandTopRightArray;
+        else if(playerIsland==3)
+            playerIslandArray = systemIslandBottomRightArray;
+        else if(playerIsland==4)
+            playerIslandArray= systemIslandBottomLeftArray;
+        else if(playerIsland==5)
+            playerIslandArray=systemIslandTopLeftArray;
+            
         
         //  Takes the SpinnerValue (a random number gen'ed from the board)
         //  adds it to the current player position
         newPlayerPos = SpinnerValue + oldPlayerPos;
         
-        
-        
-        
-
-                if (newPlayerPos > systemIslandTopRightArray.length)
+                if (newPlayerPos > playerIslandArray.length)
                 {
-                int difference = systemIslandTopRightArray.length - oldPlayerPos;
+                int difference = playerIslandArray.length - oldPlayerPos;
                 moreMathShit = SpinnerValue - difference;
                 newPlayerPos = 0;
                 newPlayerPos += moreMathShit;
@@ -80,7 +100,7 @@ public class Houston {
                 
         
         //  then adds that new number to the player position.
-        player_1.setPlayerPosition(newPlayerPos);
+        players[playerTurn].setPlayerPosition(newPlayerPos);
         
         System.out.println("Spinner Value = " + SpinnerValue);
         System.out.println("OLD player position = " + oldPlayerPos);
@@ -89,11 +109,58 @@ public class Houston {
         
         //  takes the top right island tile = to the new player position
         //
-        systemIslandTopRightArray[player_1.getPosition() -1].add(startScreen.myBoard.getLblPlayer1());
+        playerIslandArray[players[playerTurn].getPosition() -1].add(lblPlayers[playerTurn]);
+        playerTurn++;
         
+        if (playerTurn>startScreen.numberOfPlayers)
+            playerTurn=0;
         
         startScreen.myBoard.repaint();
         
     }
     
+    public void setUp(){
+        
+        //sets the players icons invisible depending on the amount of players
+        
+        for(int i=6-startScreen.numberOfPlayers;i>startScreen.numberOfPlayers;i--){
+            lblPlayers[i].setVisible(false);
+        }
+        
+    }
+    
+    public void checkTile(int spinnerValue){
+        
+        int oldPlayerPos,newPlayerPos,playerIsland;
+        newPlayerPos=0;
+        JPanel playerIslandArray [] = systemIslanMiddleArray;
+                
+        //  grabs the current player position
+        //  NB - Should be 1 on the first run
+        oldPlayerPos = players[playerTurn].getPosition();
+        
+        //get what island the player is on
+        playerIsland = players[playerTurn].getIsland();
+        
+        //depending on what island the player is on set the array to be modified
+        if(playerIsland==1)
+            playerIslandArray = systemIslanMiddleArray;
+        else if(playerIsland==2)
+            playerIslandArray = systemIslandTopRightArray;
+        else if(playerIsland==3)
+            playerIslandArray = systemIslandBottomRightArray;
+        else if(playerIsland==4)
+            playerIslandArray= systemIslandBottomLeftArray;
+        else if(playerIsland==5)
+            playerIslandArray=systemIslandTopLeftArray;
+                
+        for(int i = oldPlayerPos;i<newPlayerPos;i++){
+            if(playerIslandArray[i].getBackground().equals(Color.red))
+                spinnerValue = i; 
+                break;
+        }
+        
+        movePlayer(spinnerValue);
+        
+    }
 }

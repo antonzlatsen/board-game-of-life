@@ -16,13 +16,13 @@ public class startScreen extends javax.swing.JFrame {
 
     //declare variables 
     public static board myBoard = new board();
+    public static int numberOfPlayers = 2;
     
     /**
      * Creates new form startScreen
      */
     public startScreen() {
         initComponents();
-
     }
 
     /**
@@ -154,6 +154,8 @@ public class startScreen extends javax.swing.JFrame {
                         labels[i].setText(textFields[i].getText());
                     }
                     
+                    numberOfPlayers = ((int) spnNumberOfPlayers.getValue()-1);
+                    BoardGame.missionControl.setUp();
                     myBoard.setVisible(true);
                     dispose();
                 }
@@ -271,17 +273,6 @@ public class startScreen extends javax.swing.JFrame {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
      * @param args the command line arguments
      */
@@ -297,6 +288,7 @@ public class startScreen extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JSpinner spnNumberOfPlayers;
     // End of variables declaration//GEN-END:variables
+
 
 
 
