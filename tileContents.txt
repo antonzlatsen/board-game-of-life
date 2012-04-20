@@ -1,0 +1,37 @@
+Island 1: topMid 22 sqs - 3 green, 2 stop (1 is a port), 1 start, 12 'event'
+
+- Start square, option college/career.
+- Green: 2 payday, pay 40k college fee get a loan.
+- Stop: 1 Set sail, 1 exams, spin 1-3 = fail, 4-10 = pass.
+- Career Event: Win Employee of the Year award (+£20k), Earn Bonus (+£100k), Start a company (+£20k), Spin to Win £100k, Happy Birthday (+£10k from players)
+- College Event: Win Scholarship (+£50k), Work and study abroad (+£20k), Buy books and a computer (-£20k), Change subject (-£20k),  Win a quiz (+£20k), Get a part time job (+20k)
+
+
+
+Island 2: topRight 19 sqs - 1 green, 1 stop, 1 port, 10 'event'
+
+- Green: payday.
+- Event: Property (£150k), Build a giant mansion? (+£20k), Befriend a polar bear (+pet), Have a baby, Go extreme skiing (+£40k), Form winning sleigh team (+50k), Spin to Win £100k, Sue another player (+£100k), Spot the Yeti (+£80k), Adopt a snow leopard (+pet)
+- Stop: Get married and have a baby celebrate anniversary (+£50k)
+
+
+Island 3: botRight 17 sqs - 3 green, 2 airport, 1 port, 7 'event', 1 stop 
+
+- Green: 2 payday, promotion
+- Stop: Get married/celebrate anniversary (+£20k)
+- Event: Build a skate park (-£50k), Hospital (-£100k), Spin to Win £200k, Property £300k, See a tornado (+£400k), Have a baby, Win a talent show (+£100k)
+
+
+	
+Island 4: botLeft 22 sqs - 1 green, 1 airport, 13 'event'
+
+- Green: Payday
+- Event: Make your own honey (+£100k), Find a dinosaur bone (+£100k), Have a baby, Get a new horse (+pet), Go on safari (-£50K), Trek through the jungle (+£20k), Property (£150k), Chased by a lion (-£20k), Drive on off road buggy (-£20k), Spin to Win £150k, Property £250k, Rescue a wild animal (+pet), Climb a waterfall (+£50k)
+
+	
+Island 5: topLeft 22 sqs - 1 green, 1 port, 1 airport, 15 'event', 1 stop, 
+
+- Green: Payday
+- Stop: Get married and have a baby if already have one celebrate anniversary
+- Event: Swim with dolphins (-£20k), Get a family pet (+pet), Property £300k, Surf a huge wave (+£300k), Live on a beach for a year (+£350k), Have twins, Discover lost city (+£50k), Lawsuit sue another player (+£100k), Party on the beach (-£30k), Ride an elephant (-£20k), Have a baby, Spin to win £150k, Happy birthday collect £20k from each player, Property £150k, Swim to an uninhabited island (+£100k).
+
