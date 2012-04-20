@@ -216,7 +216,7 @@ public class Houston {
    //PlayerTurn should be the player name
     
         public void rollLog(int spinnerValue){
-         JTextArea TextLog=startScreen.myBoard.getjTextArea1();
+         JTextArea TextLog=startScreen.myEventLog.getjTextArea2();
         String log=TextLog.getText();
             TextLog.setText(log+"\n" + playerTurn + " rolled a " + spinnerValue);
            log=TextLog.getText();
