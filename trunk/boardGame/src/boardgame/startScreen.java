@@ -18,6 +18,7 @@ public class startScreen extends javax.swing.JFrame {
     public static board myBoard = new board();
     public static int numberOfPlayers = 2;
     
+    
     /**
      * Creates new form startScreen
      */
@@ -50,9 +51,15 @@ public class startScreen extends javax.swing.JFrame {
         chkPlayer4 = new javax.swing.JCheckBox();
         chkPlayer5 = new javax.swing.JCheckBox();
         chkPlayer6 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
         sldrRetirement = new javax.swing.JSlider();
         lblRetirementInfo = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        lblPlayer1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,11 +82,6 @@ public class startScreen extends javax.swing.JFrame {
         jLabel3.setText("Players");
 
         jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
 
         jButton1.setText("Start Game");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,11 +90,10 @@ public class startScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Do you want to go to college?");
-
         sldrRetirement.setMajorTickSpacing(10);
         sldrRetirement.setMinimum(10);
         sldrRetirement.setMinorTickSpacing(10);
+        sldrRetirement.setOrientation(javax.swing.JSlider.VERTICAL);
         sldrRetirement.setSnapToTicks(true);
         sldrRetirement.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -100,165 +101,232 @@ public class startScreen extends javax.swing.JFrame {
             }
         });
 
-        lblRetirementInfo.setText("jLabel4");
+        lblRetirementInfo.setText("50");
+
+        jButton2.setText("Need some help?");
+
+        lblPlayer1.setText("jLabel2");
+
+        jLabel4.setText("jLabel4");
+
+        jLabel5.setText("jLabel5");
+
+        jLabel6.setText("jLabel6");
+
+        jLabel7.setText("jLabel7");
+
+        jLabel8.setText("jLabel8");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField4)
-                    .addComponent(jTextField5)
-                    .addComponent(jTextField6)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(spnNumberOfPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel1)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(sldrRetirement, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lblRetirementInfo)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(spnNumberOfPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(chkPlayer2)
-                                    .addComponent(chkPlayer1)
-                                    .addComponent(chkPlayer3)
-                                    .addComponent(chkPlayer4)
-                                    .addComponent(chkPlayer5)
-                                    .addComponent(chkPlayer6)))
+                                .addComponent(chkPlayer1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblPlayer1))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(sldrRetirement, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(lblRetirementInfo)))
-                        .addGap(0, 15, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(chkPlayer2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chkPlayer3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chkPlayer4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chkPlayer5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel7))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chkPlayer6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel8)))))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(sldrRetirement, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spnNumberOfPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblPlayer1)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chkPlayer1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chkPlayer2)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jLabel4)))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chkPlayer3)
+                            .addComponent(jLabel5))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chkPlayer4)
+                            .addComponent(jLabel6))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chkPlayer5)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chkPlayer6)
+                            .addComponent(jLabel8))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(spnNumberOfPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chkPlayer1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chkPlayer2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chkPlayer3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(chkPlayer4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chkPlayer5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(chkPlayer6)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(lblRetirementInfo)
-                        .addComponent(sldrRetirement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                    .addComponent(jButton1)
+                    .addComponent(lblRetirementInfo)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * runs a few bits and pieces when the button at the bottom of the form is
-     * clicked.
-     *
-     */
+    
+    
+    
+    /**  
+    |-----------------------------------------------|
+    | jButton1ActionPerformed                       |
+    |-----------------------------------------------|
+    |                                               |
+    |  [x] Purpose                                  |
+    |      runs a few bits and pieces when the      |
+    |      button at the bottom of the form is      |
+    |      clicked - setting up the board and game  |
+    |                                               |
+    |  [x] Controls Affected/Used                   |
+    |      StartButton at the bottom of the form    |
+    |                                               |
+    |                                               |
+    |                                               |
+    |-----------------------------------------------|
+    */
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
 
-                
-                
-                JLabel labels[] = {myBoard.getjLabel1(),myBoard.getjLabel2(),myBoard.getjLabel3(),myBoard.getjLabel4(),myBoard.getjLabel5(),myBoard.getjLabel6()};
-                JTextField textFields[] = {jTextField1,jTextField2,jTextField3,jTextField4,jTextField5,jTextField6};
-                JCheckBox collegeCheck[] = {chkPlayer1,chkPlayer2,chkPlayer3,chkPlayer4,chkPlayer5,chkPlayer6};
-                
+
+
+                JLabel labels[] = {myBoard.getjLabel1(), myBoard.getjLabel2(), myBoard.getjLabel3(), myBoard.getjLabel4(), myBoard.getjLabel5(), myBoard.getjLabel6()};
+                JTextField textFields[] = {jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6};
+                JCheckBox collegeCheck[] = {chkPlayer1, chkPlayer2, chkPlayer3, chkPlayer4, chkPlayer5, chkPlayer6};
+
                 //sets the names on the board 
-                if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")))
-                {
+                if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals(""))) {
+                    
                     int spinnerValue = (int) spnNumberOfPlayers.getValue();
-                    for(int i=0; i<spinnerValue;i++){
+                    for (int i = 0; i < spinnerValue; i++) {
                         labels[i].setText(textFields[i].getText());
                     }
-                    
-                    numberOfPlayers = ((int) spnNumberOfPlayers.getValue()-1);
+                    BoardGame.missionControl.setLifespan(sldrRetirement.getValue());
+                    numberOfPlayers = ((int) spnNumberOfPlayers.getValue() - 1);
                     BoardGame.missionControl.setUp();
                     myBoard.setVisible(true);
                     
-                    BoardGame.missionControl.setLifespan(sldrRetirement.getValue());
-                    
-                    
-                    //BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
-                //  disposes the current form - in this case it is the
-                //  start form when the user selects players and such.
-                    dispose();
-                }
-                //validation if textbox is empty
-                else
+
+
+                    //  BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
+
+
+                    dispose(); //  disposes the current form - in this case it is the start form when the user selects players and such.
+                } 
+                else //validation if textbox is empty
                 {
-                    BoardGame.missionControl.MessageBoxShow("AHHHHHHH!!!!", "Validation Error");
-                    
-                    System.out.println("NO");
+                    BoardGame.missionControl.MessageBoxShow("Please enter two or more names you stupid prick", "Validation Error");
                 }
-               
+
                 //set players to college or not 
-                
-                for(int i=0;i<collegeCheck.length;i++){
-                    
-                    if(collegeCheck[i].isSelected())
-                    BoardGame.missionControl.players[i].changeIsland(2);
+                for (int i = 0; i < collegeCheck.length; i++) {
+
+                    if (collegeCheck[i].isSelected()) {
+                        BoardGame.missionControl.players[i].changeIsland(2);
+                    }
                 }
-                
-                
-                
-                
-                
+
             }
         });
-    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
     
+    
+    
+    /**  
+    |-----------------------------------------------|
+    | onChangeNumber2                               |
+    |-----------------------------------------------|
+    |                                               |
+    |  [x] Purpose                                  |
+    |      Sets the initial amount of text boxes    |
+    |      enabled for the user to type             |
+    |      player names                             | 
+    |                                               |
+    |  [x] Controls Affected/Used                   |
+    |      Spinner Control on the Start Form        |
+    |                                               |
+    |      spnNumberOfPlayers                       |
+    |                                               |
+    |                                               |
+    |-----------------------------------------------|
+    */
     private void onChangeNumber2(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_onChangeNumber2
         int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
         
@@ -305,6 +373,26 @@ public class startScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_onChangeNumber2
 
+    
+    
+    /**  
+    |-----------------------------------------------|
+    | onChangeNumber1                               |
+    |-----------------------------------------------|
+    |                                               |
+    |  [x] Purpose                                  |
+    |      Sets the textboxes on the form to        | 
+    |      enabled or Disabled after each           |
+    |      Change made to the spinner               |
+    |  
+    | [x] Controls Affected/Used                    |
+    |      Spinner Control on the Start Form        |
+    |                                               |
+    |      spnNumberOfPlayers                       |
+    |                                               |
+    |                                               |
+    |-----------------------------------------------|
+    */
     private void onChangeNumber1(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_onChangeNumber1
         int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
         
@@ -348,11 +436,27 @@ public class startScreen extends javax.swing.JFrame {
             jTextField5.setEnabled(true);
             jTextField4.setEnabled(true);
             jTextField3.setEnabled(true);
-        }        // TODO add your handling code here:
+        } 
     }//GEN-LAST:event_onChangeNumber1
 
+    
+    /**  
+    |-----------------------------------------------|
+    | printLabel                                    |
+    |-----------------------------------------------|
+    |                                               |
+    |  [x] Purpose                                  |
+    |      prints the current value taken from the  |
+    |      Slider (bottom right) - to the label     |
+    |                                               |
+    | [x] Controls Affected/Used                    |
+    |      label on bottom right                    |
+    |      Slider on bottom right                   |
+    |                                               |
+    |                                               |
+    |-----------------------------------------------|
+    */
     private void printLabel(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printLabel
-        // TODO add your handling code here:
         lblRetirementInfo.setText(Integer.toString(sldrRetirement.getValue()));
     }//GEN-LAST:event_printLabel
 
@@ -370,15 +474,21 @@ public class startScreen extends javax.swing.JFrame {
     private javax.swing.JCheckBox chkPlayer5;
     private javax.swing.JCheckBox chkPlayer6;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel lblPlayer1;
     private javax.swing.JLabel lblRetirementInfo;
     private javax.swing.JSlider sldrRetirement;
     private javax.swing.JSpinner spnNumberOfPlayers;

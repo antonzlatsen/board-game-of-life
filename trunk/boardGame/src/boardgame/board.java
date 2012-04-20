@@ -17,6 +17,7 @@ public class board extends javax.swing.JFrame {
     private int valcanoTotal =0;
     
     
+    
     /**
      * Creates new form board
      */
@@ -1290,11 +1291,6 @@ public class board extends javax.swing.JFrame {
                 onErupt(evt);
             }
         });
-        btnValcano.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnValcanoActionPerformed(evt);
-            }
-        });
 
         labValcanoInfo.setText("Spin until Valcano Erupts!!");
 
@@ -2344,7 +2340,7 @@ public class board extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jLabel8.setText("Life counter");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 100, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 100, 30));
 
         bottomRight3.setBackground(new java.awt.Color(204, 204, 255));
         bottomRight3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2592,8 +2588,9 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 360, 180));
 
+        jProgressBar2.setForeground(new java.awt.Color(0, 255, 0));
         jProgressBar2.setValue(20);
-        getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 234, 170, 20));
+        getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 170, 10));
 
         jButton5.setText("Option 2");
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 770, 120, -1));
@@ -2707,13 +2704,18 @@ public class board extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_onErupt
 
-    private void btnValcanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValcanoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnValcanoActionPerformed
-
+    
+     /*
+     * OMFG THIS IS SO DAMN MESSY!
+     * TODO CLEAN UP CODE AND COMMENT!!!!!!!
+     */   
+    
     /**
      * @param args the command line arguments
      */
+    
+    // ************************************************************************
+    //                  MAIN METHOD STARTS
     public static void main(String args[]) {
         BoardGame.missionControl.MessageBoxShow("heel", "hi");
         jProgressBar2.setValue(BoardGame.missionControl.getLifespan());
@@ -2751,9 +2753,33 @@ public class board extends javax.swing.JFrame {
 
             public void run() {
                 new board().setVisible(true);
+                BoardGame.missionControl.MessageBoxShow("heel", "hi");
             }
         });
     }
+    //                  MAIN METHOD END
+    //**************************************************************************
+    
+    
+/**  
+|-----------------------------------------------|
+| Comment Template box                          |
+|-----------------------------------------------|
+|                                               |
+| [x] Use Code Folding                          |
+|                                               |
+|                                               |
+|  [x] Method                                   |
+|  [x] Inner Class                              |
+|  [x] Import                                   |
+|  [x] Javadoc Comment                          |
+|  [x] Initial Comment                          |
+|                                               |
+|                                               |
+|                                               |
+|-----------------------------------------------|
+*/
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Start;
     private javax.swing.JPanel botLeft1;
