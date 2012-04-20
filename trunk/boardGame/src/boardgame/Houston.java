@@ -208,6 +208,25 @@ public class Houston {
         }
         
     }
+    
+    
+    //*************************************
+   //Text Log Events and stuff 
+   //PlayerTurn should be the player name
+    
+        public void rollLog(int spinnerValue){
+         JTextArea TextLog=startScreen.myBoard.getjTextArea1();
+        String log=TextLog.getText();
+            TextLog.setText(log+"\n" + playerTurn + " rolled a " + spinnerValue);
+           log=TextLog.getText();
+           TextLog.setText(log+"\n"+ playerTurn + " is on Square "+players[playerTurn].getPosition());
+
+        }
+     
+        //*************************************
+
+
+
 
     public void setUp() {
 
