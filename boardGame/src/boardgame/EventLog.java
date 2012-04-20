@@ -33,6 +33,7 @@ public class EventLog extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
+        setBounds(new java.awt.Rectangle(1300, 0, 300, 0));
         setMaximumSize(new java.awt.Dimension(400, 360));
         setMinimumSize(new java.awt.Dimension(400, 360));
         setPreferredSize(new java.awt.Dimension(400, 360));
@@ -57,7 +58,7 @@ public class EventLog extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(167, 167, 167)
                         .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
