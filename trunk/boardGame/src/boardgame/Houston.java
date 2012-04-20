@@ -21,6 +21,8 @@ public class Houston {
     private JLabel[] lblPlayers = startScreen.myBoard.getLblPlayers();
     //variables to determine turn
     public int playerTurn = 0;
+    //variable to determine island 
+    private int playerIsland;
     // Variables used in calcs later
     //int mathVar
     /**
@@ -58,7 +60,7 @@ public class Houston {
     public void movePlayer(int SpinnerValue) {
         //  Creates some variables
         //  two ints for use in position setting
-        int oldPlayerPos, moreMathShit, newPlayerPos, playerIsland;
+        int oldPlayerPos, moreMathShit, newPlayerPos;
         newPlayerPos = 0;
         
 
@@ -89,7 +91,8 @@ public class Houston {
 
             if (counter > playerIslandArray.length - 1) 
             {
-                counter = 0;     
+                counter = 0;
+                newPlayerPos=1;
                 
                 //change the players island once the end of the island is reached 
                     //code here is only for the middle island so far 
@@ -102,8 +105,12 @@ public class Houston {
                     players[playerTurn].changeIsland(3);
                     setIsland(players[playerTurn].getIsland());
                 }
+                else if(playerIsland==3){
+                    setIsland(players[playerTurn].getIsland());}
+                }
+                    
                 
-            } 
+        
             else 
             {              
                 if (playerIslandArray[counter].getBackground().equals(Color.red)) 
@@ -118,13 +125,22 @@ public class Houston {
                             System.out.println("You have this much money " + players[BoardGame.missionControl.playerTurn].getMoney());
                             BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(10000);
                             System.out.println("Updated total = " + players[BoardGame.missionControl.playerTurn].getMoney());
-                            counter ++;                       
+                            //counter ++;                       
                         }
-                else
-                {
+                else if(playerIslandArray[counter].getBackground().equals(Color.yellow)){
+                    counter ++;
+                    islandSelectGUI.main(null);
+                    newPlayerPos=1;
+                    break;
+                }
+                
+                
+                //else
+               // {
                     counter++;
                     loopCounter++;
-                }
+                    newPlayerPos++;
+                //}
             }    
         }
         loopCounter = 0;
@@ -167,16 +183,12 @@ public class Houston {
         System.out.println("Spinner Value = " + SpinnerValue);
         System.out.println("OLD player position = " + oldPlayerPos);
         System.out.println("New player position = " + newPlayerPos);
-
+        System.out.println("Counter = " + counter);
+        System.out.println("player class get position = " + playerIslandArray[players[playerTurn].getPosition() -1].add(lblPlayers[playerTurn]));
 
         //  takes the top right island tile = to the new player position
         //
-        playerIslandArray[players[playerTurn].getPosition() - 1].add(lblPlayers[playerTurn]);
-        playerTurn++;
-
-        if (playerTurn > startScreen.numberOfPlayers) {
-            playerTurn = 0;
-        }
+        playerIslandArray[players[playerTurn].getPosition() -1].add(lblPlayers[playerTurn]);
 
         startScreen.myBoard.repaint();
 
@@ -191,7 +203,7 @@ public class Houston {
                     JOptionPane.WARNING_MESSAGE);
     }
     
-    private void setIsland(int playerIsland){
+    public void setIsland(int playerIsland){
         
         //depending on what island the player is on set the array to be modified
         if (playerIsland == 1) {
@@ -200,11 +212,13 @@ public class Houston {
             playerIslandArray = systemIslandMiddleCollegeArray;
         } else if (playerIsland == 3) {
             playerIslandArray = systemIslanMiddleArray;
-        } else if (playerIsland == 4) {
+        } else if(playerIsland == 4){
+            playerIslandArray = systemIslandTopRightArray;
+        } else if (playerIsland == 6) {
             playerIslandArray = systemIslandBottomRightArray;
-        } else if (playerIsland == 5) {
+        } else if (playerIsland == 8) {
             playerIslandArray = systemIslandBottomLeftArray;
-        } else if(playerIsland ==6)   {
+        } else if(playerIsland ==10)   {
             playerIslandArray = systemIslandTopLeftArray;
         }
         
@@ -241,7 +255,7 @@ public class Houston {
         
         //sets the players icons invisible depending on the amount of players
         
-        for (int i = 6 - startScreen.numberOfPlayers; i > startScreen.numberOfPlayers; i--) {
+        for (int i = 5; i != startScreen.numberOfPlayers; i--) {
             lblPlayers[i].setVisible(false);
         }
 

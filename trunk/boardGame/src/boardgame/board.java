@@ -187,6 +187,7 @@ public class board extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        btnEndTurn = new javax.swing.JButton();
 
         jLabel9.setText("jLabel9");
 
@@ -580,7 +581,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(botLeft6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 580, 54, 54));
 
-        botLeft8.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft8.setBackground(new java.awt.Color(0, 0, 255));
         botLeft8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft8.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft8.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -906,7 +907,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topRight14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 220, 54, 54));
 
-        topRight1.setBackground(new java.awt.Color(255, 0, 0));
+        topRight1.setBackground(new java.awt.Color(0, 0, 255));
         topRight1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight1.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight1.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -1181,6 +1182,11 @@ public class board extends javax.swing.JFrame {
         spinner.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 onClickSpinner(evt);
+            }
+        });
+        spinner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                spinnerActionPerformed(evt);
             }
         });
         getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 50));
@@ -1666,7 +1672,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(middle35, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 54, 54));
 
-        middle36.setBackground(new java.awt.Color(255, 0, 0));
+        middle36.setBackground(new java.awt.Color(255, 255, 0));
         middle36.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle36.setMaximumSize(new java.awt.Dimension(54, 54));
         middle36.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -2085,10 +2091,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topRight19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 220, 54, 54));
 
-        topRight3.setBackground(new java.awt.Color(255, 0, 0));
+        topRight3.setBackground(java.awt.Color.blue);
         topRight3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight3.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight3.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight3.setName("directional");
 
         javax.swing.GroupLayout topRight3Layout = new javax.swing.GroupLayout(topRight3);
         topRight3.setLayout(topRight3Layout);
@@ -2265,7 +2272,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(bottomRight15, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 700, 54, 54));
 
-        bottomRight14.setBackground(new java.awt.Color(204, 204, 255));
+        bottomRight14.setBackground(new java.awt.Color(0, 0, 255));
         bottomRight14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight14.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight14.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -2657,6 +2664,14 @@ public class board extends javax.swing.JFrame {
         jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 10));
 
+        btnEndTurn.setText("End Turn");
+        btnEndTurn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEndTurnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEndTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 770, 110, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -2672,10 +2687,10 @@ public class board extends javax.swing.JFrame {
         if(randomNum==1){
             valcanoActive =true;
             btnValcano.setEnabled(true);
-            spinner.setEnabled(false);
-            
-            
         }
+        
+        spinner.setEnabled(false);
+        
         //Updates Log
          BoardGame.missionControl.rollLog(randomNum);
         }
@@ -2699,10 +2714,25 @@ public class board extends javax.swing.JFrame {
                 valcanoActive=false;
                 valcanoTotal=0;
                 progressValcano.setValue(0);
-                spinner.setEnabled(true);
             }     
         }
     }//GEN-LAST:event_onErupt
+
+    private void btnEndTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEndTurnActionPerformed
+        
+        BoardGame.missionControl.playerTurn++;
+
+        if (BoardGame.missionControl.playerTurn > startScreen.numberOfPlayers) {
+            BoardGame.missionControl.playerTurn = 0;
+            
+        }
+        
+        spinner.setEnabled(true);
+    }//GEN-LAST:event_btnEndTurnActionPerformed
+
+    private void spinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinnerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_spinnerActionPerformed
 
     
      /*
@@ -2830,6 +2860,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel bottomRight7;
     private javax.swing.JPanel bottomRight8;
     private javax.swing.JPanel bottomRight9;
+    private javax.swing.JButton btnEndTurn;
     private javax.swing.JButton btnValcano;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
