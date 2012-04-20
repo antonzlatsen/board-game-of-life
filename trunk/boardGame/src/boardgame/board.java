@@ -166,8 +166,6 @@ public class board extends javax.swing.JFrame {
         bottomRight12 = new javax.swing.JPanel();
         bottomRight1 = new javax.swing.JPanel();
         bottomRight13 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -2541,12 +2539,6 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(bottomRight13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 700, 54, 54));
 
-        jButton2.setText(">");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 40, 30));
-
-        jButton3.setText(">");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 40, 30));
-
         jPanel9.setBackground(new java.awt.Color(204, 204, 204));
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
@@ -2661,7 +2653,7 @@ public class board extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/old_paper.jpg"))); // NOI18N
         jLabel7.setMaximumSize(new java.awt.Dimension(54, 54));
         jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 10));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2800,8 +2792,6 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel bottomRight8;
     private javax.swing.JPanel bottomRight9;
     private javax.swing.JButton btnValcano;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
@@ -2995,12 +2985,26 @@ public class board extends javax.swing.JFrame {
 
     public JPanel[] getMiddleIsland(){
         
-        JPanel middleIslandArray[] = {middle1,middle2,middle3,middle4,middle5,middle6,middle7,middle8,middle9,middle10,
-            middle11,middle12,middle13,middle14,middle15,middle16,middle17,middle18,middle19,middle20,
-            middle21,middle22,middle23,middle24,middle25,middle26,middle27,middle28,middle29,middle30,
+        JPanel middleIslandArray[] = {middle18,middle20,
+            middle22,middle24,middle26,middle27,middle28,middle29,middle30,
             middle31,middle32,middle33,middle34,middle35,middle36};
         return middleIslandArray;
         }
+    
+    public JPanel[] getMiddleIslandCareer(){
+        
+        JPanel middleIslandCareer [] = {middle2, middle4, middle6,middle8,middle10,middle12,middle14,middle16};
+        
+        return middleIslandCareer;
+    }
+    
+    public JPanel[] getMiddleIslandCollege(){
+        
+        JPanel middleIslandCollege [] = {middle1,middle3,middle5,middle7,middle9,middle11,middle13,middle15,middle17,middle19,middle21,middle23,middle25};
+        
+        return middleIslandCollege;
+        
+    }
 
     public JLabel[] getLblPlayers(){
         
