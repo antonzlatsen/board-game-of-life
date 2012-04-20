@@ -17,7 +17,8 @@ public class startScreen extends javax.swing.JFrame {
     //declare variables 
     public static board myBoard = new board();
     public static int numberOfPlayers = 2;
-    
+    //
+     public static EventLog myEventLog= new EventLog();
     
     /**
      * Creates new form startScreen
@@ -282,6 +283,8 @@ public class startScreen extends javax.swing.JFrame {
                     BoardGame.missionControl.setUp();
                     myBoard.setVisible(true);
                     
+                    ///Event Log Window set to visible
+                    myEventLog.setVisible(true);
 
 
                     //  BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
