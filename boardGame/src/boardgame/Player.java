@@ -40,7 +40,7 @@ public class Player {
     */
     public Player(){
         // not used at the moment                               
-        island=2; 
+        island=1; 
         //  should set the player position to tile 1            
         //  ie - the first tile of the set                      
         position=1;
@@ -119,6 +119,10 @@ public class Player {
 
     public void setSpouse(boolean spouse) {
         this.spouse = spouse;
+    }
+    
+    public void changeIsland(int value){
+        this.island = value; 
     }
     
     
