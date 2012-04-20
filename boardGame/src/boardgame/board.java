@@ -2674,6 +2674,8 @@ public class board extends javax.swing.JFrame {
             
             
         }
+        //Updates Log
+         BoardGame.missionControl.rollLog(randomNum);
         }
     }//GEN-LAST:event_onClickSpinner
 
@@ -2947,6 +2949,9 @@ public class board extends javax.swing.JFrame {
         return jLabel6;
     }
     
+      public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
     
     
     //returns the value of the spinner as a string
