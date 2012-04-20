@@ -92,9 +92,9 @@
                   <Component id="chkPlayer1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="chkPlayer2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
@@ -206,9 +206,14 @@
     </Component>
     <Component class="javax.swing.JSlider" name="sldrRetirement">
       <Properties>
-        <Property name="paintLabels" type="boolean" value="true"/>
+        <Property name="majorTickSpacing" type="int" value="10"/>
+        <Property name="minimum" type="int" value="10"/>
+        <Property name="minorTickSpacing" type="int" value="10"/>
         <Property name="snapToTicks" type="boolean" value="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="printLabel"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblRetirementInfo">
       <Properties>

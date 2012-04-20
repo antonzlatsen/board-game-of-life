@@ -1290,6 +1290,11 @@ public class board extends javax.swing.JFrame {
                 onErupt(evt);
             }
         });
+        btnValcano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnValcanoActionPerformed(evt);
+            }
+        });
 
         labValcanoInfo.setText("Spin until Valcano Erupts!!");
 
@@ -2702,10 +2707,16 @@ public class board extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_onErupt
 
+    private void btnValcanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValcanoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnValcanoActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        BoardGame.missionControl.MessageBoxShow("heel", "hi");
+        jProgressBar2.setValue(BoardGame.missionControl.getLifespan());
         /*
          * Set the Nimbus look and feel
          */
@@ -2810,7 +2821,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JProgressBar jProgressBar2;
+    public static javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel labValcanoInfo;

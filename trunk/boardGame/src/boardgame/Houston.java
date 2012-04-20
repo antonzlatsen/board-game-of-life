@@ -9,6 +9,7 @@ import java.awt.Color;
  */
 public class Houston {
 
+    int lifespan = 0;
     // COMMENT LATER 
     public Player player_1 = new Player();
     public Player player_2 = new Player();
@@ -237,6 +238,7 @@ public class Houston {
         }
 
     }
+    
 
    /* 
     * the graveyard of code 
@@ -277,4 +279,13 @@ public class Houston {
         movePlayer(spinnerValue);
 
     }*/
+
+    public int getLifespan() {
+        return lifespan;
+    }
+
+    public void setLifespan(int lifespan) {
+        this.lifespan = lifespan;
+    }
+    
 }
