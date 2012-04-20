@@ -294,6 +294,7 @@ public class startScreen extends javax.swing.JFrame {
                 } 
                 else //validation if textbox is empty
                 {
+                    //TODO remove this curse word lol 
                     BoardGame.missionControl.MessageBoxShow("Please enter two or more names you stupid prick", "Validation Error");
                 }
 
