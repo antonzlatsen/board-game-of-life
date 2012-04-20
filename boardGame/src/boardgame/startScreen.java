@@ -90,8 +90,15 @@ public class startScreen extends javax.swing.JFrame {
 
         jLabel2.setText("Do you want to go to college?");
 
-        sldrRetirement.setPaintLabels(true);
+        sldrRetirement.setMajorTickSpacing(10);
+        sldrRetirement.setMinimum(10);
+        sldrRetirement.setMinorTickSpacing(10);
         sldrRetirement.setSnapToTicks(true);
+        sldrRetirement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                printLabel(evt);
+            }
+        });
 
         lblRetirementInfo.setText("jLabel4");
 
@@ -155,9 +162,9 @@ public class startScreen extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chkPlayer1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chkPlayer2))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkPlayer2)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,6 +222,13 @@ public class startScreen extends javax.swing.JFrame {
                     numberOfPlayers = ((int) spnNumberOfPlayers.getValue()-1);
                     BoardGame.missionControl.setUp();
                     myBoard.setVisible(true);
+                    
+                    BoardGame.missionControl.setLifespan(sldrRetirement.getValue());
+                    
+                    
+                    //BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
+                //  disposes the current form - in this case it is the
+                //  start form when the user selects players and such.
                     dispose();
                 }
                 //validation if textbox is empty
@@ -236,8 +250,6 @@ public class startScreen extends javax.swing.JFrame {
                 
                 
                 
-                //  disposes the current form - in this case it is the
-                //  start form when the user selects players and such.
                 
             }
         });
@@ -338,6 +350,11 @@ public class startScreen extends javax.swing.JFrame {
             jTextField3.setEnabled(true);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_onChangeNumber1
+
+    private void printLabel(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printLabel
+        // TODO add your handling code here:
+        lblRetirementInfo.setText(Integer.toString(sldrRetirement.getValue()));
+    }//GEN-LAST:event_printLabel
 
     
     
