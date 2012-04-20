@@ -231,8 +231,16 @@ public class Houston {
 
     public void setUp() {
 
+        
+        //setLifespan(startScreen.sldrRetirement.getValue());
+        
+        //  Sets the lifespan value to the progress bar on the board
+        board.jProgressBar2.setMaximum(lifespan);
+        board.jProgressBar2.setValue(lifespan);
+        //MessageBoxShow(Integer.toString(lifespan), "validation");
+        
         //sets the players icons invisible depending on the amount of players
-
+        
         for (int i = 6 - startScreen.numberOfPlayers; i > startScreen.numberOfPlayers; i--) {
             lblPlayers[i].setVisible(false);
         }
