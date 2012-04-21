@@ -48,6 +48,10 @@ public class Houston {
     private JPanel playerIslandArray[] = systemIslanMiddleArray;
 
     
+    // Array that holds player names
+     String pName1,pName2,pName3,pName4,pName5,pName6;
+     String [] pNames = new String[6];
+    //
     
     /**
      * *******************************************************
@@ -230,12 +234,28 @@ public class Houston {
    //PlayerTurn should be the player name
     
         public void rollLog(int spinnerValue){
+            //Variables*******************************
          JTextArea TextLog=startScreen.myEventLog.getjTextArea2();
         String log=TextLog.getText();
-            TextLog.setText(log+"\n" + playerTurn + " rolled a " + spinnerValue);
-           log=TextLog.getText();
-           TextLog.setText(log+"\n"+ playerTurn + " is on Square "+players[playerTurn].getPosition());
+       
+ pName1=startScreen.myBoard.getjLabel1().getText();
+        pName2=startScreen.myBoard.getjLabel2().getText();
+         pName3=startScreen.myBoard.getjLabel3().getText();
+         pName4=startScreen.myBoard.getjLabel4().getText();
+          pName5=startScreen.myBoard.getjLabel5().getText();
+         pName6=startScreen.myBoard.getjLabel6().getText();
 
+       pNames[0]=pName1;
+       pNames[1]=pName2;
+       pNames[2]=pName3;
+       pNames[3]=pName4;
+       pNames[4]=pName5;
+       pNames[5]=pName6;
+       
+            TextLog.setText(log+"\n" + pNames[playerTurn] + " rolled a " + spinnerValue);
+           log=TextLog.getText();
+           TextLog.setText(log+"\n"+ pNames[playerTurn] + " is on Square "+players[playerTurn].getPosition());
+          
         }
      
         //*************************************
