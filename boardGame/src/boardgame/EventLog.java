@@ -46,9 +46,7 @@ public class EventLog extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setBounds(new java.awt.Rectangle(1300, 0, 300, 0));
-        setMaximumSize(new java.awt.Dimension(500, 450));
         setMinimumSize(new java.awt.Dimension(500, 450));
-        setPreferredSize(new java.awt.Dimension(500, 450));
         setResizable(false);
 
         jTextArea2.setColumns(20);
@@ -58,46 +56,56 @@ public class EventLog extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Event Log");
 
+        jScrollPane2.setMaximumSize(new java.awt.Dimension(245, 90));
+        jScrollPane2.setMinimumSize(new java.awt.Dimension(245, 90));
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(245, 90));
+
         PlayerDetailsText.setColumns(20);
+        PlayerDetailsText.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         PlayerDetailsText.setRows(5);
+        PlayerDetailsText.setMaximumSize(new java.awt.Dimension(225, 90));
+        PlayerDetailsText.setMinimumSize(new java.awt.Dimension(225, 90));
+        PlayerDetailsText.setPreferredSize(new java.awt.Dimension(225, 90));
         jScrollPane2.setViewportView(PlayerDetailsText);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Player1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
             }
         });
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Player2");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
             }
         });
 
-        jButton3.setText("jButton3");
+        jButton3.setText("Player3");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
             }
         });
 
-        jButton4.setText("jButton4");
+        jButton4.setText("Player4");
+        jButton4.setToolTipText("");
+        jButton4.setActionCommand("Player4");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton4MouseClicked(evt);
             }
         });
 
-        jButton5.setText("jButton5");
+        jButton5.setText("Player5");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton5MouseClicked(evt);
             }
         });
 
-        jButton6.setText("jButton6");
+        jButton6.setText("Player6");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton6MouseClicked(evt);
@@ -109,27 +117,26 @@ public class EventLog extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2)
+                            .addComponent(jButton3))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(35, 35, 35)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButton1)
-                                    .addComponent(jButton2)
-                                    .addComponent(jButton3))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton4)
-                                    .addComponent(jButton5)
-                                    .addComponent(jButton6)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton4)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(198, 198, 198))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +147,6 @@ public class EventLog extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1)
@@ -152,15 +158,17 @@ public class EventLog extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton3)
-                            .addComponent(jButton6))))
-                .addContainerGap(51, Short.MAX_VALUE))
+                            .addComponent(jButton6)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
+        // When button Clicked displays Player info in Textrea PlayerDetailsText
+        
           BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
         BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
          BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
@@ -178,8 +186,13 @@ public class EventLog extends javax.swing.JFrame {
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
-        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[0].getMoney());
-        PlayerDetailsText.setText(BoardGame.missionControl.pNames[0] +" Total money = " + PlayerDetails);
+        String PlayerMoney=Integer.toString(BoardGame.missionControl.players[0].getMoney());
+        String PlayerPet=new Boolean (BoardGame.missionControl.players[0].isPet()).toString();
+        String PlayerSpouse=new Boolean (BoardGame.missionControl.players[0].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[0].isSpouse()).toString();
+        String PlayerPosition;
+        String PlayerIsland;
+        PlayerDetailsText.setText("\t"+BoardGame.missionControl.pNames[0] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -201,8 +214,13 @@ public class EventLog extends javax.swing.JFrame {
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
-        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[1].getMoney());
-        PlayerDetailsText.setText(BoardGame.missionControl.pNames[1] +" Total money = " + PlayerDetails);
+         String PlayerMoney=Integer.toString(BoardGame.missionControl.players[1].getMoney());
+        String PlayerPet=new Boolean (BoardGame.missionControl.players[1].isPet()).toString();
+        String PlayerSpouse=new Boolean (BoardGame.missionControl.players[1].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[1].isSpouse()).toString();
+        String PlayerPosition;
+        String PlayerIsland;
+        PlayerDetailsText.setText("\t"+BoardGame.missionControl.pNames[1] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -224,8 +242,13 @@ public class EventLog extends javax.swing.JFrame {
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
-        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[2].getMoney());
-        PlayerDetailsText.setText(BoardGame.missionControl.pNames[2] +" Total money = " + PlayerDetails);
+        String PlayerMoney=Integer.toString(BoardGame.missionControl.players[2].getMoney());
+        String PlayerPet=new Boolean (BoardGame.missionControl.players[2].isPet()).toString();
+        String PlayerSpouse=new Boolean (BoardGame.missionControl.players[2].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[2].isSpouse()).toString();
+        String PlayerPosition;
+        String PlayerIsland;
+        PlayerDetailsText.setText("\t"+BoardGame.missionControl.pNames[2] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
@@ -247,8 +270,13 @@ public class EventLog extends javax.swing.JFrame {
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
-        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[3].getMoney());
-        PlayerDetailsText.setText(BoardGame.missionControl.pNames[3] +" Total money = " + PlayerDetails);
+        String PlayerMoney=Integer.toString(BoardGame.missionControl.players[3].getMoney());
+        String PlayerPet=new Boolean (BoardGame.missionControl.players[3].isPet()).toString();
+        String PlayerSpouse=new Boolean (BoardGame.missionControl.players[3].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[3].isSpouse()).toString();
+        String PlayerPosition;
+        String PlayerIsland;
+        PlayerDetailsText.setText("\t"+BoardGame.missionControl.pNames[3] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
@@ -270,8 +298,13 @@ public class EventLog extends javax.swing.JFrame {
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
-        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[4].getMoney());
-        PlayerDetailsText.setText(BoardGame.missionControl.pNames[4] +" Total money = " + PlayerDetails);
+        String PlayerMoney=Integer.toString(BoardGame.missionControl.players[4].getMoney());
+        String PlayerPet=new Boolean (BoardGame.missionControl.players[4].isPet()).toString();
+        String PlayerSpouse=new Boolean (BoardGame.missionControl.players[4].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[4].isSpouse()).toString();
+        String PlayerPosition;
+        String PlayerIsland;
+        PlayerDetailsText.setText("\t"+BoardGame.missionControl.pNames[4] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
@@ -292,9 +325,14 @@ public class EventLog extends javax.swing.JFrame {
        BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
-        
-        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[5].getMoney());
-        PlayerDetailsText.setText(BoardGame.missionControl.pNames[5] +" Total money = " + PlayerDetails);
+       
+        String PlayerMoney=Integer.toString(BoardGame.missionControl.players[5].getMoney());
+        String PlayerPet=new Boolean (BoardGame.missionControl.players[5].isPet()).toString();
+        String PlayerSpouse=new Boolean (BoardGame.missionControl.players[5].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[5].isSpouse()).toString();
+        String PlayerPosition;
+        String PlayerIsland;
+        PlayerDetailsText.setText("\t"+BoardGame.missionControl.pNames[5] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
     }//GEN-LAST:event_jButton6MouseClicked
 
     
