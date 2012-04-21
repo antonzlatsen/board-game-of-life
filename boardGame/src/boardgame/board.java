@@ -3023,6 +3023,19 @@ public class board extends javax.swing.JFrame {
         return spinner.getText();
     }
     
+    public JLabel[] getLblPlayers(){
+        
+        JLabel[] labels = {lblPlayer1,lblPlayer2,jLabel11,jLabel12,jLabel13,jLabel14};
+        
+        return labels;
+    }
+    
+    
+    //*****************************************************************************************************************************
+    //          ARRAY SECTION   - creates arrays based on their islands
+    
+
+     //         top LEFT - has no paths that need coding
     public JPanel[] getTopLeftIsland(){
         
         JPanel topLeftIsland[] = {topLeft1,topLeft2,topLeft3,topLeft4,topLeft5,topLeft6,topLeft7,topLeft8,topLeft9,topLeft10,topLeft11,topLeft12,topLeft13,topLeft14,topLeft15,topLeft16,topLeft17,topLeft18,topLeft19,topLeft20,topLeft21,topLeft22};
@@ -3030,6 +3043,8 @@ public class board extends javax.swing.JFrame {
         return topLeftIsland;
     }
     
+    
+     //         bottom LEFT - DONE
     public JPanel[] getBottomLeftIsland(){
         
         JPanel bottomLeft[] = {botLeft1,botLeft2,botLeft3,botLeft4, botLeft5, botLeft6, botLeft7, botLeft8, botLeft9, botLeft10, botLeft11, botLeft12, botLeft13, botLeft14, botLeft15, botLeft16, botLeft17, botLeft18, botLeft19, botLeft20, botLeft21, botLeft22, botLeft23, botLeft24, botLeft25, botLeft26, botLeft27};
@@ -3037,6 +3052,14 @@ public class board extends javax.swing.JFrame {
         return bottomLeft;
     }
     
+    public JPanel[] getBottomLeftIslandPath1(){
+        
+        JPanel bottomLeftPath1[] = {botLeft15};
+        
+        return bottomLeftPath1;
+    }
+    
+     //         bottom RIGHT - DONE
      public JPanel[] getBottomRightIsland(){
         
         JPanel BottomRightIsland[] = {bottomRight1,bottomRight2,bottomRight3,bottomRight4,bottomRight5,bottomRight6,bottomRight7,bottomRight8,bottomRight9,bottomRight10,bottomRight11,bottomRight12,bottomRight13,bottomRight14,bottomRight15,bottomRight16,bottomRight17,bottomRight18,bottomRight19,bottomRight20,bottomRight21};
@@ -3044,14 +3067,28 @@ public class board extends javax.swing.JFrame {
         return BottomRightIsland;
     }
 
+        public JPanel[] getBottomRightIslandPath1(){
+        
+        JPanel BottomRightIslandPath1[] = {bottomRight21};
+        
+        return BottomRightIslandPath1;
+    }
+    
+     //         top RIGHT - DONE
         public JPanel[] getTopRightIsland(){
         
-        JPanel topRightIsland[] = {topRight1, topRight2, topRight3, topRight4, topRight5, topRight6, topRight7, topRight8, topRight9, topRight10, topRight11, topRight12, topRight13, topRight14, topRight15, topRight16, topRight17, topRight18, topRight19};
+        JPanel topRightIsland[] = {topRight1, topRight2, topRight3, topRight4, topRight5, topRight6, topRight7, topRight8, topRight9, topRight10, topRight11, topRight12, topRight13, topRight14, topRight15, topRight16};
         
         return topRightIsland;
     }
+        
+        public JPanel[] getTopRightIslandPath1(){ // alternate path player can make
+            JPanel topRightIslandPath1[] = {topRight17, topRight18, topRight19};
+                    return topRightIslandPath1;
+        }
 
-
+   
+    //          MIDDLE DONE!
     public JPanel[] getMiddleIsland(){
         
         JPanel middleIslandArray[] = {middle18,middle20,
@@ -3067,20 +3104,13 @@ public class board extends javax.swing.JFrame {
         return middleIslandCareer;
     }
     
-    public JPanel[] getMiddleIslandCollege(){
-        
-        JPanel middleIslandCollege [] = {middle1,middle3,middle5,middle7,middle9,middle11,middle13,middle15,middle17,middle19,middle21,middle23,middle25};
-        
-        return middleIslandCollege;
-        
+    public JPanel[] getMiddleIslandCollege(){    
+        JPanel middleIslandCollege [] = {middle1,middle3,middle5,middle7,middle9,middle11,middle13,middle15,middle17,middle19,middle21,middle23,middle25};     
+        return middleIslandCollege;       
     }
-
-    public JLabel[] getLblPlayers(){
-        
-        JLabel[] labels = {lblPlayer1,lblPlayer2,jLabel11,jLabel12,jLabel13,jLabel14};
-        
-        return labels;
-    }
+    //      END ARRAY SECTION
+    //*****************************************************************************************************************************************************8
+    
     
     
     
