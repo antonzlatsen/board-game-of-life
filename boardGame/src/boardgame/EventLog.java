@@ -169,13 +169,13 @@ public class EventLog extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // When button Clicked displays Player info in Textrea PlayerDetailsText
         
+        //Updates pNames array(Not sure if i still need this)
           BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
         BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
          BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
          BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
           BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
          BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
-         
          
        BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
        BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
@@ -197,21 +197,7 @@ public class EventLog extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
-        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
-         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
-         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
-          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
-         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
-         
-         
-       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
-       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
-       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
-       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
-       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
-       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
-       
+  
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
          String PlayerMoney=Integer.toString(BoardGame.missionControl.players[1].getMoney());
@@ -225,20 +211,6 @@ public class EventLog extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
-          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
-        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
-         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
-         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
-          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
-         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
-         
-         
-       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
-       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
-       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
-       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
-       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
-       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
@@ -253,20 +225,7 @@ public class EventLog extends javax.swing.JFrame {
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
-          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
-        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
-         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
-         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
-          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
-         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
-         
-         
-       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
-       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
-       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
-       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
-       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
-       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
+        
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
@@ -281,21 +240,7 @@ public class EventLog extends javax.swing.JFrame {
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         // TODO add your handling code here:
-          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
-        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
-         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
-         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
-          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
-         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
          
-         
-       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
-       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
-       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
-       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
-       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
-       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
-       
        // int currentPlayer=BoardGame.missionControl.playerTurn;
         
         String PlayerMoney=Integer.toString(BoardGame.missionControl.players[4].getMoney());
@@ -309,20 +254,7 @@ public class EventLog extends javax.swing.JFrame {
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         // TODO add your handling code here:
-          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
-        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
-         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
-         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
-          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
-         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
-         
-         
-       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
-       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
-       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
-       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
-       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
-       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
+   
        
        // int currentPlayer=BoardGame.missionControl.playerTurn;
        
