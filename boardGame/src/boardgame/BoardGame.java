@@ -42,3 +42,17 @@ public static Houston missionControl = new Houston();
 
 }
 
+
+
+//      This will now be the place to add to-do's 
+//      When you click on tasks - you can see what there is still left to do
+//      Hopefully will keep us up to date on things instead of having to look at the logs on SVN
+
+
+/**     
+ *      TODO    0.  Start populating this area with things that need done
+ *      TODO    1.  new form for path switching 
+        TODO    2.  Validate the eruption button and the end turn button
+        TODO    3.  make islands within island (islandception)
+        TODO    4.  Start naming controls as they are added - this will save a lot of time with renaming and creaking code later on
+ */

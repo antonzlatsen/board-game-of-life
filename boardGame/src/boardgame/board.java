@@ -1184,12 +1184,7 @@ public class board extends javax.swing.JFrame {
                 onClickSpinner(evt);
             }
         });
-        spinner.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                spinnerActionPerformed(evt);
-            }
-        });
-        getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, 50));
+        getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 170, 50));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
         middle3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2347,7 +2342,7 @@ public class board extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jLabel8.setText("Life counter");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 100, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 100, 30));
 
         bottomRight3.setBackground(new java.awt.Color(204, 204, 255));
         bottomRight3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2597,7 +2592,7 @@ public class board extends javax.swing.JFrame {
 
         jProgressBar2.setForeground(new java.awt.Color(0, 255, 0));
         jProgressBar2.setValue(20);
-        getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 170, 10));
+        getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 170, 10));
 
         jButton5.setText("Option 2");
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 770, 120, -1));
@@ -2670,13 +2665,14 @@ public class board extends javax.swing.JFrame {
                 btnEndTurnActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEndTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 770, 110, -1));
+        getContentPane().add(btnEndTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void onClickSpinner(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onClickSpinner
-        // TODO add your handling code here:
+        // TODO change the name of the spinnerbutton - to btnSpinner
+        
         if(spinner.isEnabled()){
         int randomNum = 1 + (int)(Math.random()*10);
         
@@ -2693,11 +2689,12 @@ public class board extends javax.swing.JFrame {
         
         //Updates Log
          BoardGame.missionControl.rollLog(randomNum);
+         btnEndTurn.setEnabled(true);
         }
     }//GEN-LAST:event_onClickSpinner
 
     private void onErupt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onErupt
-        // TODO add your handling code here:
+        
         
         int rand;
         if(valcanoActive==true){
@@ -2728,16 +2725,15 @@ public class board extends javax.swing.JFrame {
         }
         
         spinner.setEnabled(true);
+        
+        
+        btnEndTurn.setEnabled(false);
     }//GEN-LAST:event_btnEndTurnActionPerformed
-
-    private void spinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinnerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_spinnerActionPerformed
 
     
      /*
      * OMFG THIS IS SO DAMN MESSY!
-     * TODO CLEAN UP CODE AND COMMENT!!!!!!!
+     * @TODO CLEAN UP CODE AND COMMENT!!!!!!!
      */   
     
     /**
