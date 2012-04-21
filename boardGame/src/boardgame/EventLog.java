@@ -8,7 +8,7 @@ import javax.swing.*;
 /**
  *
  * 
- * @author Darren
+ * @author TeamLiquid
  */
 
 
@@ -37,11 +37,18 @@ public class EventLog extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         PlayerDetailsText = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setBounds(new java.awt.Rectangle(1300, 0, 300, 0));
-        setMinimumSize(new java.awt.Dimension(400, 360));
+        setMaximumSize(new java.awt.Dimension(500, 450));
+        setMinimumSize(new java.awt.Dimension(500, 450));
+        setPreferredSize(new java.awt.Dimension(500, 450));
         setResizable(false);
 
         jTextArea2.setColumns(20);
@@ -62,6 +69,41 @@ public class EventLog extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("jButton2");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        jButton3.setText("jButton3");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        jButton4.setText("jButton4");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
+        jButton5.setText("jButton5");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("jButton6");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,7 +119,15 @@ public class EventLog extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(35, 35, 35)
-                                .addComponent(jButton1))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton1)
+                                    .addComponent(jButton2)
+                                    .addComponent(jButton3))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton4)
+                                    .addComponent(jButton5)
+                                    .addComponent(jButton6)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -91,7 +141,18 @@ public class EventLog extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1)
+                            .addComponent(jButton4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton2)
+                            .addComponent(jButton5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton3)
+                            .addComponent(jButton6))))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
@@ -120,6 +181,121 @@ public class EventLog extends javax.swing.JFrame {
         String PlayerDetails=Integer.toString(BoardGame.missionControl.players[0].getMoney());
         PlayerDetailsText.setText(BoardGame.missionControl.pNames[0] +" Total money = " + PlayerDetails);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
+        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
+         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
+         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
+          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
+         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
+         
+         
+       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
+       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
+       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
+       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
+       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
+       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
+       
+       // int currentPlayer=BoardGame.missionControl.playerTurn;
+        
+        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[1].getMoney());
+        PlayerDetailsText.setText(BoardGame.missionControl.pNames[1] +" Total money = " + PlayerDetails);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
+        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
+         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
+         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
+          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
+         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
+         
+         
+       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
+       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
+       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
+       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
+       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
+       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
+       
+       // int currentPlayer=BoardGame.missionControl.playerTurn;
+        
+        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[2].getMoney());
+        PlayerDetailsText.setText(BoardGame.missionControl.pNames[2] +" Total money = " + PlayerDetails);
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
+        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
+         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
+         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
+          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
+         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
+         
+         
+       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
+       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
+       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
+       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
+       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
+       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
+       
+       // int currentPlayer=BoardGame.missionControl.playerTurn;
+        
+        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[3].getMoney());
+        PlayerDetailsText.setText(BoardGame.missionControl.pNames[3] +" Total money = " + PlayerDetails);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
+        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
+         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
+         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
+          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
+         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
+         
+         
+       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
+       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
+       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
+       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
+       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
+       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
+       
+       // int currentPlayer=BoardGame.missionControl.playerTurn;
+        
+        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[4].getMoney());
+        PlayerDetailsText.setText(BoardGame.missionControl.pNames[4] +" Total money = " + PlayerDetails);
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
+        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
+         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
+         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
+          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
+         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
+         
+         
+       BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
+       BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
+       BoardGame.missionControl.pNames[2]=BoardGame.missionControl.pName3;
+       BoardGame.missionControl.pNames[3]=BoardGame.missionControl.pName4;
+       BoardGame.missionControl.pNames[4]=BoardGame.missionControl.pName5;
+       BoardGame.missionControl.pNames[5]=BoardGame.missionControl.pName6;
+       
+       // int currentPlayer=BoardGame.missionControl.playerTurn;
+        
+        String PlayerDetails=Integer.toString(BoardGame.missionControl.players[5].getMoney());
+        PlayerDetailsText.setText(BoardGame.missionControl.pNames[5] +" Total money = " + PlayerDetails);
+    }//GEN-LAST:event_jButton6MouseClicked
 
     
     
@@ -165,7 +341,7 @@ public class EventLog extends javax.swing.JFrame {
                 new EventLog().setVisible(true);
              
              
-     
+           
             }
         });
     }
@@ -179,6 +355,11 @@ public class EventLog extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea PlayerDetailsText;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -186,6 +367,33 @@ public class EventLog extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
  
     
+    
+    //Getters
+   public JButton getjbutton1(){
+   return jButton1;
+   }
+     public JButton getjbutton2(){
+   return jButton2;
+   }
+       public JButton getjbutton3(){
+   return jButton3;
+   }
+         public JButton getjbutton4(){
+   return jButton4;
+   }
+           public JButton getjbutton5(){
+   return jButton5;
+   }
+             public JButton getjbutton6(){
+   return jButton6;
+   }
    
+   //Jbutton array
+             public JButton[] getbuttons(){
+        
+        JButton[] buttons = {jButton1,jButton2,jButton3,jButton4,jButton5,jButton6};
+        
+        return buttons;
+    }
    
 }

@@ -48,10 +48,14 @@ public class Houston {
     private JPanel playerIslandArray[] = systemIslanMiddleArray;
 
     
-    // Array that holds player names
+    // Array that holds player names used in event log
      String pName1,pName2,pName3,pName4,pName5,pName6;
      String [] pNames = new String[6];
     //
+     
+     //Array of Jbuttons for event log
+    JButton[] hideButtons= startScreen.myEventLog.getbuttons();
+     
     
     /**
      * *******************************************************
@@ -277,6 +281,9 @@ public class Houston {
         
         for (int i = 5; i != startScreen.numberOfPlayers; i--) {
             lblPlayers[i].setVisible(false);
+            
+            //Buttons on event log correspond to number of players
+             hideButtons[i].setVisible(false);
         }
 
     }
