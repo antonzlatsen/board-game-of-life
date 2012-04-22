@@ -170,12 +170,12 @@ public class EventLog extends javax.swing.JFrame {
         // When button Clicked displays Player info in Textrea PlayerDetailsText
         
         //Updates pNames array(Not sure if i still need this)
-          BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
-        BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
-         BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
-         BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
-          BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
-         BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
+       BoardGame.missionControl.pName1=startScreen.myBoard.getjLabel1().getText();
+       BoardGame.missionControl.pName2=startScreen.myBoard.getjLabel2().getText();
+       BoardGame.missionControl.pName3=startScreen.myBoard.getjLabel3().getText();
+       BoardGame.missionControl.pName4=startScreen.myBoard.getjLabel4().getText();
+       BoardGame.missionControl.pName5=startScreen.myBoard.getjLabel5().getText();
+       BoardGame.missionControl.pName6=startScreen.myBoard.getjLabel6().getText();
          
        BoardGame.missionControl.pNames[0]=BoardGame.missionControl.pName1;
        BoardGame.missionControl.pNames[1]=BoardGame.missionControl.pName2;
