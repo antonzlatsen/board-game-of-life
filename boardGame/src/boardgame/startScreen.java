@@ -17,8 +17,10 @@ public class startScreen extends javax.swing.JFrame {
     //declare variables 
     public static board myBoard = new board();
     public static int numberOfPlayers = 2;
-    //
-     public static EventLog myEventLog= new EventLog();
+    
+    //eventLog & helpPage declarations.
+    public static EventLog myEventLog= new EventLog();
+    public static helpPage myHelpPage = new helpPage(); 
     
     /**
      * Creates new form startScreen
@@ -106,18 +108,23 @@ public class startScreen extends javax.swing.JFrame {
         lblRetirementInfo.setText("50");
 
         jButton2.setText("Need some help?");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        lblPlayer1.setText("jLabel2");
+        lblPlayer1.setText("Player 1");
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("Player 2");
 
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("Player 3");
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("Player 4");
 
-        jLabel7.setText("jLabel7");
+        jLabel7.setText("Player 5");
 
-        jLabel8.setText("jLabel8");
+        jLabel8.setText("Player 6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -464,6 +471,14 @@ public class startScreen extends javax.swing.JFrame {
     private void printLabel(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printLabel
         lblRetirementInfo.setText(Integer.toString(sldrRetirement.getValue()));
     }//GEN-LAST:event_printLabel
+
+    /* jButton2ActionPerformed()
+     * When clicked this will open up a help page, giving the players information about the game.
+     */
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+       myHelpPage.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
     
