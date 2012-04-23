@@ -136,7 +136,7 @@ public class Houston {
                 else if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland() == 9){
                     players[playerTurn].changeIsland(8);
                     setIsland(players[playerTurn].getIsland());
-                    counter=12;
+                    counter=13;
                 }
                 //*****************************************************
                     
@@ -170,7 +170,7 @@ public class Houston {
                         currentIsland+=1;
                         players[playerTurn].changeIsland(currentIsland);
                         setIsland(players[playerTurn].getIsland());
-                        counter=-1;
+                        counter=0;
                     }
                 }
                 

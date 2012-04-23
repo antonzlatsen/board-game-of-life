@@ -3047,14 +3047,14 @@ public class board extends javax.swing.JFrame {
      //         bottom LEFT - DONE
     public JPanel[] getBottomLeftIsland(){
         
-        JPanel bottomLeft[] = {botLeft1,botLeft2,botLeft3,botLeft4, botLeft5, botLeft6, botLeft7, botLeft8, botLeft9, botLeft10, botLeft11, botLeft12, botLeft13, botLeft14, botLeft15, botLeft16, botLeft17, botLeft18, botLeft19, botLeft20, botLeft21, botLeft22, botLeft23, botLeft24, botLeft25, botLeft26, botLeft27};
+        JPanel bottomLeft[] = {botLeft1,botLeft2,botLeft3,botLeft4, botLeft5, botLeft6, botLeft7, botLeft8, botLeft9, botLeft10, botLeft11, botLeft12, botLeft13, botLeft14, botLeft16, botLeft17, botLeft18, botLeft19, botLeft20, botLeft21, botLeft22, botLeft23, botLeft24, botLeft25, botLeft26, botLeft27};
         
         return bottomLeft;
     }
     
     public JPanel[] getBottomLeftIslandPath1(){
         
-        JPanel bottomLeftPath1[] = {botLeft15};
+        JPanel bottomLeftPath1[] = {botLeft8,botLeft15};
         
         return bottomLeftPath1;
     }
@@ -3062,14 +3062,14 @@ public class board extends javax.swing.JFrame {
      //         bottom RIGHT - DONE
      public JPanel[] getBottomRightIsland(){
         
-        JPanel BottomRightIsland[] = {bottomRight1,bottomRight2,bottomRight3,bottomRight4,bottomRight5,bottomRight6,bottomRight7,bottomRight8,bottomRight9,bottomRight10,bottomRight11,bottomRight12,bottomRight13,bottomRight14,bottomRight15,bottomRight16,bottomRight17,bottomRight18,bottomRight19,bottomRight20,bottomRight21};
+        JPanel BottomRightIsland[] = {bottomRight1,bottomRight2,bottomRight3,bottomRight4,bottomRight5,bottomRight6,bottomRight7,bottomRight8,bottomRight9,bottomRight10,bottomRight11,bottomRight12,bottomRight13,bottomRight14,bottomRight15,bottomRight16,bottomRight17,bottomRight18,bottomRight19,bottomRight20};
         
         return BottomRightIsland;
     }
 
         public JPanel[] getBottomRightIslandPath1(){
         
-        JPanel BottomRightIslandPath1[] = {bottomRight21};
+        JPanel BottomRightIslandPath1[] = {bottomRight14,bottomRight21};
         
         return BottomRightIslandPath1;
     }
@@ -3083,7 +3083,7 @@ public class board extends javax.swing.JFrame {
     }
         
         public JPanel[] getTopRightIslandPath1(){ // alternate path player can make
-            JPanel topRightIslandPath1[] = {topRight17, topRight18, topRight19};
+            JPanel topRightIslandPath1[] = {topRight3, topRight17, topRight18, topRight19};
                     return topRightIslandPath1;
         }
 
