@@ -13,8 +13,8 @@ import javax.swing.*;
 public class board extends javax.swing.JFrame {
 
     //Creating variables here
-    private boolean valcanoActive = false; 
     private int valcanoTotal =0;
+    private boolean valcanoActive =false; 
     
     
     
@@ -2674,22 +2674,25 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum = 1 + (int)(Math.random()*10);
+        int randomNum =1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
         BoardGame.missionControl.movePlayer(randomNum);
         
         if(randomNum==1){
-            valcanoActive =true;
             btnValcano.setEnabled(true);
+            btnEndTurn.setEnabled(false);
+            valcanoActive =true; 
         }
         
         spinner.setEnabled(false);
         
         //Updates Log
          BoardGame.missionControl.rollLog(randomNum);
-         btnEndTurn.setEnabled(true);
+         
+         if(valcanoActive!=true)
+             btnEndTurn.setEnabled(true);
         }
     }//GEN-LAST:event_onClickSpinner
 
@@ -2697,7 +2700,7 @@ public class board extends javax.swing.JFrame {
         
         
         int rand;
-        if(valcanoActive==true){
+        if(btnValcano.isEnabled()){
             btnValcano.setEnabled(true);
             rand = 1 + (int)(Math.random()*10);
             valcanoTotal +=rand;
@@ -2708,10 +2711,11 @@ public class board extends javax.swing.JFrame {
             if(valcanoTotal>15){
                 BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(valcanoTotal*1000);
                 btnValcano.setEnabled(false);
-                valcanoActive=false;
+                btnEndTurn.setEnabled(true);
+                valcanoActive = false;
                 valcanoTotal=0;
                 progressValcano.setValue(0);
-            }     
+            }    
         }
     }//GEN-LAST:event_onErupt
 

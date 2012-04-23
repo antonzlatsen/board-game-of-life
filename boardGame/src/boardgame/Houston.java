@@ -68,60 +68,36 @@ public class Houston {
      * *******************************************************
      * @ DON - comment 
      *  MOVES THE PLAYER POSITION ON SAID ISLAND
-     *
-     *
      **********************************************************
      */
     public void movePlayer(int SpinnerValue) {
-        //  Creates some variables
-        //  two ints for use in position setting
-        int oldPlayerPos, moreMathShit, newPlayerPos;
-        newPlayerPos = 0;
-        
-
-        //  grabs the current player position
-        //  NB - Should be 1 on the first run
-        oldPlayerPos = players[playerTurn].getPosition();
 
         //get what island the player is on
         playerIsland = players[playerTurn].getIsland();
         
         //set the island array 
-        setIsland(playerIsland);
+        setIsland(playerIsland);       
         
-
-        //  Takes the SpinnerValue (a random number gen'ed from the board)
-        //  adds it to the current player position
-        //  then sets the new player position variable
-        newPlayerPos = SpinnerValue + oldPlayerPos;
-
-
-
-        
-        
-        int counter = oldPlayerPos;
+        int counter = players[playerTurn].getPosition();
         int loopCounter = 0;
 
         while (loopCounter < SpinnerValue) {
-
+            
+            //this if is to avoid an out of bounds exception 
             if (counter > playerIslandArray.length - 1) 
             {
+                //reset counter, note counter can change on down depending on the island
                 counter = 0;
                 
                 //change the players island once the end of the island is reached 
-                
+                //this block is just for the middle island 
                 if(playerIsland == 1){
                     players[playerTurn].changeIsland(3);
-                    setIsland(players[playerTurn].getIsland());
-                    newPlayerPos=1;}
+                    setIsland(players[playerTurn].getIsland());}
                 else if (playerIsland == 2){
                     players[playerTurn].changeIsland(3);
-                    setIsland(players[playerTurn].getIsland());
-                    newPlayerPos=1;}
-                /*//commented this out because i dont think we need it
-                 * else if(playerIsland==3){
                     setIsland(players[playerTurn].getIsland());}
-                }*/
+
                 /*these checks or for the alternative paths, it decreases the island by one
                 *and sets the players position depending on the island they are on
                 *******************************************************/
@@ -141,28 +117,30 @@ public class Houston {
                 //*****************************************************
                     
             }
-        
+            
+            
+            //this whole else is checking the color of tiles and performing actions based on that tile
             else 
             {              
                 if (playerIslandArray[counter].getBackground().equals(Color.red)) 
                 {
-                    newPlayerPos = counter + 1;
                     counter ++;
-                    //loopCounter = 0;
                     break;
                 }
                 else if (playerIslandArray[counter].getBackground().equals(Color.green))
                         {
                             System.out.println("You have this much money " + players[BoardGame.missionControl.playerTurn].getMoney());
                             BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(10000);
-                            System.out.println("Updated total = " + players[BoardGame.missionControl.playerTurn].getMoney());
-                            //counter ++;                       
+                            System.out.println("Updated total = " + players[BoardGame.missionControl.playerTurn].getMoney());                      
                         }
                 else if(playerIslandArray[counter].getBackground().equals(Color.yellow)){
-                    counter ++;
-                    islandSelectGUI.main(null);
-                    newPlayerPos=1;
-                    break;
+                    //counter ++;
+                    //islandSelectGUI.main(null);
+                    if(getUserIsland()){
+                        counter=1;
+                        System.out.println("ITS IN HERE");
+                        break;}
+                        
                 }
                 else if(playerIslandArray[counter].getBackground().equals(Color.blue)){
                     if(getUserPath()){
@@ -174,62 +152,26 @@ public class Houston {
                     }
                 }
                 
-                
-                //else
-               // {
+                //increment the loop counter and the counter which represents the players position
                     counter++;
                     loopCounter++;
-                    newPlayerPos++;
-                //}
             }    
         }
         loopCounter = 0;
-              
         
-        // *************************************************
-        // **Checks if a player is at the end of the tile set
-        // see workings below
         
-        //  if the updated position of the player wil bring him beyond the 
-        //  length / ammount of tiles currently in said island / array
-        if (newPlayerPos > playerIslandArray.length)
-        {
-            //  the difference is calculated 
-            //  so - the old player position is subtracted from the length of the array
-            //  E.G.    30 - 2 = 28
-            int difference = playerIslandArray.length - oldPlayerPos;
-            
-            // Takes the spinner value and removes the difference from it.
-            // E.G.    10 - 2 = 8
-            moreMathShit = SpinnerValue - difference;
-            
-            //  set the players position to equal 0 
-            newPlayerPos = 0;
-            //  then add the previous variable onto the position 
-            //  removing the previous two values (in the example)
-            newPlayerPos += moreMathShit;
-            //  NOTE - reading though this code - players can skip red tiles by the looks of things...
-            
-        }
-
-
-        
-
-
 
         //  then adds that new number to the player position.
         players[playerTurn].setPlayerPosition(counter);
 
         System.out.println("Spinner Value = " + SpinnerValue);
-        System.out.println("OLD player position = " + oldPlayerPos);
-        System.out.println("New player position = " + newPlayerPos);
         System.out.println("Counter = " + counter);
 
 
-        //  takes the top right island tile = to the new player position
-        //
+        //  moves the label aka the player icon to the new position on the board
         playerIslandArray[players[playerTurn].getPosition() -1].add(lblPlayers[playerTurn]);
-
+           
+        //redraw the board to update the graphics 
         startScreen.myBoard.repaint();
 
     }
@@ -325,10 +267,18 @@ public class Houston {
 
     }
     
+    
+    /*
+     * this method "getUserPath is used for path switching in islands
+     * when the player lands on a blue tile a dialog box appears
+     * depending on the option selected the method returns a boolean
+     */
     public boolean getUserPath(){
         
+        //declare return boolean
         boolean switchPath=false;
         
+        //create the dialog box with a yes no option 
         JOptionPane pane = new JOptionPane("Do You want to switch paths? ",
         JOptionPane.QUESTION_MESSAGE,
         JOptionPane.YES_NO_OPTION);
@@ -342,57 +292,85 @@ public class Houston {
         if(val instanceof Integer) {
         int intVal = ((Integer)val).intValue();
         if(intVal == JOptionPane.OK_OPTION) {
-        // do the stuff you want to do if the user presses ok
+        // set switchPath to true if yes is pressed
             switchPath=true;
         } else {
-        // do the stuff you want to do if the user presses cancel
+        // set switchPath to false if no is pressed
             switchPath=false;
                 }   
             }
         }
+        //return the boolean
         return switchPath;
     }
     
+    public boolean getUserIsland(){
+        
+        //the new playerIsland 
+        int newplayerIsland=0; 
+        
+        //is the player continuing or changing island
+        boolean playerChangeIsland =true;
+        
+        /*
+         * this code spawns a new JOption pane and gets the users input 
+         * retun value is set to an int to represent the island selection 
+         * 1 - Top Left 2 - Top Right 3 - Bottom Left 4- Bottom Right 0 - no island (continue on)
+         */
+        Object[] options = {"Top Left","Top Right","Bottom Left","Bottom Right", "Continue"};
+        
+        int returnValue = JOptionPane.showOptionDialog(null, "Which Island would you like to travel to?", "Island Travel",
 
-   /* 
-    * the graveyard of code 
-    * 
-    * public void checkTile(int spinnerValue) {
+        JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
 
-        int oldPlayerPos, newPlayerPos, playerIsland;
-        newPlayerPos = 0;
-        JPanel playerIslandArray[] = systemIslanMiddleArray;
-
-        //  grabs the current player position
-        //  NB - Should be 1 on the first run
-        oldPlayerPos = players[playerTurn].getPosition();
-
-        //get what island the player is on
-        playerIsland = players[playerTurn].getIsland();
-
-        //depending on what island the player is on set the array to be modified
-        if (playerIsland == 1) {
-            playerIslandArray = systemIslanMiddleArray;
-        } else if (playerIsland == 2) {
-            playerIslandArray = systemIslandTopRightArray;
-        } else if (playerIsland == 3) {
-            playerIslandArray = systemIslandBottomRightArray;
-        } else if (playerIsland == 4) {
-            playerIslandArray = systemIslandBottomLeftArray;
-        } else if (playerIsland == 5) {
-            playerIslandArray = systemIslandTopLeftArray;
+        null, options, options[0]);
+        
+        switch(returnValue){
+            case 0:
+                returnValue =1;
+                break;
+            case 1:
+                returnValue =2;
+                break;
+            case 2:
+                returnValue =3; 
+                break;
+           case 3:
+                returnValue =4;
+                break;
+           case 4: 
+                returnValue =0;
+                System.out.println("this is the return value = " + returnValue);
+               break;
         }
-
-        for (int i = oldPlayerPos; i < newPlayerPos; i++) {
-            if (playerIslandArray[i].getBackground().equals(Color.red)) {
-                spinnerValue = i;
-            }
-            break;
-        }
-
-        movePlayer(spinnerValue);
-
-    }*/
+        
+        if(returnValue==0)
+            playerChangeIsland=false;
+        
+        
+        /*Depending on the users selection, we need to change the island and position is the player class
+         * and run setIsland in this class and movePlayer with a parameter of zero to update the board
+         */
+        if(playerChangeIsland){
+        if(returnValue==1)
+            newplayerIsland=10;
+        else if(returnValue==2)
+            newplayerIsland=4;
+        else if(returnValue==3)
+            newplayerIsland=8;
+        else if(returnValue==4)
+            newplayerIsland=6;
+        
+        players[playerTurn].changeIsland(newplayerIsland);
+        players[playerTurn].setPlayerPosition(1);
+        setIsland(newplayerIsland);
+        movePlayer(0);}
+        
+        return playerChangeIsland;
+        
+        
+    }
+    
 
     public int getLifespan() {
         return lifespan;
