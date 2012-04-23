@@ -31,8 +31,12 @@ public class Houston {
      */
     //  Top Right Island on the board - assigned to an array
     public JPanel[] systemIslandTopRightArray = startScreen.myBoard.getTopRightIsland();
+    //  Top Right Island on the board alternative path - assigned to an array 
+    public JPanel[] systemIslandTopRightAltArray = startScreen.myBoard.getTopRightIslandPath1();
     //  Bottom Right Island on the board - assigned to an array
     public JPanel[] systemIslandBottomRightArray = startScreen.myBoard.getBottomRightIsland();
+    // Bottom right Island on the board alternative path - assigned to an array
+    public JPanel[] systemIslandBottomRightAltArray = startScreen.myBoard.getBottomRightIslandPath1();
     //  Middle island on the board - assigned to and array
     public JPanel[] systemIslanMiddleArray = startScreen.myBoard.getMiddleIsland();
     //starting islands within the middle island 
@@ -42,8 +46,11 @@ public class Houston {
     public JPanel[] systemIslandMiddleCareerArray = startScreen.myBoard.getMiddleIslandCareer();
     //  Bottom left Island on the board - assigned to an array
     public JPanel[] systemIslandBottomLeftArray = startScreen.myBoard.getBottomLeftIsland();
+     //  Bottom Left Island on the board alternative path - assigned to an array
+    public JPanel[] systemIslandBottomLeftAltArray = startScreen.myBoard.getBottomLeftIslandPath1();
     //  Top Left Island on the board - assigned to and array.
     public JPanel[] systemIslandTopLeftArray = startScreen.myBoard.getTopLeftIsland();
+   
     
     private JPanel playerIslandArray[] = systemIslanMiddleArray;
 
@@ -100,24 +107,40 @@ public class Houston {
             if (counter > playerIslandArray.length - 1) 
             {
                 counter = 0;
-                newPlayerPos=1;
                 
                 //change the players island once the end of the island is reached 
-                    //code here is only for the middle island so far 
-                        //might need a method like "adjust Island"
                 
                 if(playerIsland == 1){
                     players[playerTurn].changeIsland(3);
-                    setIsland(players[playerTurn].getIsland());}
+                    setIsland(players[playerTurn].getIsland());
+                    newPlayerPos=1;}
                 else if (playerIsland == 2){
                     players[playerTurn].changeIsland(3);
                     setIsland(players[playerTurn].getIsland());
-                }
-                else if(playerIsland==3){
+                    newPlayerPos=1;}
+                /*//commented this out because i dont think we need it
+                 * else if(playerIsland==3){
                     setIsland(players[playerTurn].getIsland());}
+                }*/
+                /*these checks or for the alternative paths, it decreases the island by one
+                *and sets the players position depending on the island they are on
+                *******************************************************/
+                else if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland() == 5){
+                    players[playerTurn].changeIsland(4);
+                    setIsland(players[playerTurn].getIsland());
+                    counter=10;}
+                else if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland() == 7){
+                    players[playerTurn].changeIsland(6);
+                    setIsland(players[playerTurn].getIsland());
+                    counter=19;}
+                else if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland() == 9){
+                    players[playerTurn].changeIsland(8);
+                    setIsland(players[playerTurn].getIsland());
+                    counter=12;
                 }
+                //*****************************************************
                     
-                
+            }
         
             else 
             {              
@@ -140,6 +163,15 @@ public class Houston {
                     islandSelectGUI.main(null);
                     newPlayerPos=1;
                     break;
+                }
+                else if(playerIslandArray[counter].getBackground().equals(Color.blue)){
+                    if(getUserPath()){
+                        int currentIsland = players[playerTurn].getIsland();
+                        currentIsland+=1;
+                        players[playerTurn].changeIsland(currentIsland);
+                        setIsland(players[playerTurn].getIsland());
+                        counter=-1;
+                    }
                 }
                 
                 
@@ -192,7 +224,7 @@ public class Houston {
         System.out.println("OLD player position = " + oldPlayerPos);
         System.out.println("New player position = " + newPlayerPos);
         System.out.println("Counter = " + counter);
-        System.out.println("player class get position = " + playerIslandArray[players[playerTurn].getPosition() -1].add(lblPlayers[playerTurn]));
+
 
         //  takes the top right island tile = to the new player position
         //
@@ -222,14 +254,19 @@ public class Houston {
             playerIslandArray = systemIslanMiddleArray;
         } else if(playerIsland == 4){
             playerIslandArray = systemIslandTopRightArray;
+        } else if(playerIsland ==5){
+            playerIslandArray = systemIslandTopRightAltArray;
         } else if (playerIsland == 6) {
             playerIslandArray = systemIslandBottomRightArray;
+        } else if (playerIsland ==7){
+            playerIslandArray = systemIslandBottomRightAltArray;
         } else if (playerIsland == 8) {
             playerIslandArray = systemIslandBottomLeftArray;
+        } else if(playerIsland ==9){
+            playerIslandArray = systemIslandBottomLeftAltArray;
         } else if(playerIsland ==10)   {
             playerIslandArray = systemIslandTopLeftArray;
         }
-        
     }
     
     
@@ -286,6 +323,34 @@ public class Houston {
              hideButtons[i].setVisible(false);
         }
 
+    }
+    
+    public boolean getUserPath(){
+        
+        boolean switchPath=false;
+        
+        JOptionPane pane = new JOptionPane("Do You want to switch paths? ",
+        JOptionPane.QUESTION_MESSAGE,
+        JOptionPane.YES_NO_OPTION);
+        JDialog info = pane.createDialog("Path Switch");
+        info.setVisible(true);
+
+
+        Object val = pane.getValue();
+        // Check for yes or no button pressed
+        if(val != null) {
+        if(val instanceof Integer) {
+        int intVal = ((Integer)val).intValue();
+        if(intVal == JOptionPane.OK_OPTION) {
+        // do the stuff you want to do if the user presses ok
+            switchPath=true;
+        } else {
+        // do the stuff you want to do if the user presses cancel
+            switchPath=false;
+                }   
+            }
+        }
+        return switchPath;
     }
     
 

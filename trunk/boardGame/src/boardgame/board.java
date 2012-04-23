@@ -907,7 +907,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topRight14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 220, 54, 54));
 
-        topRight1.setBackground(new java.awt.Color(0, 0, 255));
+        topRight1.setBackground(new java.awt.Color(204, 204, 255));
         topRight1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight1.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight1.setMinimumSize(new java.awt.Dimension(54, 54));

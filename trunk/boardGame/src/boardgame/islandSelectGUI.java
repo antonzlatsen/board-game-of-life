@@ -105,6 +105,8 @@ public class islandSelectGUI extends javax.swing.JFrame {
               
         BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].changeIsland(10);
         BoardGame.missionControl.setIsland(10);
+        BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setPlayerPosition(1);
+        BoardGame.missionControl.movePlayer(0);
         dispose();
     }//GEN-LAST:event_btnTopLeftActionPerformed
 
@@ -113,8 +115,7 @@ public class islandSelectGUI extends javax.swing.JFrame {
         BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].changeIsland(4);
         BoardGame.missionControl.setIsland(4);
         BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setPlayerPosition(1);
-        BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getPosition()), "A Title");
-        //BoardGame.missionControl.movePlayer(0);
+        BoardGame.missionControl.movePlayer(0);
         dispose();
     }//GEN-LAST:event_btnTopRightActionPerformed
 
@@ -123,7 +124,7 @@ public class islandSelectGUI extends javax.swing.JFrame {
         BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].changeIsland(8);
         BoardGame.missionControl.setIsland(8);
         BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setPlayerPosition(1);
-        //BoardGame.missionControl.movePlayer(0);
+        BoardGame.missionControl.movePlayer(0);
         dispose();
     }//GEN-LAST:event_btnBottomLeftActionPerformed
 
@@ -131,6 +132,8 @@ public class islandSelectGUI extends javax.swing.JFrame {
         
         BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].changeIsland(6);
         BoardGame.missionControl.setIsland(6);
+        BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setPlayerPosition(1);
+        BoardGame.missionControl.movePlayer(0);
         dispose();
     }//GEN-LAST:event_btnBottomRightActionPerformed
 
