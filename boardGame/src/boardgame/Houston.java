@@ -304,6 +304,11 @@ public class Houston {
         return switchPath;
     }
     
+    /*
+     * this method "getUserIsland" is used for island switching
+     * when the user lands on a yellow tile the dialog box appears 
+     * the method returns a boolean depending on the method selected
+     */
     public boolean getUserIsland(){
         
         //the new playerIsland 
@@ -316,8 +321,23 @@ public class Houston {
          * this code spawns a new JOption pane and gets the users input 
          * retun value is set to an int to represent the island selection 
          * 1 - Top Left 2 - Top Right 3 - Bottom Left 4- Bottom Right 0 - no island (continue on)
+         * the content of options depends on the players current island - some options will be removed
          */
-        Object[] options = {"Top Left","Top Right","Bottom Left","Bottom Right", "Continue"};
+        
+        Object[] options = new Object[4];
+            if(players[playerTurn].getIsland()==3){
+                options[0]="Top Left"; options[1]="Top Right"; options[2]="Bottom Left"; options[3]="Bottom Right";}
+           // options = {"Top Left","Top Right","Bottom Left","Bottom Right"};
+            else{
+               if(players[playerTurn].getIsland()==4){
+               options[0]="Top Left"; options[1]="Bottom Left"; options[2]="Bottom Right"; options[3]="Continue";}
+               else if(players[playerTurn].getIsland()==6){
+                   options[0]="Top Left"; options[1]="Top Right"; options[2]="Bottom Left"; options[3]="Continue";}
+               else if(players[playerTurn].getIsland()==8){
+                   options[0]="Top Left"; options[1]="Top Right"; options[2]="Bottom Right"; options[3]="Continue";}
+               else if(players[playerTurn].getIsland()==10){
+                   options[0]="Top Right"; options[1]="Bottom Left"; options[2]="Bottom Right"; options[3]="Continue";}
+                }
         
         int returnValue = JOptionPane.showOptionDialog(null, "Which Island would you like to travel to?", "Island Travel",
 
@@ -325,53 +345,48 @@ public class Houston {
 
         null, options, options[0]);
         
-        switch(returnValue){
-            case 0:
-                returnValue =1;
+        /* the variable returnValue holds the index of the selected value in the
+         * array Object options
+         */
+        
+        //change the object selected to a string so it can be compared 
+        String selected = options[returnValue].toString();
+        
+        //find out what was selected and set the appropiate island
+        switch(selected){
+            case "Top Left":
+                newplayerIsland=10;
                 break;
-            case 1:
-                returnValue =2;
+            case "Top Right":
+                newplayerIsland=4;
                 break;
-            case 2:
-                returnValue =3; 
+            case "Bottom Right":
+                newplayerIsland=6;
                 break;
-           case 3:
-                returnValue =4;
+            case "Bottom Left":
+                newplayerIsland=8;
                 break;
-           case 4: 
-                returnValue =0;
-                System.out.println("this is the return value = " + returnValue);
-               break;
+            case "Continue":
+                playerChangeIsland=false;
+                break;
         }
         
-        if(returnValue==0)
-            playerChangeIsland=false;
-        
-        
-        /*Depending on the users selection, we need to change the island and position is the player class
-         * and run setIsland in this class and movePlayer with a parameter of zero to update the board
+        /*If the user has selected to change island make the appropiate changes 
+         * to the player class and variables in this class
          */
         if(playerChangeIsland){
-        if(returnValue==1)
-            newplayerIsland=10;
-        else if(returnValue==2)
-            newplayerIsland=4;
-        else if(returnValue==3)
-            newplayerIsland=8;
-        else if(returnValue==4)
-            newplayerIsland=6;
         
         players[playerTurn].changeIsland(newplayerIsland);
         players[playerTurn].setPlayerPosition(1);
         setIsland(newplayerIsland);
         movePlayer(0);}
         
+        //return true or false depending on if the player wants to switch islands
         return playerChangeIsland;
         
         
     }
     
-
     public int getLifespan() {
         return lifespan;
     }

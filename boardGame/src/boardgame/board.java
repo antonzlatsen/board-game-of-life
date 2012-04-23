@@ -372,7 +372,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(botLeft1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 54, 54));
 
-        botLeft27.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft27.setBackground(new java.awt.Color(255, 255, 0));
         botLeft27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft27.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft27.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -853,7 +853,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topLeft20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 54, 54));
 
-        topLeft22.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft22.setBackground(new java.awt.Color(255, 255, 0));
         topLeft22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft22.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft22.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -871,7 +871,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topLeft22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 54, 54));
 
-        topRight15.setBackground(new java.awt.Color(204, 204, 255));
+        topRight15.setBackground(new java.awt.Color(255, 255, 0));
         topRight15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight15.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight15.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -2303,7 +2303,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(bottomRight21, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 640, 54, 54));
 
-        bottomRight19.setBackground(new java.awt.Color(204, 204, 255));
+        bottomRight19.setBackground(new java.awt.Color(255, 255, 0));
         bottomRight19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight19.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight19.setMinimumSize(new java.awt.Dimension(54, 54));
