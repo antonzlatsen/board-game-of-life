@@ -273,11 +273,17 @@ public class startScreen extends javax.swing.JFrame {
 
             public void run() {
 
-
-
                 JLabel labels[] = {myBoard.getjLabel1(), myBoard.getjLabel2(), myBoard.getjLabel3(), myBoard.getjLabel4(), myBoard.getjLabel5(), myBoard.getjLabel6()};
                 JTextField textFields[] = {jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6};
                 JCheckBox collegeCheck[] = {chkPlayer1, chkPlayer2, chkPlayer3, chkPlayer4, chkPlayer5, chkPlayer6};
+                    
+                //set players to college or not 
+                for (int i = 0; i < collegeCheck.length; i++) {
+
+                    if (collegeCheck[i].isSelected()) {
+                        BoardGame.missionControl.players[i].changeIsland(2);
+                    }
+                }
 
                 //sets the names on the board 
                 if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals(""))) {
@@ -293,8 +299,6 @@ public class startScreen extends javax.swing.JFrame {
                     
                     ///Event Log Window set to visible
                     myEventLog.setVisible(true);
-
-
                     //  BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
 
 
@@ -304,14 +308,6 @@ public class startScreen extends javax.swing.JFrame {
                 {
                     //TODO remove this curse word lol 
                     BoardGame.missionControl.MessageBoxShow("Please enter two or more names you stupid prick", "Validation Error");
-                }
-
-                //set players to college or not 
-                for (int i = 0; i < collegeCheck.length; i++) {
-
-                    if (collegeCheck[i].isSelected()) {
-                        BoardGame.missionControl.players[i].changeIsland(2);
-                    }
                 }
 
             }

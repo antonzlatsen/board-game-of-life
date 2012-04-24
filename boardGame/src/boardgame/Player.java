@@ -21,10 +21,14 @@ public class Player {
     *   position will show where the player is on his/her island
     **********************************************************
     */
-    private int island, position, money, spinToWin; 
+    private int island, position, money, spinToWin,salary,promotionTokens,houseIndex=-1; 
     private boolean pet=false; 
     private boolean baby=false;
     private boolean spouse=false;
+    private boolean boat=false;
+    private boolean plane=false;
+    private boolean house=false;
+    private boolean[] islandTravelToArray = new boolean[4]; 
     
     
     /*********************************************************
@@ -45,7 +49,16 @@ public class Player {
         position=1;
         
         //starting value 10K
-        money = 10000;
+        money = 1000000;
+        
+        //starting promotion tokens 
+        promotionTokens=0;
+        
+        //set that the player has no passport tokens and has travelled nowhere
+        /* in a boolean array all values defaults to false so this is not needed
+        for(int i=0; i<islandTravelToArray.length;i++){
+            islandTravelToArray[i]=false;
+        }*/
         
         spinToWin=0;
        
@@ -74,7 +87,7 @@ public class Player {
     /*********************************************************
     *   @ DON - comment
     *   
-    *   Simple SETTERS.
+    *   Simple SETTERS & GETTERS.
     *   Nothing to see here - move along.
     **********************************************************
     */
@@ -123,6 +136,79 @@ public class Player {
     public void changeIsland(int value){
         this.island = value; 
     }
+
+    public boolean isBoat() {
+        return boat;
+    }
+
+    public void setBoat(boolean boat) {
+        this.boat = boat;
+    }
+
+    public boolean isPlane() {
+        return plane;
+    }
+
+    public void setPlane(boolean plane) {
+        this.plane = plane;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+    
+    public void adjustSalary(int salary) {
+        this.salary += salary;
+    }
+    
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public int getPromotionTokens() {
+        return promotionTokens;
+    }
+
+    public void setPromotionTokens(int promotionTokens) {
+        this.promotionTokens += promotionTokens;
+    }
+    
+    public void setBooleanIslandArray(int index){
+        islandTravelToArray[index]=true;
+    }
+
+    public boolean isHouse() {
+        return house;
+    }
+
+    public void setHouse(boolean house) {
+        this.house = house;
+    }
+
+    public int getHouseIndex() {
+        return houseIndex;
+    }
+
+    public void setHouseIndex(int houseIndex) {
+        this.houseIndex = houseIndex;
+    }
+    
+    
+    
+    //returns the number of passport tokens the player has - for scoring
+    public int getPassPortTokens(){
+        int passportTokens=0;
+        
+        for(int i=0;i<islandTravelToArray.length;i++){
+            if(islandTravelToArray[i]=true)
+                passportTokens++;
+        }
+        
+        return passportTokens;
+    }
+    
+    
+    
     
     
     
