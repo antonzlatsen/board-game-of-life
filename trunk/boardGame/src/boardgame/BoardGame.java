@@ -50,12 +50,14 @@ public static Houston missionControl = new Houston();
 
 
 /**     
- *      TODO    0.  Start populating this area with things that need done
- *      TODO    ******1.  new form for path switching - done 
-        TODO    ******2.  Validate the eruption button and the end turn button -done
-        TODO    ******3.  make islands within island (islandception) -done
-        TODO    ******3.1.  warning Islands have different paths - but movement is now broken (or working as expected depending on how you look at it). -done
-        TODO    ******3.2 make messagebox to allow for path switching - done 
         TODO    4.  Start naming controls as they are added - this will save a lot of time with renaming and creaking code later on
-        TODO    ******5. validation needs put into buttons, player can end turn without choosing an island when they land on a yellow tile -done 
+        TODO    - When volcano erupts change tiles on board 
+        TODO    - Bank Loans ability to pay and repay 
+        TODO    - to start the game the volcano must erupt setting the board and the house prices method in place to set prices setHousePrice();
+        TODO    - need a method to randomize the board 
+        TODO    - the method for checking tiles now checks their name not their color
+        TODO    - house prices change when volcano erupts (I have also spelled volcano wrong everywhere lol i spelt it valcano so that might need changed)
+        TODO    - put pictures onto JPanel for a better looking and move informative board. For this don't use labels as it will mess up the player icons when
+        * they are in that square instead look into overriding the JPanel paint method i think it is called
+        TODO    - lots of testing and adding more tiles
  */

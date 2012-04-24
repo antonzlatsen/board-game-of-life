@@ -34,7 +34,6 @@ public class board extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel9 = new javax.swing.JLabel();
         botLeft24 = new javax.swing.JPanel();
         botLeft22 = new javax.swing.JPanel();
         botLeft2 = new javax.swing.JPanel();
@@ -177,7 +176,7 @@ public class board extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jProgressBar2 = new javax.swing.JProgressBar();
-        jButton5 = new javax.swing.JButton();
+        btnSellHouse = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         Start = new javax.swing.JPanel();
         lblPlayer1 = new javax.swing.JLabel();
@@ -188,8 +187,6 @@ public class board extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnEndTurn = new javax.swing.JButton();
-
-        jLabel9.setText("jLabel9");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Game of Life!");
@@ -204,7 +201,7 @@ public class board extends javax.swing.JFrame {
         botLeft24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft24.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft24.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft24.setName("botLeft24");
+        botLeft24.setName("blank");
         botLeft24.setPreferredSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout botLeft24Layout = new javax.swing.GroupLayout(botLeft24);
@@ -224,7 +221,7 @@ public class board extends javax.swing.JFrame {
         botLeft22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft22.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft22.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft22.setName("botLeft22");
+        botLeft22.setName("blank");
 
         javax.swing.GroupLayout botLeft22Layout = new javax.swing.GroupLayout(botLeft22);
         botLeft22.setLayout(botLeft22Layout);
@@ -243,7 +240,7 @@ public class board extends javax.swing.JFrame {
         botLeft2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft2.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft2.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft2.setName("botLeft2");
+        botLeft2.setName("blank");
 
         javax.swing.GroupLayout botLeft2Layout = new javax.swing.GroupLayout(botLeft2);
         botLeft2.setLayout(botLeft2Layout);
@@ -262,7 +259,7 @@ public class board extends javax.swing.JFrame {
         botLeft26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft26.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft26.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft26.setName("botLeft26");
+        botLeft26.setName("blank");
 
         javax.swing.GroupLayout botLeft26Layout = new javax.swing.GroupLayout(botLeft26);
         botLeft26.setLayout(botLeft26Layout);
@@ -281,7 +278,7 @@ public class board extends javax.swing.JFrame {
         botLeft5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft5.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft5.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft5.setName("botLeft5");
+        botLeft5.setName("blank");
 
         javax.swing.GroupLayout botLeft5Layout = new javax.swing.GroupLayout(botLeft5);
         botLeft5.setLayout(botLeft5Layout);
@@ -300,7 +297,7 @@ public class board extends javax.swing.JFrame {
         botLeft25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft25.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft25.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft25.setName("botLeft25");
+        botLeft25.setName("blank");
 
         javax.swing.GroupLayout botLeft25Layout = new javax.swing.GroupLayout(botLeft25);
         botLeft25.setLayout(botLeft25Layout);
@@ -319,7 +316,7 @@ public class board extends javax.swing.JFrame {
         botLeft23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft23.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft23.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft23.setName("botLeft23");
+        botLeft23.setName("blank");
 
         javax.swing.GroupLayout botLeft23Layout = new javax.swing.GroupLayout(botLeft23);
         botLeft23.setLayout(botLeft23Layout);
@@ -338,7 +335,7 @@ public class board extends javax.swing.JFrame {
         botLeft18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft18.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft18.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft18.setName("botLeft18");
+        botLeft18.setName("blank");
 
         javax.swing.GroupLayout botLeft18Layout = new javax.swing.GroupLayout(botLeft18);
         botLeft18.setLayout(botLeft18Layout);
@@ -357,7 +354,7 @@ public class board extends javax.swing.JFrame {
         botLeft1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft1.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft1.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft1.setName("botLeft1");
+        botLeft1.setName("blank");
 
         javax.swing.GroupLayout botLeft1Layout = new javax.swing.GroupLayout(botLeft1);
         botLeft1.setLayout(botLeft1Layout);
@@ -376,7 +373,7 @@ public class board extends javax.swing.JFrame {
         botLeft27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft27.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft27.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft27.setName("botLeft27");
+        botLeft27.setName("boatPort");
 
         javax.swing.GroupLayout botLeft27Layout = new javax.swing.GroupLayout(botLeft27);
         botLeft27.setLayout(botLeft27Layout);
@@ -391,11 +388,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(botLeft27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 54, 54));
 
-        botLeft4.setBackground(new java.awt.Color(0, 153, 153));
+        botLeft4.setBackground(new java.awt.Color(51, 51, 51));
         botLeft4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft4.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft4.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft4.setName("botLeft4");
+        botLeft4.setName("house2");
 
         javax.swing.GroupLayout botLeft4Layout = new javax.swing.GroupLayout(botLeft4);
         botLeft4.setLayout(botLeft4Layout);
@@ -414,7 +411,7 @@ public class board extends javax.swing.JFrame {
         botLeft13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft13.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft13.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft13.setName("botLeft13");
+        botLeft13.setName("blank");
 
         javax.swing.GroupLayout botLeft13Layout = new javax.swing.GroupLayout(botLeft13);
         botLeft13.setLayout(botLeft13Layout);
@@ -433,7 +430,7 @@ public class board extends javax.swing.JFrame {
         botLeft11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft11.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft11.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft11.setName("botLeft11");
+        botLeft11.setName("blank");
 
         javax.swing.GroupLayout botLeft11Layout = new javax.swing.GroupLayout(botLeft11);
         botLeft11.setLayout(botLeft11Layout);
@@ -452,7 +449,7 @@ public class board extends javax.swing.JFrame {
         botLeft16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft16.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft16.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft16.setName("botLeft16");
+        botLeft16.setName("blank");
 
         javax.swing.GroupLayout botLeft16Layout = new javax.swing.GroupLayout(botLeft16);
         botLeft16.setLayout(botLeft16Layout);
@@ -471,7 +468,7 @@ public class board extends javax.swing.JFrame {
         botLeft12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft12.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft12.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft12.setName("botLeft12");
+        botLeft12.setName("payday");
 
         javax.swing.GroupLayout botLeft12Layout = new javax.swing.GroupLayout(botLeft12);
         botLeft12.setLayout(botLeft12Layout);
@@ -490,7 +487,7 @@ public class board extends javax.swing.JFrame {
         botLeft10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft10.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft10.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft10.setName("botLeft10");
+        botLeft10.setName("blank");
 
         javax.swing.GroupLayout botLeft10Layout = new javax.swing.GroupLayout(botLeft10);
         botLeft10.setLayout(botLeft10Layout);
@@ -509,7 +506,7 @@ public class board extends javax.swing.JFrame {
         botLeft9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft9.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft9.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft9.setName("botLeft9");
+        botLeft9.setName("blank");
 
         javax.swing.GroupLayout botLeft9Layout = new javax.swing.GroupLayout(botLeft9);
         botLeft9.setLayout(botLeft9Layout);
@@ -528,7 +525,7 @@ public class board extends javax.swing.JFrame {
         botLeft7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft7.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft7.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft7.setName("botLeft7");
+        botLeft7.setName("blank");
 
         javax.swing.GroupLayout botLeft7Layout = new javax.swing.GroupLayout(botLeft7);
         botLeft7.setLayout(botLeft7Layout);
@@ -547,7 +544,7 @@ public class board extends javax.swing.JFrame {
         botLeft14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft14.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft14.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft14.setName("botLeft14");
+        botLeft14.setName("blank");
 
         javax.swing.GroupLayout botLeft14Layout = new javax.swing.GroupLayout(botLeft14);
         botLeft14.setLayout(botLeft14Layout);
@@ -566,7 +563,7 @@ public class board extends javax.swing.JFrame {
         botLeft6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft6.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft6.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft6.setName("botLeft6");
+        botLeft6.setName("blank");
 
         javax.swing.GroupLayout botLeft6Layout = new javax.swing.GroupLayout(botLeft6);
         botLeft6.setLayout(botLeft6Layout);
@@ -585,7 +582,7 @@ public class board extends javax.swing.JFrame {
         botLeft8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft8.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft8.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft8.setName("botLeft8");
+        botLeft8.setName("pathSwitch");
 
         javax.swing.GroupLayout botLeft8Layout = new javax.swing.GroupLayout(botLeft8);
         botLeft8.setLayout(botLeft8Layout);
@@ -604,7 +601,7 @@ public class board extends javax.swing.JFrame {
         botLeft15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft15.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft15.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft15.setName("botLeft15");
+        botLeft15.setName("blank");
 
         javax.swing.GroupLayout botLeft15Layout = new javax.swing.GroupLayout(botLeft15);
         botLeft15.setLayout(botLeft15Layout);
@@ -623,6 +620,7 @@ public class board extends javax.swing.JFrame {
         topRight4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight4.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight4.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight4.setName("blank");
 
         javax.swing.GroupLayout topRight4Layout = new javax.swing.GroupLayout(topRight4);
         topRight4.setLayout(topRight4Layout);
@@ -641,6 +639,7 @@ public class board extends javax.swing.JFrame {
         topRight12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight12.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight12.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight12.setName("blank");
 
         javax.swing.GroupLayout topRight12Layout = new javax.swing.GroupLayout(topRight12);
         topRight12.setLayout(topRight12Layout);
@@ -655,10 +654,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topRight12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 280, 54, 54));
 
-        topRight5.setBackground(new java.awt.Color(0, 153, 153));
+        topRight5.setBackground(new java.awt.Color(51, 51, 51));
         topRight5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight5.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight5.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight5.setName("house0");
 
         javax.swing.GroupLayout topRight5Layout = new javax.swing.GroupLayout(topRight5);
         topRight5.setLayout(topRight5Layout);
@@ -677,6 +677,7 @@ public class board extends javax.swing.JFrame {
         topRight10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight10.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight10.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight10.setName("blank");
 
         javax.swing.GroupLayout topRight10Layout = new javax.swing.GroupLayout(topRight10);
         topRight10.setLayout(topRight10Layout);
@@ -695,6 +696,7 @@ public class board extends javax.swing.JFrame {
         topRight9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight9.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight9.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight9.setName("blank");
 
         javax.swing.GroupLayout topRight9Layout = new javax.swing.GroupLayout(topRight9);
         topRight9.setLayout(topRight9Layout);
@@ -713,6 +715,7 @@ public class board extends javax.swing.JFrame {
         topLeft1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft1.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft1.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft1.setName("payday");
 
         javax.swing.GroupLayout topLeft1Layout = new javax.swing.GroupLayout(topLeft1);
         topLeft1.setLayout(topLeft1Layout);
@@ -731,6 +734,7 @@ public class board extends javax.swing.JFrame {
         topLeft19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft19.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft19.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft19.setName("blank");
 
         javax.swing.GroupLayout topLeft19Layout = new javax.swing.GroupLayout(topLeft19);
         topLeft19.setLayout(topLeft19Layout);
@@ -749,6 +753,7 @@ public class board extends javax.swing.JFrame {
         topRight6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight6.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight6.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight6.setName("blank");
 
         javax.swing.GroupLayout topRight6Layout = new javax.swing.GroupLayout(topRight6);
         topRight6.setLayout(topRight6Layout);
@@ -767,6 +772,7 @@ public class board extends javax.swing.JFrame {
         topRight8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight8.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight8.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight8.setName("blank");
 
         javax.swing.GroupLayout topRight8Layout = new javax.swing.GroupLayout(topRight8);
         topRight8.setLayout(topRight8Layout);
@@ -785,6 +791,7 @@ public class board extends javax.swing.JFrame {
         topRight7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight7.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight7.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight7.setName("blank");
 
         javax.swing.GroupLayout topRight7Layout = new javax.swing.GroupLayout(topRight7);
         topRight7.setLayout(topRight7Layout);
@@ -803,6 +810,7 @@ public class board extends javax.swing.JFrame {
         topLeft21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft21.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft21.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft21.setName("blank");
 
         javax.swing.GroupLayout topLeft21Layout = new javax.swing.GroupLayout(topLeft21);
         topLeft21.setLayout(topLeft21Layout);
@@ -821,6 +829,7 @@ public class board extends javax.swing.JFrame {
         topLeft18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft18.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft18.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft18.setName("blank");
 
         javax.swing.GroupLayout topLeft18Layout = new javax.swing.GroupLayout(topLeft18);
         topLeft18.setLayout(topLeft18Layout);
@@ -839,6 +848,7 @@ public class board extends javax.swing.JFrame {
         topLeft20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft20.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft20.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft20.setName("blank");
 
         javax.swing.GroupLayout topLeft20Layout = new javax.swing.GroupLayout(topLeft20);
         topLeft20.setLayout(topLeft20Layout);
@@ -857,6 +867,7 @@ public class board extends javax.swing.JFrame {
         topLeft22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft22.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft22.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft22.setName("boatPort");
 
         javax.swing.GroupLayout topLeft22Layout = new javax.swing.GroupLayout(topLeft22);
         topLeft22.setLayout(topLeft22Layout);
@@ -875,6 +886,7 @@ public class board extends javax.swing.JFrame {
         topRight15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight15.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight15.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight15.setName("boatPort");
 
         javax.swing.GroupLayout topRight15Layout = new javax.swing.GroupLayout(topRight15);
         topRight15.setLayout(topRight15Layout);
@@ -893,6 +905,7 @@ public class board extends javax.swing.JFrame {
         topRight14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight14.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight14.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight14.setName("payday");
 
         javax.swing.GroupLayout topRight14Layout = new javax.swing.GroupLayout(topRight14);
         topRight14.setLayout(topRight14Layout);
@@ -911,6 +924,7 @@ public class board extends javax.swing.JFrame {
         topRight1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight1.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight1.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight1.setName("blank");
 
         javax.swing.GroupLayout topRight1Layout = new javax.swing.GroupLayout(topRight1);
         topRight1.setLayout(topRight1Layout);
@@ -929,6 +943,7 @@ public class board extends javax.swing.JFrame {
         topRight16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight16.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight16.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight16.setName("blank");
 
         javax.swing.GroupLayout topRight16Layout = new javax.swing.GroupLayout(topRight16);
         topRight16.setLayout(topRight16Layout);
@@ -947,6 +962,7 @@ public class board extends javax.swing.JFrame {
         topLeft17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft17.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft17.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft17.setName("blank");
 
         javax.swing.GroupLayout topLeft17Layout = new javax.swing.GroupLayout(topLeft17);
         topLeft17.setLayout(topLeft17Layout);
@@ -965,6 +981,7 @@ public class board extends javax.swing.JFrame {
         topRight13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight13.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight13.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight13.setName("blank");
 
         javax.swing.GroupLayout topRight13Layout = new javax.swing.GroupLayout(topRight13);
         topRight13.setLayout(topRight13Layout);
@@ -983,6 +1000,7 @@ public class board extends javax.swing.JFrame {
         topRight2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight2.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight2.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight2.setName("blank");
 
         javax.swing.GroupLayout topRight2Layout = new javax.swing.GroupLayout(topRight2);
         topRight2.setLayout(topRight2Layout);
@@ -1001,6 +1019,7 @@ public class board extends javax.swing.JFrame {
         middle12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle12.setMaximumSize(new java.awt.Dimension(54, 54));
         middle12.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle12.setName("blank");
 
         javax.swing.GroupLayout middle12Layout = new javax.swing.GroupLayout(middle12);
         middle12.setLayout(middle12Layout);
@@ -1019,6 +1038,7 @@ public class board extends javax.swing.JFrame {
         middle8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle8.setMaximumSize(new java.awt.Dimension(54, 54));
         middle8.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle8.setName("blank");
 
         javax.swing.GroupLayout middle8Layout = new javax.swing.GroupLayout(middle8);
         middle8.setLayout(middle8Layout);
@@ -1037,6 +1057,7 @@ public class board extends javax.swing.JFrame {
         middle6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle6.setMaximumSize(new java.awt.Dimension(54, 54));
         middle6.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle6.setName("blank");
 
         javax.swing.GroupLayout middle6Layout = new javax.swing.GroupLayout(middle6);
         middle6.setLayout(middle6Layout);
@@ -1055,6 +1076,7 @@ public class board extends javax.swing.JFrame {
         middle17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle17.setMaximumSize(new java.awt.Dimension(54, 54));
         middle17.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle17.setName("blank");
 
         javax.swing.GroupLayout middle17Layout = new javax.swing.GroupLayout(middle17);
         middle17.setLayout(middle17Layout);
@@ -1073,6 +1095,7 @@ public class board extends javax.swing.JFrame {
         middle14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle14.setMaximumSize(new java.awt.Dimension(54, 54));
         middle14.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle14.setName("blank");
 
         javax.swing.GroupLayout middle14Layout = new javax.swing.GroupLayout(middle14);
         middle14.setLayout(middle14Layout);
@@ -1091,6 +1114,7 @@ public class board extends javax.swing.JFrame {
         middle23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle23.setMaximumSize(new java.awt.Dimension(54, 54));
         middle23.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle23.setName("blank");
 
         javax.swing.GroupLayout middle23Layout = new javax.swing.GroupLayout(middle23);
         middle23.setLayout(middle23Layout);
@@ -1109,6 +1133,7 @@ public class board extends javax.swing.JFrame {
         middle2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle2.setMaximumSize(new java.awt.Dimension(54, 54));
         middle2.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle2.setName("payday");
 
         javax.swing.GroupLayout middle2Layout = new javax.swing.GroupLayout(middle2);
         middle2.setLayout(middle2Layout);
@@ -1127,6 +1152,7 @@ public class board extends javax.swing.JFrame {
         middle7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle7.setMaximumSize(new java.awt.Dimension(54, 54));
         middle7.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle7.setName("blank");
 
         javax.swing.GroupLayout middle7Layout = new javax.swing.GroupLayout(middle7);
         middle7.setLayout(middle7Layout);
@@ -1145,6 +1171,7 @@ public class board extends javax.swing.JFrame {
         middle4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle4.setMaximumSize(new java.awt.Dimension(54, 54));
         middle4.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle4.setName("blank");
 
         javax.swing.GroupLayout middle4Layout = new javax.swing.GroupLayout(middle4);
         middle4.setLayout(middle4Layout);
@@ -1163,6 +1190,7 @@ public class board extends javax.swing.JFrame {
         middle25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle25.setMaximumSize(new java.awt.Dimension(54, 54));
         middle25.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle25.setName("redExam");
 
         javax.swing.GroupLayout middle25Layout = new javax.swing.GroupLayout(middle25);
         middle25.setLayout(middle25Layout);
@@ -1190,6 +1218,7 @@ public class board extends javax.swing.JFrame {
         middle3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle3.setMaximumSize(new java.awt.Dimension(54, 54));
         middle3.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle3.setName("blank");
 
         javax.swing.GroupLayout middle3Layout = new javax.swing.GroupLayout(middle3);
         middle3.setLayout(middle3Layout);
@@ -1208,6 +1237,7 @@ public class board extends javax.swing.JFrame {
         middle9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle9.setMaximumSize(new java.awt.Dimension(54, 54));
         middle9.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle9.setName("blank");
 
         javax.swing.GroupLayout middle9Layout = new javax.swing.GroupLayout(middle9);
         middle9.setLayout(middle9Layout);
@@ -1226,6 +1256,7 @@ public class board extends javax.swing.JFrame {
         middle11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle11.setMaximumSize(new java.awt.Dimension(54, 54));
         middle11.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle11.setName("blank");
 
         javax.swing.GroupLayout middle11Layout = new javax.swing.GroupLayout(middle11);
         middle11.setLayout(middle11Layout);
@@ -1244,6 +1275,7 @@ public class board extends javax.swing.JFrame {
         middle13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle13.setMaximumSize(new java.awt.Dimension(54, 54));
         middle13.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle13.setName("blank");
 
         javax.swing.GroupLayout middle13Layout = new javax.swing.GroupLayout(middle13);
         middle13.setLayout(middle13Layout);
@@ -1262,6 +1294,7 @@ public class board extends javax.swing.JFrame {
         middle18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle18.setMaximumSize(new java.awt.Dimension(54, 54));
         middle18.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle18.setName("blank");
 
         javax.swing.GroupLayout middle18Layout = new javax.swing.GroupLayout(middle18);
         middle18.setLayout(middle18Layout);
@@ -1329,6 +1362,7 @@ public class board extends javax.swing.JFrame {
         middle5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle5.setMaximumSize(new java.awt.Dimension(54, 54));
         middle5.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle5.setName("blank");
 
         javax.swing.GroupLayout middle5Layout = new javax.swing.GroupLayout(middle5);
         middle5.setLayout(middle5Layout);
@@ -1347,6 +1381,7 @@ public class board extends javax.swing.JFrame {
         middle10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle10.setMaximumSize(new java.awt.Dimension(54, 54));
         middle10.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle10.setName("blank");
 
         javax.swing.GroupLayout middle10Layout = new javax.swing.GroupLayout(middle10);
         middle10.setLayout(middle10Layout);
@@ -1365,6 +1400,7 @@ public class board extends javax.swing.JFrame {
         middle21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle21.setMaximumSize(new java.awt.Dimension(54, 54));
         middle21.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle21.setName("blank");
 
         javax.swing.GroupLayout middle21Layout = new javax.swing.GroupLayout(middle21);
         middle21.setLayout(middle21Layout);
@@ -1383,6 +1419,7 @@ public class board extends javax.swing.JFrame {
         middle19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle19.setMaximumSize(new java.awt.Dimension(54, 54));
         middle19.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle19.setName("blank");
 
         javax.swing.GroupLayout middle19Layout = new javax.swing.GroupLayout(middle19);
         middle19.setLayout(middle19Layout);
@@ -1401,6 +1438,7 @@ public class board extends javax.swing.JFrame {
         middle15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle15.setMaximumSize(new java.awt.Dimension(54, 54));
         middle15.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle15.setName("blank");
 
         javax.swing.GroupLayout middle15Layout = new javax.swing.GroupLayout(middle15);
         middle15.setLayout(middle15Layout);
@@ -1419,6 +1457,7 @@ public class board extends javax.swing.JFrame {
         middle16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle16.setMaximumSize(new java.awt.Dimension(54, 54));
         middle16.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle16.setName("blank");
 
         javax.swing.GroupLayout middle16Layout = new javax.swing.GroupLayout(middle16);
         middle16.setLayout(middle16Layout);
@@ -1437,6 +1476,7 @@ public class board extends javax.swing.JFrame {
         middle20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle20.setMaximumSize(new java.awt.Dimension(54, 54));
         middle20.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle20.setName("blank");
 
         javax.swing.GroupLayout middle20Layout = new javax.swing.GroupLayout(middle20);
         middle20.setLayout(middle20Layout);
@@ -1455,6 +1495,7 @@ public class board extends javax.swing.JFrame {
         middle22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle22.setMaximumSize(new java.awt.Dimension(54, 54));
         middle22.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle22.setName("blank");
 
         javax.swing.GroupLayout middle22Layout = new javax.swing.GroupLayout(middle22);
         middle22.setLayout(middle22Layout);
@@ -1473,6 +1514,7 @@ public class board extends javax.swing.JFrame {
         middle24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle24.setMaximumSize(new java.awt.Dimension(54, 54));
         middle24.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle24.setName("blank");
 
         javax.swing.GroupLayout middle24Layout = new javax.swing.GroupLayout(middle24);
         middle24.setLayout(middle24Layout);
@@ -1491,6 +1533,7 @@ public class board extends javax.swing.JFrame {
         middle26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle26.setMaximumSize(new java.awt.Dimension(54, 54));
         middle26.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle26.setName("blank");
 
         javax.swing.GroupLayout middle26Layout = new javax.swing.GroupLayout(middle26);
         middle26.setLayout(middle26Layout);
@@ -1509,6 +1552,7 @@ public class board extends javax.swing.JFrame {
         middle27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle27.setMaximumSize(new java.awt.Dimension(54, 54));
         middle27.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle27.setName("blank");
 
         javax.swing.GroupLayout middle27Layout = new javax.swing.GroupLayout(middle27);
         middle27.setLayout(middle27Layout);
@@ -1527,6 +1571,7 @@ public class board extends javax.swing.JFrame {
         middle28.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle28.setMaximumSize(new java.awt.Dimension(54, 54));
         middle28.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle28.setName("blank");
 
         javax.swing.GroupLayout middle28Layout = new javax.swing.GroupLayout(middle28);
         middle28.setLayout(middle28Layout);
@@ -1545,6 +1590,7 @@ public class board extends javax.swing.JFrame {
         middle29.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle29.setMaximumSize(new java.awt.Dimension(54, 54));
         middle29.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle29.setName("blank");
 
         javax.swing.GroupLayout middle29Layout = new javax.swing.GroupLayout(middle29);
         middle29.setLayout(middle29Layout);
@@ -1563,6 +1609,7 @@ public class board extends javax.swing.JFrame {
         middle30.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle30.setMaximumSize(new java.awt.Dimension(54, 54));
         middle30.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle30.setName("blank");
 
         javax.swing.GroupLayout middle30Layout = new javax.swing.GroupLayout(middle30);
         middle30.setLayout(middle30Layout);
@@ -1581,6 +1628,7 @@ public class board extends javax.swing.JFrame {
         middle31.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle31.setMaximumSize(new java.awt.Dimension(54, 54));
         middle31.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle31.setName("blank");
 
         javax.swing.GroupLayout middle31Layout = new javax.swing.GroupLayout(middle31);
         middle31.setLayout(middle31Layout);
@@ -1599,6 +1647,7 @@ public class board extends javax.swing.JFrame {
         middle32.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle32.setMaximumSize(new java.awt.Dimension(54, 54));
         middle32.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle32.setName("blank");
 
         javax.swing.GroupLayout middle32Layout = new javax.swing.GroupLayout(middle32);
         middle32.setLayout(middle32Layout);
@@ -1617,6 +1666,7 @@ public class board extends javax.swing.JFrame {
         middle33.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle33.setMaximumSize(new java.awt.Dimension(54, 54));
         middle33.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle33.setName("payday");
 
         javax.swing.GroupLayout middle33Layout = new javax.swing.GroupLayout(middle33);
         middle33.setLayout(middle33Layout);
@@ -1635,6 +1685,7 @@ public class board extends javax.swing.JFrame {
         middle34.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle34.setMaximumSize(new java.awt.Dimension(54, 54));
         middle34.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle34.setName("blank");
 
         javax.swing.GroupLayout middle34Layout = new javax.swing.GroupLayout(middle34);
         middle34.setLayout(middle34Layout);
@@ -1653,6 +1704,7 @@ public class board extends javax.swing.JFrame {
         middle35.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle35.setMaximumSize(new java.awt.Dimension(54, 54));
         middle35.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle35.setName("blank");
 
         javax.swing.GroupLayout middle35Layout = new javax.swing.GroupLayout(middle35);
         middle35.setLayout(middle35Layout);
@@ -1671,6 +1723,7 @@ public class board extends javax.swing.JFrame {
         middle36.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle36.setMaximumSize(new java.awt.Dimension(54, 54));
         middle36.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle36.setName("boatPort");
 
         javax.swing.GroupLayout middle36Layout = new javax.swing.GroupLayout(middle36);
         middle36.setLayout(middle36Layout);
@@ -1689,6 +1742,7 @@ public class board extends javax.swing.JFrame {
         middle1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle1.setMaximumSize(new java.awt.Dimension(54, 54));
         middle1.setMinimumSize(new java.awt.Dimension(54, 54));
+        middle1.setName("payday");
 
         javax.swing.GroupLayout middle1Layout = new javax.swing.GroupLayout(middle1);
         middle1.setLayout(middle1Layout);
@@ -1707,7 +1761,7 @@ public class board extends javax.swing.JFrame {
         botLeft3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft3.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft3.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft3.setName("botLeft3");
+        botLeft3.setName("blank");
 
         javax.swing.GroupLayout botLeft3Layout = new javax.swing.GroupLayout(botLeft3);
         botLeft3.setLayout(botLeft3Layout);
@@ -1726,7 +1780,7 @@ public class board extends javax.swing.JFrame {
         botLeft20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft20.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft20.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft20.setName("botLeft20");
+        botLeft20.setName("blank");
 
         javax.swing.GroupLayout botLeft20Layout = new javax.swing.GroupLayout(botLeft20);
         botLeft20.setLayout(botLeft20Layout);
@@ -1745,7 +1799,7 @@ public class board extends javax.swing.JFrame {
         botLeft21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft21.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft21.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft21.setName("botLeft21");
+        botLeft21.setName("blank");
 
         javax.swing.GroupLayout botLeft21Layout = new javax.swing.GroupLayout(botLeft21);
         botLeft21.setLayout(botLeft21Layout);
@@ -1764,7 +1818,7 @@ public class board extends javax.swing.JFrame {
         botLeft19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft19.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft19.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft19.setName("botLeft19");
+        botLeft19.setName("blank");
 
         javax.swing.GroupLayout botLeft19Layout = new javax.swing.GroupLayout(botLeft19);
         botLeft19.setLayout(botLeft19Layout);
@@ -1783,7 +1837,7 @@ public class board extends javax.swing.JFrame {
         botLeft17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft17.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft17.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft17.setName("botLeft17");
+        botLeft17.setName("blank");
 
         javax.swing.GroupLayout botLeft17Layout = new javax.swing.GroupLayout(botLeft17);
         botLeft17.setLayout(botLeft17Layout);
@@ -1802,6 +1856,7 @@ public class board extends javax.swing.JFrame {
         topLeft2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft2.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft2.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft2.setName("blank");
 
         javax.swing.GroupLayout topLeft2Layout = new javax.swing.GroupLayout(topLeft2);
         topLeft2.setLayout(topLeft2Layout);
@@ -1820,6 +1875,7 @@ public class board extends javax.swing.JFrame {
         topLeft3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft3.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft3.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft3.setName("blank");
 
         javax.swing.GroupLayout topLeft3Layout = new javax.swing.GroupLayout(topLeft3);
         topLeft3.setLayout(topLeft3Layout);
@@ -1838,6 +1894,7 @@ public class board extends javax.swing.JFrame {
         topLeft4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft4.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft4.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft4.setName("blank");
 
         javax.swing.GroupLayout topLeft4Layout = new javax.swing.GroupLayout(topLeft4);
         topLeft4.setLayout(topLeft4Layout);
@@ -1856,6 +1913,7 @@ public class board extends javax.swing.JFrame {
         topLeft5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft5.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft5.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft5.setName("blank");
 
         javax.swing.GroupLayout topLeft5Layout = new javax.swing.GroupLayout(topLeft5);
         topLeft5.setLayout(topLeft5Layout);
@@ -1874,6 +1932,7 @@ public class board extends javax.swing.JFrame {
         topLeft6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft6.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft6.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft6.setName("blank");
 
         javax.swing.GroupLayout topLeft6Layout = new javax.swing.GroupLayout(topLeft6);
         topLeft6.setLayout(topLeft6Layout);
@@ -1892,6 +1951,7 @@ public class board extends javax.swing.JFrame {
         topLeft7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft7.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft7.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft7.setName("blank");
 
         javax.swing.GroupLayout topLeft7Layout = new javax.swing.GroupLayout(topLeft7);
         topLeft7.setLayout(topLeft7Layout);
@@ -1906,10 +1966,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topLeft7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 54, 54));
 
-        topLeft8.setBackground(new java.awt.Color(0, 153, 153));
+        topLeft8.setBackground(new java.awt.Color(51, 51, 51));
         topLeft8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft8.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft8.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft8.setName("house3");
 
         javax.swing.GroupLayout topLeft8Layout = new javax.swing.GroupLayout(topLeft8);
         topLeft8.setLayout(topLeft8Layout);
@@ -1928,6 +1989,7 @@ public class board extends javax.swing.JFrame {
         topLeft9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft9.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft9.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft9.setName("blank");
 
         javax.swing.GroupLayout topLeft9Layout = new javax.swing.GroupLayout(topLeft9);
         topLeft9.setLayout(topLeft9Layout);
@@ -1946,6 +2008,7 @@ public class board extends javax.swing.JFrame {
         topLeft10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft10.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft10.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft10.setName("blank");
 
         javax.swing.GroupLayout topLeft10Layout = new javax.swing.GroupLayout(topLeft10);
         topLeft10.setLayout(topLeft10Layout);
@@ -1964,6 +2027,7 @@ public class board extends javax.swing.JFrame {
         topLeft11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft11.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft11.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft11.setName("blank");
 
         javax.swing.GroupLayout topLeft11Layout = new javax.swing.GroupLayout(topLeft11);
         topLeft11.setLayout(topLeft11Layout);
@@ -1982,6 +2046,7 @@ public class board extends javax.swing.JFrame {
         topLeft12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft12.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft12.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft12.setName("blank");
 
         javax.swing.GroupLayout topLeft12Layout = new javax.swing.GroupLayout(topLeft12);
         topLeft12.setLayout(topLeft12Layout);
@@ -2000,6 +2065,7 @@ public class board extends javax.swing.JFrame {
         topLeft13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft13.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft13.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft13.setName("redMarriage");
 
         javax.swing.GroupLayout topLeft13Layout = new javax.swing.GroupLayout(topLeft13);
         topLeft13.setLayout(topLeft13Layout);
@@ -2018,6 +2084,7 @@ public class board extends javax.swing.JFrame {
         topLeft14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft14.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft14.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft14.setName("blank");
 
         javax.swing.GroupLayout topLeft14Layout = new javax.swing.GroupLayout(topLeft14);
         topLeft14.setLayout(topLeft14Layout);
@@ -2036,6 +2103,7 @@ public class board extends javax.swing.JFrame {
         topLeft15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft15.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft15.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft15.setName("blank");
 
         javax.swing.GroupLayout topLeft15Layout = new javax.swing.GroupLayout(topLeft15);
         topLeft15.setLayout(topLeft15Layout);
@@ -2054,6 +2122,7 @@ public class board extends javax.swing.JFrame {
         topLeft16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft16.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft16.setMinimumSize(new java.awt.Dimension(54, 54));
+        topLeft16.setName("blank");
 
         javax.swing.GroupLayout topLeft16Layout = new javax.swing.GroupLayout(topLeft16);
         topLeft16.setLayout(topLeft16Layout);
@@ -2072,6 +2141,7 @@ public class board extends javax.swing.JFrame {
         topRight19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight19.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight19.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight19.setName("blank");
 
         javax.swing.GroupLayout topRight19Layout = new javax.swing.GroupLayout(topRight19);
         topRight19.setLayout(topRight19Layout);
@@ -2090,7 +2160,7 @@ public class board extends javax.swing.JFrame {
         topRight3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight3.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight3.setMinimumSize(new java.awt.Dimension(54, 54));
-        topRight3.setName("directional");
+        topRight3.setName("pathSwitch");
 
         javax.swing.GroupLayout topRight3Layout = new javax.swing.GroupLayout(topRight3);
         topRight3.setLayout(topRight3Layout);
@@ -2109,6 +2179,7 @@ public class board extends javax.swing.JFrame {
         topRight17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight17.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight17.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight17.setName("blank");
 
         javax.swing.GroupLayout topRight17Layout = new javax.swing.GroupLayout(topRight17);
         topRight17.setLayout(topRight17Layout);
@@ -2127,6 +2198,7 @@ public class board extends javax.swing.JFrame {
         topRight18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight18.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight18.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight18.setName("blank");
 
         javax.swing.GroupLayout topRight18Layout = new javax.swing.GroupLayout(topRight18);
         topRight18.setLayout(topRight18Layout);
@@ -2145,6 +2217,7 @@ public class board extends javax.swing.JFrame {
         bottomRight11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight11.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight11.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight11.setName("blank");
 
         javax.swing.GroupLayout bottomRight11Layout = new javax.swing.GroupLayout(bottomRight11);
         bottomRight11.setLayout(bottomRight11Layout);
@@ -2163,6 +2236,7 @@ public class board extends javax.swing.JFrame {
         topRight11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight11.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight11.setMinimumSize(new java.awt.Dimension(54, 54));
+        topRight11.setName("blank");
 
         javax.swing.GroupLayout topRight11Layout = new javax.swing.GroupLayout(topRight11);
         topRight11.setLayout(topRight11Layout);
@@ -2181,6 +2255,7 @@ public class board extends javax.swing.JFrame {
         bottomRight18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight18.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight18.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight18.setName("blank");
 
         javax.swing.GroupLayout bottomRight18Layout = new javax.swing.GroupLayout(bottomRight18);
         bottomRight18.setLayout(bottomRight18Layout);
@@ -2199,6 +2274,7 @@ public class board extends javax.swing.JFrame {
         bottomRight20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight20.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight20.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight20.setName("blank");
 
         javax.swing.GroupLayout bottomRight20Layout = new javax.swing.GroupLayout(bottomRight20);
         bottomRight20.setLayout(bottomRight20Layout);
@@ -2217,6 +2293,7 @@ public class board extends javax.swing.JFrame {
         bottomRight17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight17.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight17.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight17.setName("payday");
 
         javax.swing.GroupLayout bottomRight17Layout = new javax.swing.GroupLayout(bottomRight17);
         bottomRight17.setLayout(bottomRight17Layout);
@@ -2235,6 +2312,7 @@ public class board extends javax.swing.JFrame {
         bottomRight16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight16.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight16.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight16.setName("blank");
 
         javax.swing.GroupLayout bottomRight16Layout = new javax.swing.GroupLayout(bottomRight16);
         bottomRight16.setLayout(bottomRight16Layout);
@@ -2253,6 +2331,7 @@ public class board extends javax.swing.JFrame {
         bottomRight15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight15.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight15.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight15.setName("blank");
 
         javax.swing.GroupLayout bottomRight15Layout = new javax.swing.GroupLayout(bottomRight15);
         bottomRight15.setLayout(bottomRight15Layout);
@@ -2271,6 +2350,7 @@ public class board extends javax.swing.JFrame {
         bottomRight14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight14.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight14.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight14.setName("pathSwitch");
 
         javax.swing.GroupLayout bottomRight14Layout = new javax.swing.GroupLayout(bottomRight14);
         bottomRight14.setLayout(bottomRight14Layout);
@@ -2289,6 +2369,7 @@ public class board extends javax.swing.JFrame {
         bottomRight21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight21.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight21.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight21.setName("redMarriage");
 
         javax.swing.GroupLayout bottomRight21Layout = new javax.swing.GroupLayout(bottomRight21);
         bottomRight21.setLayout(bottomRight21Layout);
@@ -2307,6 +2388,7 @@ public class board extends javax.swing.JFrame {
         bottomRight19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight19.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight19.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight19.setName("boatPort");
 
         javax.swing.GroupLayout bottomRight19Layout = new javax.swing.GroupLayout(bottomRight19);
         bottomRight19.setLayout(bottomRight19Layout);
@@ -2325,6 +2407,7 @@ public class board extends javax.swing.JFrame {
         bottomRight2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight2.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight2.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight2.setName("payday");
 
         javax.swing.GroupLayout bottomRight2Layout = new javax.swing.GroupLayout(bottomRight2);
         bottomRight2.setLayout(bottomRight2Layout);
@@ -2348,6 +2431,7 @@ public class board extends javax.swing.JFrame {
         bottomRight3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight3.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight3.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight3.setName("blank");
 
         javax.swing.GroupLayout bottomRight3Layout = new javax.swing.GroupLayout(bottomRight3);
         bottomRight3.setLayout(bottomRight3Layout);
@@ -2366,6 +2450,7 @@ public class board extends javax.swing.JFrame {
         bottomRight4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight4.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight4.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight4.setName("blank");
 
         javax.swing.GroupLayout bottomRight4Layout = new javax.swing.GroupLayout(bottomRight4);
         bottomRight4.setLayout(bottomRight4Layout);
@@ -2384,6 +2469,7 @@ public class board extends javax.swing.JFrame {
         bottomRight5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight5.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight5.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight5.setName("blank");
 
         javax.swing.GroupLayout bottomRight5Layout = new javax.swing.GroupLayout(bottomRight5);
         bottomRight5.setLayout(bottomRight5Layout);
@@ -2402,6 +2488,7 @@ public class board extends javax.swing.JFrame {
         bottomRight6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight6.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight6.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight6.setName("blank");
 
         javax.swing.GroupLayout bottomRight6Layout = new javax.swing.GroupLayout(bottomRight6);
         bottomRight6.setLayout(bottomRight6Layout);
@@ -2420,6 +2507,7 @@ public class board extends javax.swing.JFrame {
         bottomRight7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight7.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight7.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight7.setName("blank");
 
         javax.swing.GroupLayout bottomRight7Layout = new javax.swing.GroupLayout(bottomRight7);
         bottomRight7.setLayout(bottomRight7Layout);
@@ -2438,6 +2526,7 @@ public class board extends javax.swing.JFrame {
         bottomRight8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight8.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight8.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight8.setName("payday");
 
         javax.swing.GroupLayout bottomRight8Layout = new javax.swing.GroupLayout(bottomRight8);
         bottomRight8.setLayout(bottomRight8Layout);
@@ -2456,6 +2545,7 @@ public class board extends javax.swing.JFrame {
         bottomRight9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight9.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight9.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight9.setName("blank");
 
         javax.swing.GroupLayout bottomRight9Layout = new javax.swing.GroupLayout(bottomRight9);
         bottomRight9.setLayout(bottomRight9Layout);
@@ -2474,6 +2564,7 @@ public class board extends javax.swing.JFrame {
         bottomRight10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight10.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight10.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight10.setName("blank");
 
         javax.swing.GroupLayout bottomRight10Layout = new javax.swing.GroupLayout(bottomRight10);
         bottomRight10.setLayout(bottomRight10Layout);
@@ -2488,10 +2579,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(bottomRight10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 700, 54, 54));
 
-        bottomRight12.setBackground(new java.awt.Color(0, 153, 153));
+        bottomRight12.setBackground(new java.awt.Color(51, 51, 51));
         bottomRight12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight12.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight12.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight12.setName("house1");
 
         javax.swing.GroupLayout bottomRight12Layout = new javax.swing.GroupLayout(bottomRight12);
         bottomRight12.setLayout(bottomRight12Layout);
@@ -2510,6 +2602,7 @@ public class board extends javax.swing.JFrame {
         bottomRight1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight1.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight1.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight1.setName("blank");
 
         javax.swing.GroupLayout bottomRight1Layout = new javax.swing.GroupLayout(bottomRight1);
         bottomRight1.setLayout(bottomRight1Layout);
@@ -2528,6 +2621,7 @@ public class board extends javax.swing.JFrame {
         bottomRight13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bottomRight13.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight13.setMinimumSize(new java.awt.Dimension(54, 54));
+        bottomRight13.setName("blank");
 
         javax.swing.GroupLayout bottomRight13Layout = new javax.swing.GroupLayout(bottomRight13);
         bottomRight13.setLayout(bottomRight13Layout);
@@ -2594,8 +2688,13 @@ public class board extends javax.swing.JFrame {
         jProgressBar2.setValue(20);
         getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 170, 10));
 
-        jButton5.setText("Option 2");
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 770, 120, -1));
+        btnSellHouse.setText("Sell House");
+        btnSellHouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSellHouseActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSellHouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 770, 120, -1));
 
         jButton6.setText("Option 1");
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 770, 120, -1));
@@ -2734,6 +2833,35 @@ public class board extends javax.swing.JFrame {
         btnEndTurn.setEnabled(false);
     }//GEN-LAST:event_btnEndTurnActionPerformed
 
+    private void btnSellHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellHouseActionPerformed
+        
+        //check does the player have a house 
+        
+        if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isHouse()){
+            
+            //get what house is being sold
+            int houseIndex = BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getHouseIndex();
+            //get the price of the house
+            int housePrice = BoardGame.missionControl.getHousePrices(houseIndex);
+            //add the price of the house to the players money
+            BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(housePrice);
+            //put the house back on the market
+            BoardGame.missionControl.setHouseTaken(houseIndex, false);
+            //set the players house index to -1 and their house boolean to false to show they dont own a house 
+            BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setHouseIndex(-1);
+            BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setHouse(false);
+            //inform the player their house is sold and for how much 
+            BoardGame.missionControl.MessageBoxShow("Your house has been sold for " + housePrice, "Success");
+        }
+        else{
+            //the player does not have a house show an error
+            BoardGame.missionControl.MessageBoxShow("You do not have a house", "Error");
+        } 
+            
+        
+        
+    }//GEN-LAST:event_btnSellHouseActionPerformed
+
     
      /*
      * OMFG THIS IS SO DAMN MESSY!
@@ -2861,8 +2989,8 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel bottomRight8;
     private javax.swing.JPanel bottomRight9;
     private javax.swing.JButton btnEndTurn;
+    private javax.swing.JButton btnSellHouse;
     private javax.swing.JButton btnValcano;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -2876,7 +3004,6 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel9;
     public static javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -3112,6 +3239,18 @@ public class board extends javax.swing.JFrame {
         JPanel middleIslandCollege [] = {middle1,middle3,middle5,middle7,middle9,middle11,middle13,middle15,middle17,middle19,middle21,middle23,middle25};     
         return middleIslandCollege;       
     }
+    
+    //method tp get the tiles that are changeable on the board 
+    //*************** this is wrong edit before use, REMOVE HOUSE TILES
+    public JPanel[] getChangeableTiles(){
+        JPanel changeableTiles [] = {topLeft4,topLeft8,topLeft12,topLeft16,topLeft17,topLeft18,
+                                    botLeft4,botLeft6,botLeft9,botLeft16,botLeft19,botLeft20,botLeft25,
+                                    topRight5,topRight6,topRight10,topRight16,topRight17,topRight18,
+                                    bottomRight1,bottomRight4,bottomRight12,bottomRight13,bottomRight20};
+        
+        return changeableTiles;
+    }
+    
     //      END ARRAY SECTION
     //*****************************************************************************************************************************************************8
     

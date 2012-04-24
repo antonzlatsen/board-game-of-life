@@ -53,6 +53,11 @@ public class Houston {
    
     
     private JPanel playerIslandArray[] = systemIslanMiddleArray;
+    
+    //this boolean array holds the availabilty of house 
+    private boolean houseTaken [] = new boolean[4];
+    //holds the prices of houses 
+    private int housePrices [] = new int[4];
 
     
     // Array that holds player names used in event log
@@ -117,38 +122,95 @@ public class Houston {
                 //*****************************************************
                     
             }
-            
+             
             
             //this whole else is checking the color of tiles and performing actions based on that tile
             else 
-            {              
-                if (playerIslandArray[counter].getBackground().equals(Color.red)) 
+            {
+                String name = playerIslandArray[counter].getName();
+                
+                
+                if (name.equals("redMarriage"))
                 {
                     counter ++;
+                    //check to see if the player has a spouse
+                    //if not a spouse is added else money is given
+                    if(!players[playerTurn].isSpouse())
+                        players[playerTurn].setSpouse(true);
+                    else
+                        players[playerTurn].adjustMoney(10000);
+                    
                     break;
                 }
-                else if (playerIslandArray[counter].getBackground().equals(Color.green))
-                        {
-                            System.out.println("You have this much money " + players[BoardGame.missionControl.playerTurn].getMoney());
-                            BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(10000);
-                            System.out.println("Updated total = " + players[BoardGame.missionControl.playerTurn].getMoney());                      
-                        }
-                else if(playerIslandArray[counter].getBackground().equals(Color.yellow)){
-                    //counter ++;
-                    //islandSelectGUI.main(null);
+                
+                else if (name.equals("payday")){
+                            //debug statements
+                            //System.out.println("You have this much money " + players[BoardGame.missionControl.playerTurn].getMoney());
+                            players[playerTurn].adjustMoney(players[playerTurn].getSalary());
+                            //debug statements
+                            //System.out.println("Updated total = " + players[BoardGame.missionControl.playerTurn].getMoney());                      
+                }
+                
+                else if(name.equals("paydayPromotion")){
+                    players[playerTurn].adjustMoney(players[playerTurn].getSalary());
+                    
+                    if(players[playerTurn].getPromotionTokens()<3){
+                        //this increases promotion tokens by one does not set 
+                        players[playerTurn].setPromotionTokens(1);
+                        //set the new salary
+                        players[playerTurn].adjustSalary(10000);}      
+                }
+                
+                else if(name.equals("boatPort")){
                     if(getUserIsland()){
+                        
+                        //check if player has a boat if not add one
+                        if(!players[playerTurn].isBoat())
+                            players[playerTurn].setBoat(true);
+                        
                         counter=1;
-                        System.out.println("ITS IN HERE");
                         break;}
+                }
+                    
+                else if(name.equals("airPort")){
+                    if(getUserIsland()){
+                        
+                        //check if player has a plane if not add one
+                        if(!players[playerTurn].isPlane())
+                            players[playerTurn].setPlane(true);
+                        
+                        counter=1;
+                        break;
+                }
                         
                 }
-                else if(playerIslandArray[counter].getBackground().equals(Color.blue)){
-                    if(getUserPath()){
+                else if(name.equals("pathSwitch")){
+                    if(getUserInput("Do you want to switch path? ", "Path Switch")){
                         int currentIsland = players[playerTurn].getIsland();
                         currentIsland+=1;
                         players[playerTurn].changeIsland(currentIsland);
                         setIsland(players[playerTurn].getIsland());
                         counter=0;
+                    }
+                }
+                
+                else if(name.substring(0,5).equals("house")){
+                    //do house stuff
+                    if(doHouseStuff(name)){
+                        //get the house index in the house taken and house prices arrat
+                        int houseIndex = Integer.parseInt(name.substring(name.length()-1));
+                        //check that the player has enough money
+                        if((players[playerTurn].getMoney()-housePrices[houseIndex]>0)){
+                            //if they do adjust money, set that they have a house and set the house as taken
+                            players[playerTurn].adjustMoney(-housePrices[houseIndex]);
+                            players[playerTurn].setHouseIndex(houseIndex);
+                            players[playerTurn].setHouse(true);
+                            houseTaken[houseIndex]=true;
+                            counter++;
+                            break;}
+                        else{
+                            //error messge if they dont have enough money
+                            MessageBoxShow("You do not have enough money to buy this house", "Your broke");}
                     }
                 }
                 
@@ -245,7 +307,6 @@ public class Houston {
 
 
 
-
     public void setUp() {
 
         
@@ -260,11 +321,37 @@ public class Houston {
         
         for (int i = 5; i != startScreen.numberOfPlayers; i--) {
             lblPlayers[i].setVisible(false);
-            
+        
             //Buttons on event log correspond to number of players
-             hideButtons[i].setVisible(false);
-        }
-
+             hideButtons[i].setVisible(false);    
+            }
+            
+            //code to set players salary 
+            //****************************************************
+            int [] careerJobsSalary = {10000,20000,30000};
+            int [] collegeJobsSalary = {40000,50000,60000};
+            
+            for(int j=0; j<=startScreen.numberOfPlayers; j++){
+                   
+                //since rand number is inside loop it is calculated very quickly, index 2 is very rare if not impossible 
+                //maybe look at a different way forward
+                int randomIndexNumber = 0 + (int)(Math.random()*2);
+                
+                
+                if(players[j].getIsland()==1){
+                    players[j].setSalary(careerJobsSalary[randomIndexNumber]);
+                }
+                else{
+                    players[j].setSalary(collegeJobsSalary[randomIndexNumber]);
+                }
+                
+                //set the inital house prices
+                setHousePrices();
+                
+                //give each player their starting salary 
+                players[j].adjustMoney(players[j].getSalary());
+            }
+            //***************************************************** 
     }
     
     
@@ -272,17 +359,18 @@ public class Houston {
      * this method "getUserPath is used for path switching in islands
      * when the player lands on a blue tile a dialog box appears
      * depending on the option selected the method returns a boolean
+     * returns tru for yes and false for no 
      */
-    public boolean getUserPath(){
+    public boolean getUserInput(String message, String title){
         
         //declare return boolean
         boolean switchPath=false;
         
         //create the dialog box with a yes no option 
-        JOptionPane pane = new JOptionPane("Do You want to switch paths? ",
+        JOptionPane pane = new JOptionPane(message,
         JOptionPane.QUESTION_MESSAGE,
         JOptionPane.YES_NO_OPTION);
-        JDialog info = pane.createDialog("Path Switch");
+        JDialog info = pane.createDialog(title);
         info.setVisible(true);
 
 
@@ -352,19 +440,24 @@ public class Houston {
         //change the object selected to a string so it can be compared 
         String selected = options[returnValue].toString();
         
-        //find out what was selected and set the appropiate island
+        //find out what was selected and set the appropiate island and
+        //set that the player has travelled to this island 
         switch(selected){
             case "Top Left":
                 newplayerIsland=10;
+                players[playerTurn].setBooleanIslandArray(0);
                 break;
             case "Top Right":
                 newplayerIsland=4;
+                players[playerTurn].setBooleanIslandArray(1);
                 break;
             case "Bottom Right":
                 newplayerIsland=6;
+                players[playerTurn].setBooleanIslandArray(2);
                 break;
             case "Bottom Left":
                 newplayerIsland=8;
+                players[playerTurn].setBooleanIslandArray(3);
                 break;
             case "Continue":
                 playerChangeIsland=false;
@@ -387,6 +480,47 @@ public class Houston {
         
     }
     
+    
+    /*doHouseStuff checks that the player does not already have a house
+     * the house is available and that they want to buy the house 
+     */
+    public boolean doHouseStuff(String theHouse){
+        
+        //get the house index first 
+        int houseIndex = Integer.parseInt(theHouse.substring(theHouse.length()-1));
+        //make sure the house is not already taken
+        if(!houseTaken[houseIndex]&&!players[playerTurn].isHouse()){
+            //check if the user wants to buy the house
+            return (getUserInput("Would you like to buy this house? ", "Buy House"));}
+        
+        else
+            return false;
+    }
+    
+    public void setHousePrices(){
+        int rand = 1 + (int)(Math.random()*4);
+        
+        int [] prices1 = {100000,200000,300000,400000};
+        int [] prices2 = {200000,300000,400000,100000};
+        int [] prices3 = {300000,400000,100000,200000};
+        int [] prices4 = {400000,100000,200000,300000};
+        
+        switch(rand){
+            case 1:
+                housePrices = prices1;
+                break;
+            case 2: 
+                housePrices = prices2;
+                break;
+            case 3: 
+                housePrices = prices3;
+                break;
+            case 4:
+                housePrices = prices4;
+                break;
+        }
+    }
+    
     public int getLifespan() {
         return lifespan;
     }
@@ -394,5 +528,20 @@ public class Houston {
     public void setLifespan(int lifespan) {
         this.lifespan = lifespan;
     }
+    
+    
+    //getter and setter for houseTaken and housePrices
+
+    public int getHousePrices(int index) {
+        return housePrices[index];
+    }
+
+    public void setHouseTaken(int index,boolean value) {
+        this.houseTaken[index] = value;
+    }
+    
+    
+    
+    
     
 }
