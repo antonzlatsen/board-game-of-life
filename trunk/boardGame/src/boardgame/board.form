@@ -1389,7 +1389,7 @@
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[54, 54]"/>
         </Property>
-        <Property name="name" type="java.lang.String" value="boatPort"/>
+        <Property name="name" type="java.lang.String" value="airPort"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
