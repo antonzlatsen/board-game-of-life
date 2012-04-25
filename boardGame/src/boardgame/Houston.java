@@ -330,12 +330,12 @@ public class Houston {
             //****************************************************
             int [] careerJobsSalary = {10000,20000,30000};
             int [] collegeJobsSalary = {40000,50000,60000};
+            double randomNumberSeed = Math.random();
+            int randomIndexNumber;
             
             for(int j=0; j<=startScreen.numberOfPlayers; j++){
-                   
-                //since rand number is inside loop it is calculated very quickly, index 2 is very rare if not impossible 
-                //maybe look at a different way forward
-                int randomIndexNumber = 0 + (int)(Math.random()*2);
+                
+                randomIndexNumber = 0 + (int)(randomNumberSeed*2);
                 
                 
                 if(players[j].getIsland()==1){
@@ -352,6 +352,12 @@ public class Houston {
                 players[j].adjustMoney(players[j].getSalary());
             }
             //***************************************************** 
+            
+            //code to set the buttons at the start of the game 
+            startScreen.myBoard.setButtons();
+            
+            
+            
     }
     
     

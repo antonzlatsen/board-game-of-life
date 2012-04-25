@@ -15,6 +15,7 @@ public class board extends javax.swing.JFrame {
     //Creating variables here
     private int valcanoTotal =0;
     private boolean valcanoActive =false; 
+    private boolean settingUp = true;
     
     
     
@@ -24,7 +25,7 @@ public class board extends javax.swing.JFrame {
     public board() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -886,7 +887,7 @@ public class board extends javax.swing.JFrame {
         topRight15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight15.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight15.setMinimumSize(new java.awt.Dimension(54, 54));
-        topRight15.setName("boatPort");
+        topRight15.setName("airPort");
 
         javax.swing.GroupLayout topRight15Layout = new javax.swing.GroupLayout(topRight15);
         topRight15.setLayout(topRight15Layout);
@@ -2790,13 +2791,14 @@ public class board extends javax.swing.JFrame {
         //Updates Log
          BoardGame.missionControl.rollLog(randomNum);
          
-         if(valcanoActive!=true)
+         if(!valcanoActive)
              btnEndTurn.setEnabled(true);
         }
     }//GEN-LAST:event_onClickSpinner
 
     private void onErupt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onErupt
         
+        //TODO comment this 
         
         int rand;
         if(btnValcano.isEnabled()){
@@ -2808,12 +2810,30 @@ public class board extends javax.swing.JFrame {
             labValcanoPay.setText(""+(valcanoTotal*1000)+" Thousand");
             
             if(valcanoTotal>15){
-                BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(valcanoTotal*1000);
-                btnValcano.setEnabled(false);
-                btnEndTurn.setEnabled(true);
-                valcanoActive = false;
-                valcanoTotal=0;
-                progressValcano.setValue(0);
+                
+                //if we are just setting up the game
+                if(settingUp){
+                    
+                    btnEndTurn.setEnabled(false);
+                    spinner.setEnabled(true);
+                    settingUp = false;
+                    btnValcano.setEnabled(false);
+                    valcanoTotal=0;
+                    progressValcano.setValue(0);
+                }
+                else{
+                    BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(valcanoTotal*1000);
+                    btnValcano.setEnabled(false);
+                    btnEndTurn.setEnabled(true);
+                    valcanoActive = false;
+                    valcanoTotal=0;
+                    progressValcano.setValue(0);}
+                
+                //randomise the tiles and set new colors based on what tile it is
+                BoardGame.boardTiles.randomiseTiles(getChangeableTiles());
+                BoardGame.boardTiles.changeTileColors(getChangeableTiles());
+                //house prices change when volcano erupts
+                BoardGame.missionControl.setHousePrices();
             }    
         }
     }//GEN-LAST:event_onErupt
@@ -2829,8 +2849,8 @@ public class board extends javax.swing.JFrame {
         
         spinner.setEnabled(true);
         
-        
         btnEndTurn.setEnabled(false);
+        
     }//GEN-LAST:event_btnEndTurnActionPerformed
 
     private void btnSellHouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellHouseActionPerformed
@@ -2875,6 +2895,7 @@ public class board extends javax.swing.JFrame {
     // ************************************************************************
     //                  MAIN METHOD STARTS
     public static void main(String args[]) {
+        //TODO remove this
         BoardGame.missionControl.MessageBoxShow("heel", "hi");
         jProgressBar2.setValue(BoardGame.missionControl.getLifespan());
         /*
@@ -2911,12 +2932,22 @@ public class board extends javax.swing.JFrame {
 
             public void run() {
                 new board().setVisible(true);
+                //TODO remove this
                 BoardGame.missionControl.MessageBoxShow("heel", "hi");
             }
         });
     }
     //                  MAIN METHOD END
     //**************************************************************************
+    
+    //method here to called from setup in Houston to set the buttons on starting the game
+    public void setButtons(){
+        
+        spinner.setEnabled(false);
+        btnEndTurn.setEnabled(false);
+        btnValcano.setEnabled(true);
+        
+    }
     
     
 /**  
@@ -3240,24 +3271,18 @@ public class board extends javax.swing.JFrame {
         return middleIslandCollege;       
     }
     
-    //method tp get the tiles that are changeable on the board 
-    //*************** this is wrong edit before use, REMOVE HOUSE TILES
+    //method to get the tiles that are changeable on the board 
     public JPanel[] getChangeableTiles(){
-        JPanel changeableTiles [] = {topLeft4,topLeft8,topLeft12,topLeft16,topLeft17,topLeft18,
-                                    botLeft4,botLeft6,botLeft9,botLeft16,botLeft19,botLeft20,botLeft25,
-                                    topRight5,topRight6,topRight10,topRight16,topRight17,topRight18,
-                                    bottomRight1,bottomRight4,bottomRight12,bottomRight13,bottomRight20};
+        JPanel changeableTiles [] = {topLeft4,topLeft12,topLeft16,topLeft17,topLeft18,
+                                    botLeft6,botLeft9,botLeft16,botLeft19,botLeft20,botLeft25,
+                                    topRight6,topRight10,topRight16,topRight17,topRight18,
+                                    bottomRight1,bottomRight4,bottomRight13,bottomRight20};
         
         return changeableTiles;
     }
     
     //      END ARRAY SECTION
-    //*****************************************************************************************************************************************************8
-    
-    
-    
-    
-    
+    //*****************************************************************************************************************************************************8    
 }
 
 

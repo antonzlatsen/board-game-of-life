@@ -6,7 +6,6 @@ package boardgame;
 
 import javax.swing.JTextField;
 import javax.swing.*;
-import java.util.*;
 
 /**
  *
