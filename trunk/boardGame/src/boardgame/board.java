@@ -2970,7 +2970,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum =10;//1 + (int)(Math.random()*10);
+        int randomNum =1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -3049,6 +3049,9 @@ public class board extends javax.swing.JFrame {
             
         }
         
+        //set the stats for the current player
+        BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
+        
         spinner.setEnabled(true);
         
         btnEndTurn.setEnabled(false);
@@ -3056,7 +3059,7 @@ public class board extends javax.swing.JFrame {
         if(Integer.parseInt(getSpinner()) ==10){
             
             int i =jProgressBar2.getValue();
-            int temp = i -10;
+            int temp = i -1;
             i = temp;
             
             jProgressBar2.setValue(i);
@@ -3073,7 +3076,7 @@ public class board extends javax.swing.JFrame {
                     }
         
         
- //Player Stats method, (can be moved else where if needed)
+        //Player Stats method, (can be moved else where if needed)
         BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
         
     }//GEN-LAST:event_btnEndTurnActionPerformed
@@ -3096,7 +3099,8 @@ public class board extends javax.swing.JFrame {
             BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setHouseIndex(-1);
             BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setHouse(false);
             //inform the player their house is sold and for how much 
-            BoardGame.missionControl.MessageBoxShow("Your house has been sold for " + housePrice, "Success");
+            BoardGame.missionControl.MessageBoxShow("Your house has been sold for $" + housePrice, "Success");
+            BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
         }
         else{
             //the player does not have a house show an error
@@ -3118,6 +3122,7 @@ public class board extends javax.swing.JFrame {
             BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustBankLoans(1);
             
             BoardGame.missionControl.MessageBoxShow("You have been given a $50'000 bank loan \n there is $10'000 intrest on this", "Bank Loan");
+            BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
         }
         else 
             BoardGame.missionControl.MessageBoxShow("You already have a maximum of 4 loans", "Bank Loan");
@@ -3135,7 +3140,9 @@ public class board extends javax.swing.JFrame {
               BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustBankLoans(-1);
               // inform the player of the outcome
               BoardGame.missionControl.MessageBoxShow("$60'000 was repayed to the bank \n you now have " + BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getBankLoans()
-                      + " Loan(s)", "Bank Loan");             
+                      + " Loan(s)", "Bank Loan"); 
+              
+              BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
             }
             else{ 
                 BoardGame.missionControl.MessageBoxShow("You do not have enough money to repay the loan", "Bank Loan");

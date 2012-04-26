@@ -203,6 +203,7 @@ outerloop:
                             counter=0;}
                         break;
                         
+                        
                     case "payCollege":
                         MessageBoxShow("You have to take out a loan to pay college fees\n you have one bank loan","Bank Loan");
                         players[playerTurn].adjustBankLoans(1);
@@ -236,8 +237,9 @@ outerloop:
                 //increment the loop counter and the counter which represents the players position
                        
         }
-        loopCounter = 0;     
-        /*
+        loopCounter = 0;
+        
+        
         String name = playerIslandArray[counter-1].getName();
         if (name.equals("blank")){
             
@@ -275,7 +277,7 @@ outerloop:
                     Logger.getLogger(Houston.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        }*/
+        }
 
         
         
@@ -291,7 +293,8 @@ outerloop:
         //  moves the label aka the player icon to the new position on the board
         playerIslandArray[players[playerTurn].getPosition() -1].add(lblPlayers[playerTurn]);
            
-        //redraw the board to update the graphics 
+        //redraw the board to update the graphics
+        playerstats(playerTurn);
         startScreen.myBoard.repaint();
 
     }
@@ -472,8 +475,7 @@ public void playerstats(int playerturn){
             //code to set the buttons at the start of the game 
             startScreen.myBoard.setButtons(false,false,true);
             
-            
-            
+            playerstats(playerTurn);       
     }
     
     
@@ -613,8 +615,8 @@ public void playerstats(int playerturn){
         //make sure the house is not already taken
         if(!houseTaken[houseIndex]&&!players[playerTurn].isHouse()){
             //check if the user wants to buy the house
-            return (getUserInput("Would you like to buy this house? ", "Buy House"));}
-        
+            return (getUserInput("Would you like to buy this house for $"+housePrices[houseIndex] +"?", "Buy House"));}
+            
         else
             return false;
     }
