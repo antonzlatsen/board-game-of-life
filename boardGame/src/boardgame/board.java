@@ -2995,8 +2995,10 @@ public class board extends javax.swing.JFrame {
          
          if(!valcanoActive && !BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
              btnEndTurn.setEnabled(true);
-         BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
+         
         }
+        //Shows player Stats
+        BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
     }//GEN-LAST:event_onClickSpinner
 
     private void onErupt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onErupt
@@ -3068,7 +3070,8 @@ public class board extends javax.swing.JFrame {
             this.setVisible(false);
             
             
-            
+             //Shows player Stats
+        BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
             
             }
                     
