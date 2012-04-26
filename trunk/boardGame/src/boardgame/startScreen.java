@@ -301,17 +301,56 @@ public class startScreen extends javax.swing.JFrame {
                     }
                 }
                 
-                numberOfPlayers = (int) spnNumberOfPlayers.getValue();
+                int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
                 boolean namesEntered =  false;
                 
-                for(int i=0;i<numberOfPlayers;i++){
-                    if(textFields[i].getText().equals("")){
-                        BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
-                        namesEntered=false;
-                        break;
-                    }
-                    else
-                        namesEntered=true;
+                //sets the names on the board 
+                switch(numberOfPlayers){
+                    case 2:
+                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals(""))) {
+                                namesEntered = true;
+                               } 
+                            else{
+                                //validation if textbox is empty
+                                 BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
+                                }
+                            break; 
+                    case 3:
+                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals(""))) {
+                                 namesEntered = true;
+                                } 
+                            else{ 
+                            //validation if textbox is empty
+                                BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
+                                }
+                            break;
+                   case 4:
+                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals("")) && !(jTextField4.getText().equals(""))) {
+                                 namesEntered = true;
+                                } 
+                            else{
+                            //validation if textbox is empty
+                                 BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
+                                }
+                            break; 
+                  case 5:
+                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals("")) && !(jTextField4.getText().equals("")) && !(jTextField5.getText().equals(""))) {
+                                namesEntered = true;
+                               } 
+                            else{
+                            //validation if textbox is empty
+                                BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
+                                }
+                            break; 
+                 case 6:
+                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals("")) && !(jTextField4.getText().equals("")) && !(jTextField5.getText().equals("")) && !(jTextField6.getText().equals(""))) {
+                                namesEntered = true;
+                                } 
+                            else{
+                            //validation if textbox is empty
+                                BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
+                                }
+                            break; 
                 }
                 
                 if (namesEntered==true)
@@ -360,16 +399,8 @@ public class startScreen extends javax.swing.JFrame {
     private void onChangeNumber2(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_onChangeNumber2
         int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
         
-        JTextField[] fields = getTextFields();
+        //System.out.println("number of players =" + numberOfPlayers);
         
-        for(int i =numberOfPlayers-1; i!=0; i--){
-            fields[i].setEnabled(true); 
-         for(int j=5;j!=numberOfPlayers-1;j--){
-            fields[j].setEnabled(false);
-        }
-        }
-        
-        /*
         if (numberOfPlayers == 2)
         {
             jTextField6.setEnabled(false);
@@ -408,7 +439,7 @@ public class startScreen extends javax.swing.JFrame {
             jTextField5.setEnabled(true);
             jTextField4.setEnabled(true);
             jTextField3.setEnabled(true);
-        }*/
+        }
     }//GEN-LAST:event_onChangeNumber2
 
     
@@ -433,15 +464,9 @@ public class startScreen extends javax.swing.JFrame {
     */
     private void onChangeNumber1(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_onChangeNumber1
         int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
-          
-        JTextField[] fields = getTextFields();
         
-        for(int i=5;i!=numberOfPlayers-1;i--){
-            fields[i].setEnabled(false);
-        }
+        //System.out.println("number of players =" + numberOfPlayers);
         
-        
-        /*
         if (numberOfPlayers == 2)
         {
             jTextField6.setEnabled(false);
@@ -480,7 +505,7 @@ public class startScreen extends javax.swing.JFrame {
             jTextField5.setEnabled(true);
             jTextField4.setEnabled(true);
             jTextField3.setEnabled(true);
-        } */
+        } 
     }//GEN-LAST:event_onChangeNumber1
 
     
@@ -548,12 +573,7 @@ public class startScreen extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 //
 
-private JTextField[] getTextFields(){
-    
-    JTextField textFields[] = {jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6};
-    
-    return textFields;
-}
+
 
 }
 
