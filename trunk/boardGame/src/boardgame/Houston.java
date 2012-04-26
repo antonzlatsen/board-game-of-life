@@ -368,12 +368,15 @@ public void playerstats(int playerturn){
     
     //Displays player stats
     
-    //*NAME STILL EQUALS NULL
+    //*Fixed name but can't use getlblplayers() array so put them in individually
         String[] label=new String[6];
-    for (int i=0;i<5;i++){
-        
-        label[i]= startScreen.myBoard.getLblPlayers()[i].getName();
-        }
+   
+        label[0]= startScreen.myBoard.getjLabel1().getText().toString();
+        label[1]=startScreen.myBoard.getjLabel2().getText().toString();
+        label[2]=startScreen.myBoard.getjLabel3().getText().toString();
+        label[3]=startScreen.myBoard.getjLabel4().getText().toString();
+        label[4]=startScreen.myBoard.getjLabel5().getText().toString();
+        label[5]=startScreen.myBoard.getjLabel6().getText().toString();       
 
          String PlayerMoney=Integer.toString(BoardGame.missionControl.players[playerturn].getMoney());
         String PlayerPet=new Boolean (BoardGame.missionControl.players[playerturn].isPet()).toString();
@@ -381,7 +384,7 @@ public void playerstats(int playerturn){
         String PlayerBaby=new Boolean (BoardGame.missionControl.players[playerturn].isSpouse()).toString();
         String PlayerPosition;
         String PlayerIsland;
-       startScreen.myBoard.getjTextArea1().setText("\t"+label[1] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
+       startScreen.myBoard.getjTextArea1().setText("\t"+label[playerturn] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
 }
 
 
