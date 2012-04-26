@@ -4894,13 +4894,16 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="btnTakeOutLoan">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Option 1"/>
+        <Property name="text" type="java.lang.String" value="Get A Loan"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTakeOutLoanActionPerformed"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="550" y="770" width="120" height="-1"/>
+          <AbsoluteConstraints x="420" y="770" width="120" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -5038,6 +5041,19 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="520" y="260" width="170" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRepayLoan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Repay Loan"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRepayLoanActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="550" y="770" width="120" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
