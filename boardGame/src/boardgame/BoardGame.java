@@ -51,13 +51,20 @@ public static tiles boardTiles = new tiles();
 
 
 /**     
-        TODO    4.  Start naming controls as they are added - this will save a lot of time with renaming and creaking code later on
-        TODO    - put pictures onto JPanel for a better looking and move informative board. For this don't use labels as it will mess up the player icons when
-        * they are in that square instead look into overriding the JPanel paint method i think it is called
-        TODO    - lots of testing and adding more tiles
-        TODO    - create a key on what each tile means 
-        TODO    -randomizing tiles needs tweaked so that popups are not showing up everywhere, e.g all tiles become a port (travel tile)
-        TODO    - clean up the board.java code - very messy in there 
-        TODO    - more outputs to tell us what is happening with each player
-        TODO    -code for the exam red tile on the middle island
+        TODO    - Lots of testing and adding more tiles
+        TODO    - Randomizing tiles needs tweaked so that popups are not showing up everywhere, e.g all tiles become a port (travel tile)
+        TODO    - Clean up the board.java code - very messy in there
+        TODO    - More outputs to tell us what is happening with each player
+        TODO    - Code for the exam red tile on the middle island
+        TODO    - Add code to find what tile the player has landed on
+        TODO    - Progress bar decreases when a 10 is rolled
+        TODO    - Scoring for when game is finished
+        TODO    - Clean up volcano board buttons and look 
+        TODO    - Player icons need slight formatting
+        TODO    - Validation for entering player names 3,4,5,6 can be left blank
+        TODO    - StartScreen needs a label to inform the player what the check boxes are for
+        TODO    - Set help screen to non-re-sizable
+        TODO    - College pay add a green tile that is pay college fees
+        TODO    - Add spin to win functionality
+        
  */

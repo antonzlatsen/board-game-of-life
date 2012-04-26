@@ -198,10 +198,6 @@ public class Player {
         this.examActive = examActive;
     }
     
-    
-    
-    
-    
     //returns the number of passport tokens the player has - for scoring
     public int getPassPortTokens(){
         int passportTokens=0;
