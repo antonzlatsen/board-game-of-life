@@ -28,6 +28,7 @@ public class Player {
     private boolean boat=false;
     private boolean plane=false;
     private boolean house=false;
+    private boolean examActive=false; 
     private boolean[] islandTravelToArray = new boolean[4]; 
     
     
@@ -188,6 +189,16 @@ public class Player {
     public void setHouseIndex(int houseIndex) {
         this.houseIndex = houseIndex;
     }
+
+    public boolean isExamActive() {
+        return examActive;
+    }
+
+    public void setExamActive(boolean examActive) {
+        this.examActive = examActive;
+    }
+    
+    
     
     
     

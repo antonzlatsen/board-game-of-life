@@ -2792,7 +2792,11 @@ public class board extends javax.swing.JFrame {
         
         spinner.setText(""+randomNum);
         
-        BoardGame.missionControl.movePlayer(randomNum);
+        //TODO examActive is false movePlayer around the board, otherwise pass random number into redExamTile, 
+        if(!BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
+            BoardGame.missionControl.movePlayer(randomNum);
+        else
+            BoardGame.boardTiles.redExamTile(randomNum);
         
         if(randomNum==1){
             btnValcano.setEnabled(true);
@@ -2991,11 +2995,11 @@ public class board extends javax.swing.JFrame {
     //**************************************************************************
     
     //method here to called from setup in Houston to set the buttons on starting the game
-    public void setButtons(){
+    public void setButtons(boolean spin, boolean endturn, boolean volcano){
         
-        spinner.setEnabled(false);
-        btnEndTurn.setEnabled(false);
-        btnValcano.setEnabled(true);
+        spinner.setEnabled(spin);
+        btnEndTurn.setEnabled(endturn);
+        btnValcano.setEnabled(volcano);
         
     }
     

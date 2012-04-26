@@ -139,8 +139,16 @@ public class Houston {
                         players[playerTurn].setSpouse(true);
                     else
                         players[playerTurn].adjustMoney(10000);
-                    
                     break;
+                }
+                
+                else if(name.equals("redExam")){
+                    
+                    counter++;
+                    startScreen.myBoard.setButtons(true, false, false);
+                    players[playerTurn].setExamActive(true);
+                    MessageBoxShow("Take your exams, spin over a 3 to pass", "Exam Info");
+                    
                 }
                 
                 else if (name.equals("payday")){
@@ -354,7 +362,7 @@ public class Houston {
             //***************************************************** 
             
             //code to set the buttons at the start of the game 
-            startScreen.myBoard.setButtons();
+            startScreen.myBoard.setButtons(false,false,true);
             
             
             
