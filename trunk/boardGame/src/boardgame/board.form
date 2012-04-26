@@ -5342,9 +5342,6 @@
             <Property name="text" type="java.lang.String" value="KEY"/>
             <Property name="name" type="java.lang.String" value=""/>
           </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="KEY"/>
-          </AccessibilityProperties>
         </Component>
       </SubComponents>
     </Container>

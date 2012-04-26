@@ -3080,7 +3080,9 @@ public class board extends javax.swing.JFrame {
 
     private void btnTakeOutLoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTakeOutLoanActionPerformed
         
-        //check if the player has less than the maximum of 4 loans 
+        //check if the player has less than the maximum of 4 loans
+        
+        if(BoardGame.missionControl.getUserInput("Are you sure you want a loan of $50'000 \n there is interest of $10'000", "Bank Loan")){
         if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getBankLoans()<4){
             //give the player the money and add one to the players bank loan count
             BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(50000);
@@ -3091,7 +3093,7 @@ public class board extends javax.swing.JFrame {
         else 
             BoardGame.missionControl.MessageBoxShow("You already have a maximum of 4 loans", "Bank Loan");
     }//GEN-LAST:event_btnTakeOutLoanActionPerformed
-
+}
     private void btnRepayLoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepayLoanActionPerformed
         //get the loans the player has
         int playerLoans = BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getBankLoans();
