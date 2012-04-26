@@ -132,9 +132,12 @@ public class exitgame extends javax.swing.JFrame {
         /*
          * Create and display the form
          */
+        BoardGame.missionControl.getClass()
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
+                
                 new exitgame().setVisible(true);
             }
         });
