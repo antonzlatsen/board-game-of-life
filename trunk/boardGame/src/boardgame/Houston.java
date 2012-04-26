@@ -2,6 +2,10 @@ package boardgame;
 
 import javax.swing.*;
 import java.awt.Color;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import sun.java2d.loops.Blit;
 
 /**
  *
@@ -230,12 +234,61 @@ public class Houston {
         loopCounter = 0;
         
         
+        
+        
+        
+        String name = playerIslandArray[counter].getName();
+        if (name.equals("blank")){
+            
+            
+            
+            
+            
+            int randNumb = 0;
+            try {
+                randNumb = 1 + (int)(Math.random()* returnLineCount());
+            } catch (IOException ex) {
+                Logger.getLogger(Houston.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            int checker = randNumb % 2;
+            
+            if (checker != 0) {
+                MessageBoxShow("ODD", "ODD");
+                //******************************
+                {
+                    try {
+                        MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
+                        MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
+                        MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
+                    } catch (IOException ex) {
+                        Logger.getLogger(Houston.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }
+                //******************************
+            else{
+                MessageBoxShow("EVEN", "EVEN");
+                randNumb --;                  
+                try {
+                        MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
+                        MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
+                        MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
+                } catch (IOException ex) {
+                    Logger.getLogger(Houston.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
 
+        
+        
+        //2
+        
         //  then adds that new number to the player position.
         players[playerTurn].setPlayerPosition(counter);
 
-        System.out.println("Spinner Value = " + SpinnerValue);
-        System.out.println("Counter = " + counter);
+        //System.out.println("Spinner Value = " + SpinnerValue);
+        //System.out.println("Counter = " + counter);
 
 
         //  moves the label aka the player icon to the new position on the board
@@ -357,7 +410,8 @@ public void playerstats(int playerturn){
             
             //code to set players salary 
             //****************************************************
-            int [] careerJobsSalary = {10000,20000,30000};
+            //TODO change these values back
+            int [] careerJobsSalary = {10000,10000,10000};
             int [] collegeJobsSalary = {40000,50000,60000};
             double randomNumberSeed = Math.random();
             int randomIndexNumber;
@@ -575,6 +629,102 @@ public void playerstats(int playerturn){
         this.houseTaken[index] = value;
     }
     
+    
+    
+    public int returnLineCount() throws IOException{
+        //  line counter vars
+        String file_name = "C:/story.txt";
+        FileReader counterFile = new FileReader(file_name);
+        BufferedReader bufferReader = new BufferedReader (counterFile);
+        
+        
+         //******************************************************************
+        //  gets the number of lines in the text file
+        int i;
+        String line;
+         //  the number of lines to read into the buffer
+        int numberOfLines = 0;       
+        while ((line = bufferReader.readLine()) != null) {
+	    numberOfLines ++;
+	}
+        
+        //  validation
+       // MessageBoxShow(Integer.toString(numberOfLines),"number of lines");
+        //******************************************************************
+        bufferReader.close();
+        return numberOfLines;
+        
+    }
+    
+    
+    
+    
+    
+    /**
+     *  this method will read in text files and allow stuff to happen
+     */
+    
+    public String readFile(int randomNumber) throws IOException{
+        
+        int i;
+        int workingVar = randomNumber;
+        
+        String file_name = "C:/story.txt";
+        //MessageBoxShow("hey","lo");
+        
+        //  story buffers;
+        FileReader myStoryFile = new FileReader(file_name);
+        BufferedReader myStoryBuffer= new BufferedReader(myStoryFile);
+        
+        //  money buffer
+        //FileReader myMoneyFile = new FileReader(file_name);
+        //BufferedReader myMoneyBuffer= new BufferedReader(myMoneyFile);
+        
+       
+        
+        
+        
+        
+        //2
+        
+        
+        int numberOfLines = returnLineCount();
+        
+        
+        
+        //  creates an array to hold the lines from the text file
+        String[] txtOUTPUT = new String[numberOfLines];
+
+        // for loop to populate the array
+        for (i=0; i < numberOfLines; i ++) {
+            
+        txtOUTPUT[i] = myStoryBuffer.readLine();
+
+        }
+        
+        // takes the values and ajusts the current players money
+        System.out.println("random number = " + workingVar);
+        //randomNumber ++;
+        int makeSomeMoney = Integer.parseInt(txtOUTPUT[workingVar]);
+        
+        
+        
+        players[playerTurn].adjustMoney(makeSomeMoney);
+        
+//       for (i=0; i < numberOfLines; i ++) {
+//            
+//        System.out.println(txtOUTPUT[i]);
+//
+//        }
+        
+        //closes the buffers
+        
+        myStoryBuffer.close();
+        
+        // returns the text for output later
+        String zoneOfEnders = "You " + txtOUTPUT[workingVar - 1] + "\nA change of $" + txtOUTPUT[workingVar] + " to your account";
+        return zoneOfEnders;
+    }
     
     
     

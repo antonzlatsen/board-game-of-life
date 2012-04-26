@@ -4,6 +4,10 @@
  */
 package boardgame;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 
 /**
@@ -2954,8 +2958,6 @@ public class board extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel18.getAccessibleContext().setAccessibleName("KEY");
-
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 150, 140, 200));
 
         pack();
@@ -2971,7 +2973,9 @@ public class board extends javax.swing.JFrame {
         
         //TODO examActive is false movePlayer around the board, otherwise pass random number into redExamTile, 
         if(!BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
-            BoardGame.missionControl.movePlayer(randomNum);
+            {
+                BoardGame.missionControl.movePlayer(randomNum);
+            }
         else
             BoardGame.boardTiles.redExamTile(randomNum);
         

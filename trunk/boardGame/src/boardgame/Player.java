@@ -50,7 +50,7 @@ public class Player {
         position=1;
         
         //starting value 10K
-        money = 1000000;
+        money = 10000;
         
         //starting promotion tokens 
         promotionTokens=0;

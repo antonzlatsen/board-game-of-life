@@ -1,4 +1,5 @@
 package boardgame;
+import java.io.IOException;
 import javax.swing.*;
 
 public class BoardGame {
@@ -16,7 +17,7 @@ public static tiles boardTiles = new tiles();
         //*********************************************************
         //                  MAIN METHOD
     
-        public static void main(String args[]) {
+        public static void main(String args[]){
         
                 //testing code     
                 //boardgame.startScreen.myBoard.setVisible(true);
