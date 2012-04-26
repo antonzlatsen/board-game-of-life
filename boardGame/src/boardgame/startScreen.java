@@ -18,7 +18,7 @@ public class startScreen extends javax.swing.JFrame {
     public static int numberOfPlayers = 2;
     
     //eventLog & helpPage declarations.
-    public static EventLog myEventLog= new EventLog();
+ 
     public static helpPage myHelpPage = new helpPage(); 
     
     /**
@@ -296,8 +296,7 @@ public class startScreen extends javax.swing.JFrame {
                     BoardGame.missionControl.setUp();
                     myBoard.setVisible(true);
                     
-                    ///Event Log Window set to visible
-                    myEventLog.setVisible(true);
+                 
                     //  BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
 
 
@@ -508,7 +507,7 @@ public class startScreen extends javax.swing.JFrame {
     private javax.swing.JSlider sldrRetirement;
     private javax.swing.JSpinner spnNumberOfPlayers;
     // End of variables declaration//GEN-END:variables
-
+//
 
 
 

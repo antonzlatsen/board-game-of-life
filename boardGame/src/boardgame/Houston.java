@@ -60,14 +60,14 @@ public class Houston {
     private int housePrices [] = new int[4];
 
     
-    // Array that holds player names used in event log
+  /**  // Array that holds player names used in event log
      String pName1,pName2,pName3,pName4,pName5,pName6;
      String [] pNames = new String[6];
     //
      
      //Array of Jbuttons for event log
     JButton[] hideButtons= startScreen.myEventLog.getbuttons();
-     
+     //* Event log Delete
     
     /**
      * *******************************************************
@@ -286,9 +286,10 @@ public class Houston {
    //Text Log Events and stuff 
    //PlayerTurn should be the player name
     
-        public void rollLog(int spinnerValue){
+   /*PROBABLY DELETE...
+    public void rollLog(int spinnerValue){
             //Variables*******************************
-         JTextArea TextLog=startScreen.myEventLog.getjTextArea2();
+         JTextArea TextLog=startScreen.myBoard.getjTextArea1();
         String log=TextLog.getText();
        
  pName1=startScreen.myBoard.getjLabel1().getText();
@@ -308,10 +309,30 @@ public class Houston {
             TextLog.setText(log+"\n" + pNames[playerTurn] + " rolled a " + spinnerValue);
            log=TextLog.getText();
            TextLog.setText(log+"\n"+ pNames[playerTurn] + " is on Square "+players[playerTurn].getPosition());
-          
-        }
+          */
+       
      
         //*************************************
+
+public void playerstats(int playerturn){
+    
+    //Displays player stats
+    
+    //*NAME STILL EQUALS NULL
+        String[] label=new String[6];
+    for (int i=0;i<5;i++){
+        
+        label[i]= startScreen.myBoard.getLblPlayers()[i].getName();
+        }
+
+         String PlayerMoney=Integer.toString(BoardGame.missionControl.players[playerturn].getMoney());
+        String PlayerPet=new Boolean (BoardGame.missionControl.players[playerturn].isPet()).toString();
+        String PlayerSpouse=new Boolean (BoardGame.missionControl.players[playerturn].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[playerturn].isSpouse()).toString();
+        String PlayerPosition;
+        String PlayerIsland;
+       startScreen.myBoard.getjTextArea1().setText("\t"+label[1] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
+}
 
 
 
@@ -330,8 +351,8 @@ public class Houston {
         for (int i = 5; i != startScreen.numberOfPlayers; i--) {
             lblPlayers[i].setVisible(false);
         
-            //Buttons on event log correspond to number of players
-             hideButtons[i].setVisible(false);    
+
+        
             }
             
             //code to set players salary 
