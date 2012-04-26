@@ -360,8 +360,16 @@ public class startScreen extends javax.swing.JFrame {
     private void onChangeNumber2(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_onChangeNumber2
         int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
         
-        //System.out.println("number of players =" + numberOfPlayers);
+        JTextField[] fields = getTextFields();
         
+        for(int i =numberOfPlayers-1; i!=0; i--){
+            fields[i].setEnabled(true); 
+         for(int j=5;j!=numberOfPlayers-1;j--){
+            fields[j].setEnabled(false);
+        }
+        }
+        
+        /*
         if (numberOfPlayers == 2)
         {
             jTextField6.setEnabled(false);
@@ -400,7 +408,7 @@ public class startScreen extends javax.swing.JFrame {
             jTextField5.setEnabled(true);
             jTextField4.setEnabled(true);
             jTextField3.setEnabled(true);
-        }
+        }*/
     }//GEN-LAST:event_onChangeNumber2
 
     
@@ -425,9 +433,15 @@ public class startScreen extends javax.swing.JFrame {
     */
     private void onChangeNumber1(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_onChangeNumber1
         int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
+          
+        JTextField[] fields = getTextFields();
         
-        //System.out.println("number of players =" + numberOfPlayers);
+        for(int i=5;i!=numberOfPlayers-1;i--){
+            fields[i].setEnabled(false);
+        }
         
+        
+        /*
         if (numberOfPlayers == 2)
         {
             jTextField6.setEnabled(false);
@@ -466,7 +480,7 @@ public class startScreen extends javax.swing.JFrame {
             jTextField5.setEnabled(true);
             jTextField4.setEnabled(true);
             jTextField3.setEnabled(true);
-        } 
+        } */
     }//GEN-LAST:event_onChangeNumber1
 
     
@@ -534,7 +548,12 @@ public class startScreen extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 //
 
-
+private JTextField[] getTextFields(){
+    
+    JTextField textFields[] = {jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6};
+    
+    return textFields;
+}
 
 }
 
