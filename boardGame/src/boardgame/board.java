@@ -178,7 +178,7 @@ public class board extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jProgressBar2 = new javax.swing.JProgressBar();
         btnSellHouse = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnTakeOutLoan = new javax.swing.JButton();
         Start = new javax.swing.JPanel();
         lblPlayer1 = new javax.swing.JLabel();
         lblPlayer2 = new javax.swing.JLabel();
@@ -188,6 +188,7 @@ public class board extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnEndTurn = new javax.swing.JButton();
+        btnRepayLoan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Game of Life!");
@@ -2697,8 +2698,13 @@ public class board extends javax.swing.JFrame {
         });
         getContentPane().add(btnSellHouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 770, 120, -1));
 
-        jButton6.setText("Option 1");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 770, 120, -1));
+        btnTakeOutLoan.setText("Get A Loan");
+        btnTakeOutLoan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTakeOutLoanActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnTakeOutLoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 770, 120, -1));
 
         Start.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -2766,6 +2772,14 @@ public class board extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEndTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 170, -1));
+
+        btnRepayLoan.setText("Repay Loan");
+        btnRepayLoan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRepayLoanActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRepayLoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 770, 120, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2881,6 +2895,42 @@ public class board extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnSellHouseActionPerformed
+
+    private void btnTakeOutLoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTakeOutLoanActionPerformed
+        
+        //check if the player has less than the maximum of 4 loans 
+        if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getBankLoans()<4){
+            //give the player the money and add one to the players bank loan count
+            BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(50000);
+            BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustBankLoans(1);
+            
+            BoardGame.missionControl.MessageBoxShow("You have been given a $50'000 bank loan \n there is $10'000 intrest on this", "Bank Loan");
+        }
+        else 
+            BoardGame.missionControl.MessageBoxShow("You already have a maximum of 4 loans", "Bank Loan");
+    }//GEN-LAST:event_btnTakeOutLoanActionPerformed
+
+    private void btnRepayLoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepayLoanActionPerformed
+        //get the loans the player has
+        int playerLoans = BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getBankLoans();
+        //check that the player has loans
+        if(playerLoans>0){
+            //if the player has enough money repay the loan
+            if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getMoney()>60000){
+              //adjust the players money and minus one from their amount of loans
+              BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(-60000);
+              BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustBankLoans(-1);
+              // inform the player of the outcome
+              BoardGame.missionControl.MessageBoxShow("$60'000 was repayed to the bank \n you now have " + BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getBankLoans()
+                      + " Loan(s)", "Bank Loan");             
+            }
+            else{ 
+                BoardGame.missionControl.MessageBoxShow("You do not have enough money to repay the loan", "Bank Loan");
+            } 
+        }
+        else
+            BoardGame.missionControl.MessageBoxShow("You do not have any loans to repay", "Bank Loan");    
+    }//GEN-LAST:event_btnRepayLoanActionPerformed
 
     
      /*
@@ -3020,9 +3070,10 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel bottomRight8;
     private javax.swing.JPanel bottomRight9;
     private javax.swing.JButton btnEndTurn;
+    private javax.swing.JButton btnRepayLoan;
     private javax.swing.JButton btnSellHouse;
+    private javax.swing.JButton btnTakeOutLoan;
     private javax.swing.JButton btnValcano;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

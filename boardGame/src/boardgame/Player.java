@@ -21,7 +21,7 @@ public class Player {
     *   position will show where the player is on his/her island
     **********************************************************
     */
-    private int island, position, money, spinToWin,salary,promotionTokens,houseIndex=-1; 
+    private int island, position, money, spinToWin,salary,promotionTokens,houseIndex=-1,bankLoans; 
     private boolean pet=false; 
     private boolean baby=false;
     private boolean spouse=false;
@@ -54,11 +54,7 @@ public class Player {
         //starting promotion tokens 
         promotionTokens=0;
         
-        //set that the player has no passport tokens and has travelled nowhere
-        /* in a boolean array all values defaults to false so this is not needed
-        for(int i=0; i<islandTravelToArray.length;i++){
-            islandTravelToArray[i]=false;
-        }*/
+        bankLoans =0;
         
         spinToWin=0;
        
@@ -206,6 +202,17 @@ public class Player {
         
         return passportTokens;
     }
+
+    public int getBankLoans() {
+        return bankLoans;
+    }
+
+    public void adjustBankLoans(int value) {
+        //value will either be 1 or -1
+        this.bankLoans += value;
+    }
+    
+    
     
     
     

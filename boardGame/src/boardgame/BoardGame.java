@@ -52,7 +52,6 @@ public static tiles boardTiles = new tiles();
 
 /**     
         TODO    4.  Start naming controls as they are added - this will save a lot of time with renaming and creaking code later on
-        TODO    - Bank Loans ability to pay and repay 
         TODO    - put pictures onto JPanel for a better looking and move informative board. For this don't use labels as it will mess up the player icons when
         * they are in that square instead look into overriding the JPanel paint method i think it is called
         TODO    - lots of testing and adding more tiles
