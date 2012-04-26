@@ -180,12 +180,12 @@ public class board extends javax.swing.JFrame {
         btnSellHouse = new javax.swing.JButton();
         btnTakeOutLoan = new javax.swing.JButton();
         Start = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         lblPlayer1 = new javax.swing.JLabel();
         lblPlayer2 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnEndTurn = new javax.swing.JButton();
         btnRepayLoan = new javax.swing.JButton();
@@ -2708,18 +2708,18 @@ public class board extends javax.swing.JFrame {
 
         Start.setBackground(new java.awt.Color(204, 204, 204));
 
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_2.png"))); // NOI18N
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_6.png"))); // NOI18N
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_4.png"))); // NOI18N
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_3.png"))); // NOI18N
+
         lblPlayer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_5.png"))); // NOI18N
 
         lblPlayer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_1.png"))); // NOI18N
         lblPlayer2.setText("jLabel10");
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_2.png"))); // NOI18N
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_3.png"))); // NOI18N
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_4.png"))); // NOI18N
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_6.png"))); // NOI18N
 
         javax.swing.GroupLayout StartLayout = new javax.swing.GroupLayout(Start);
         Start.setLayout(StartLayout);
@@ -2788,7 +2788,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum =1 + (int)(Math.random()*10);
+        int randomNum =2;//1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -2804,12 +2804,13 @@ public class board extends javax.swing.JFrame {
             valcanoActive =true; 
         }
         
-        spinner.setEnabled(false);
+        if(!BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
+            spinner.setEnabled(false);
         
         //Updates Log
          BoardGame.missionControl.rollLog(randomNum);
          
-         if(!valcanoActive)
+         if(!valcanoActive && !BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
              btnEndTurn.setEnabled(true);
         }
     }//GEN-LAST:event_onClickSpinner

@@ -148,7 +148,7 @@ public class Houston {
                     startScreen.myBoard.setButtons(true, false, false);
                     players[playerTurn].setExamActive(true);
                     MessageBoxShow("Take your exams, spin over a 3 to pass", "Exam Info");
-                    
+                    break;
                 }
                 
                 else if (name.equals("payday")){
