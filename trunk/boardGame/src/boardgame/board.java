@@ -1169,11 +1169,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(middle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 54, 54));
 
-        middle7.setBackground(new java.awt.Color(204, 204, 255));
+        middle7.setBackground(new java.awt.Color(0, 255, 0));
         middle7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle7.setMaximumSize(new java.awt.Dimension(54, 54));
         middle7.setMinimumSize(new java.awt.Dimension(54, 54));
-        middle7.setName("blank");
+        middle7.setName("payCollege");
 
         javax.swing.GroupLayout middle7Layout = new javax.swing.GroupLayout(middle7);
         middle7.setLayout(middle7Layout);
@@ -2970,7 +2970,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum =10;//1 + (int)(Math.random()*10);
+        int randomNum =1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -3056,7 +3056,7 @@ public class board extends javax.swing.JFrame {
         if(Integer.parseInt(getSpinner()) ==10){
             
             int i =jProgressBar2.getValue();
-            int temp = i -10;
+            int temp = i -1;
             i = temp;
             
             jProgressBar2.setValue(i);
