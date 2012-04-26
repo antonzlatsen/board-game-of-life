@@ -15,7 +15,7 @@ public class Score {
     
     public void test(){
         
-        for(i=playerarray.length()){
+        //for(i=playerarray.length()){
     }
     
     
