@@ -384,7 +384,9 @@ public void playerstats(int playerturn){
         String PlayerBaby=new Boolean (BoardGame.missionControl.players[playerturn].isSpouse()).toString();
         String PlayerPosition;
         String PlayerIsland;
-       startScreen.myBoard.getjTextArea1().setText("\t"+label[playerturn] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
+       startScreen.myBoard.getjTextArea1().setText("\t"+label[playerturn] +"\n -------------------------------------------\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Child = " +PlayerBaby);
+       String stats=startScreen.myBoard.getjTextArea1().getText();
+       startScreen.myBoard.getjTextArea1().setText(stats + "\n");
 }
 
 
