@@ -2984,8 +2984,7 @@ public class board extends javax.swing.JFrame {
         if(!BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
             spinner.setEnabled(false);
         
-        //Updates Log
-         BoardGame.missionControl.rollLog(randomNum);
+     
          
          if(!valcanoActive && !BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
              btnEndTurn.setEnabled(true);
@@ -3055,6 +3054,10 @@ public class board extends javax.swing.JFrame {
             
             jProgressBar2.setValue(i)
                     ;}
+        
+        
+ //Player Stats method, (can be moved else where if needed)
+        BoardGame.missionControl.playerstats(BoardGame.missionControl.playerTurn);
         
     }//GEN-LAST:event_btnEndTurnActionPerformed
 
