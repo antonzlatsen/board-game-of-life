@@ -20,6 +20,9 @@ public class board extends javax.swing.JFrame {
     private int valcanoTotal =0;
     private boolean valcanoActive =false; 
     private boolean settingUp = true;
+    public static exitgame MyExitGame = new exitgame();
+    
+    
     
     
     
@@ -3056,8 +3059,20 @@ public class board extends javax.swing.JFrame {
             int temp = i -10;
             i = temp;
             
-            jProgressBar2.setValue(i)
-                    ;}
+            jProgressBar2.setValue(i);
+            
+            if(i==0)
+            {
+            MyExitGame.setVisible(true);
+            this.setVisible(false);
+            
+            
+            
+            
+            }
+                    
+            
+                    }
         
         
  //Player Stats method, (can be moved else where if needed)

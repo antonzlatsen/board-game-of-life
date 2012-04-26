@@ -16,6 +16,7 @@ public class startScreen extends javax.swing.JFrame {
 
     //declare variables 
     public static board myBoard = new board();
+    
     public static int numberOfPlayers = 2;
     
     //eventLog & helpPage declarations.
