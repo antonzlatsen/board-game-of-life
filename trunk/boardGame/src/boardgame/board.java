@@ -2965,7 +2965,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum =2;//1 + (int)(Math.random()*10);
+        int randomNum =10;//1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -3046,6 +3046,15 @@ public class board extends javax.swing.JFrame {
         spinner.setEnabled(true);
         
         btnEndTurn.setEnabled(false);
+        
+        if(Integer.parseInt(getSpinner()) ==10){
+            
+            int i =jProgressBar2.getValue();
+            int temp = i -10;
+            i = temp;
+            
+            jProgressBar2.setValue(i)
+                    ;}
         
     }//GEN-LAST:event_btnEndTurnActionPerformed
 
