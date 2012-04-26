@@ -32,7 +32,6 @@ public class tiles{
         
         for(int i=0;i<tiles.length;i++){
         String name = tiles[i].getName();
-        System.out.print(name + " ");
         
         switch(name){
             case "blank":

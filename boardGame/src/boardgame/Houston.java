@@ -90,6 +90,7 @@ public class Houston {
         int counter = players[playerTurn].getPosition();
         int loopCounter = 0;
 
+outerloop:
         while (loopCounter < SpinnerValue) {
             
             //this if is to avoid an out of bounds exception 
@@ -98,115 +99,117 @@ public class Houston {
                 //reset counter, note counter can change on down depending on the island
                 counter = 0;
                 
-                //change the players island once the end of the island is reached 
-                //this block is just for the middle island 
-                if(playerIsland == 1){
-                    players[playerTurn].changeIsland(3);
-                    setIsland(players[playerTurn].getIsland());}
-                else if (playerIsland == 2){
-                    players[playerTurn].changeIsland(3);
-                    setIsland(players[playerTurn].getIsland());}
-
-                /*these checks or for the alternative paths, it decreases the island by one
-                *and sets the players position depending on the island they are on
-                *******************************************************/
-                else if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland() == 5){
-                    players[playerTurn].changeIsland(4);
-                    setIsland(players[playerTurn].getIsland());
-                    counter=10;}
-                else if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland() == 7){
-                    players[playerTurn].changeIsland(6);
-                    setIsland(players[playerTurn].getIsland());
-                    counter=19;}
-                else if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland() == 9){
-                    players[playerTurn].changeIsland(8);
-                    setIsland(players[playerTurn].getIsland());
-                    counter=13;
-                }
-                //*****************************************************
+                switch(playerIsland){
                     
+                    case 1:
+                        players[playerTurn].changeIsland(3);
+                        setIsland(players[playerTurn].getIsland());
+                        break;
+                    case 2:
+                        players[playerTurn].changeIsland(3);
+                        setIsland(players[playerTurn].getIsland());
+                        break;
+                }
+                
+                int playerIslandPathSwitch = BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getIsland();
+                
+                switch(playerIslandPathSwitch){
+                    
+                    case 5:
+                        players[playerTurn].changeIsland(4);
+                        setIsland(players[playerTurn].getIsland());
+                        counter=10;
+                        break;
+                    case 7:
+                        players[playerTurn].changeIsland(6);
+                        setIsland(players[playerTurn].getIsland());
+                        counter=19;
+                        break;
+                    case 9:
+                        players[playerTurn].changeIsland(8);
+                        setIsland(players[playerTurn].getIsland());
+                        counter=13;
+                        break;
+                }
+     
             }
              
-            
             //this whole else is checking the color of tiles and performing actions based on that tile
             else 
             {
                 String name = playerIslandArray[counter].getName();
                 
-                
-                if (name.equals("redMarriage"))
-                {
-                    counter ++;
-                    //check to see if the player has a spouse
-                    //if not a spouse is added else money is given
-                    if(!players[playerTurn].isSpouse())
-                        players[playerTurn].setSpouse(true);
-                    else
-                        players[playerTurn].adjustMoney(10000);
-                    break;
-                }
-                
-                else if(name.equals("redExam")){
+                switch(name){
                     
-                    counter++;
-                    startScreen.myBoard.setButtons(true, false, false);
-                    players[playerTurn].setExamActive(true);
-                    MessageBoxShow("Take your exams, spin over a 3 to pass", "Exam Info");
-                    break;
-                }
-                
-                else if (name.equals("payday")){
-                            //debug statements
-                            //System.out.println("You have this much money " + players[BoardGame.missionControl.playerTurn].getMoney());
-                            players[playerTurn].adjustMoney(players[playerTurn].getSalary());
-                            //debug statements
-                            //System.out.println("Updated total = " + players[BoardGame.missionControl.playerTurn].getMoney());                      
-                }
-                
-                else if(name.equals("paydayPromotion")){
-                    players[playerTurn].adjustMoney(players[playerTurn].getSalary());
+                    case "redMarriage":
+                        counter ++;
+                        //check to see if the player has a spouse
+                        //if not a spouse is added else money is given
+                        if(!players[playerTurn].isSpouse())
+                            players[playerTurn].setSpouse(true);
+                        else
+                            players[playerTurn].adjustMoney(10000);
+                        break outerloop;
                     
-                    if(players[playerTurn].getPromotionTokens()<3){
-                        //this increases promotion tokens by one does not set 
-                        players[playerTurn].setPromotionTokens(1);
-                        //set the new salary
-                        players[playerTurn].adjustSalary(10000);}      
-                }
-                
-                else if(name.equals("boatPort")){
-                    if(getUserIsland()){
+                    case "redExam":                        
+                        counter++;
+                        startScreen.myBoard.setButtons(true, false, false);
+                        players[playerTurn].setExamActive(true);
+                        MessageBoxShow("Take your exams, spin over a 3 to pass", "Exam Info");
+                        break outerloop;
                         
-                        //check if player has a boat if not add one
-                        if(!players[playerTurn].isBoat())
+                    case "payday":
+                        players[playerTurn].adjustMoney(players[playerTurn].getSalary());
+                        break;
+                        
+                    case "paydayPromotion":
+                        players[playerTurn].adjustMoney(players[playerTurn].getSalary());
+                    
+                        if(players[playerTurn].getPromotionTokens()<3){
+                            //this increases promotion tokens by one does not set 
+                            players[playerTurn].setPromotionTokens(1);
+                            //set the new salary
+                            players[playerTurn].adjustSalary(10000);}
+                        break;
+                        
+                    case "boatPort":
+                        if(getUserIsland()){
+                            //check if player has a boat if not add one
+                            if(!players[playerTurn].isBoat())
                             players[playerTurn].setBoat(true);
                         
-                        counter=1;
-                        break;}
-                }
-                    
-                else if(name.equals("airPort")){
-                    if(getUserIsland()){
+                            counter=1;
+                            break outerloop;}
+                        break;
                         
+                        
+                    case "airPort":
+                        if(getUserIsland()){
                         //check if player has a plane if not add one
-                        if(!players[playerTurn].isPlane())
-                            players[playerTurn].setPlane(true);
+                            if(!players[playerTurn].isPlane())
+                                players[playerTurn].setPlane(true);
+                            
+                            counter=1;
+                            break outerloop;}
+                        break;
                         
-                        counter=1;
+                        
+                    case "pathSwitch":
+                        if(getUserInput("Do you want to switch path? ", "Path Switch")){
+                            int currentIsland = players[playerTurn].getIsland();
+                            currentIsland+=1;
+                            players[playerTurn].changeIsland(currentIsland);
+                            setIsland(players[playerTurn].getIsland());
+                            counter=0;}
+                        break;
+                        
+                    case "payCollege":
+                        MessageBoxShow("You have to take out a loan to pay college fees\n you have one bank loan","Bank Loan");
+                        players[playerTurn].adjustBankLoans(1);
                         break;
                 }
-                        
-                }
-                else if(name.equals("pathSwitch")){
-                    if(getUserInput("Do you want to switch path? ", "Path Switch")){
-                        int currentIsland = players[playerTurn].getIsland();
-                        currentIsland+=1;
-                        players[playerTurn].changeIsland(currentIsland);
-                        setIsland(players[playerTurn].getIsland());
-                        counter=0;
-                    }
-                }
                 
-                else if(name.substring(0,5).equals("house")){
+                if(name.substring(0,5).equals("house")){
                     //do house stuff
                     if(doHouseStuff(name)){
                         //get the house index in the house taken and house prices arrat
@@ -225,24 +228,18 @@ public class Houston {
                             MessageBoxShow("You do not have enough money to buy this house", "Your broke");}
                     }
                 }
-                
-                //increment the loop counter and the counter which represents the players position
+            }
+                    
                     counter++;
                     loopCounter++;
-            }    
+                
+                //increment the loop counter and the counter which represents the players position
+                       
         }
-        loopCounter = 0;
-        
-        
-        
-        
-        
-        String name = playerIslandArray[counter].getName();
+        loopCounter = 0;     
+        /*
+        String name = playerIslandArray[counter-1].getName();
         if (name.equals("blank")){
-            
-            
-            
-            
             
             int randNumb = 0;
             try {
@@ -278,7 +275,7 @@ public class Houston {
                     Logger.getLogger(Houston.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        }
+        }*/
 
         
         
@@ -371,23 +368,59 @@ public void playerstats(int playerturn){
     
     //Displays player stats
     
-    //*NAME STILL EQUALS NULL
-        String[] label=new String[6];
-    for (int i=0;i<5;i++){
+    //*Fixed name but can't use getlblplayers() array so put them in individually
+        //String[] label=new String[6];
+   
+        /*label[0]=startScreen.myBoard.getjLabel1().getText().toString();
+        label[1]=startScreen.myBoard.getjLabel2().getText().toString();
+        label[2]=startScreen.myBoard.getjLabel3().getText().toString();
+        label[3]=startScreen.myBoard.getjLabel4().getText().toString();
+        label[4]=startScreen.myBoard.getjLabel5().getText().toString();
+        label[5]=startScreen.myBoard.getjLabel6().getText().toString();*/
         
-        label[i]= startScreen.myBoard.getLblPlayers()[i].getName();
-        }
-
-         String PlayerMoney=Integer.toString(BoardGame.missionControl.players[playerturn].getMoney());
+        JLabel [] playerNames = startScreen.myBoard.getPlayerNames();
+        String output;
+        //start constructing a string for output 
+        
+        //add players name to output 
+        output ="\t" + playerNames[playerTurn].getText();
+        
+        //add players money to output
+        output += "\nYou have $" + BoardGame.missionControl.players[playerturn].getMoney();
+        //output the players salary
+        output+="\nYour salary is $" + BoardGame.missionControl.players[playerturn].getSalary();
+        //add if the player has a wife 
+        if(BoardGame.missionControl.players[playerturn].isSpouse())
+            output+="\nYou have a wife";
+        //add if the player has a baby
+        if(BoardGame.missionControl.players[playerturn].isBaby())
+            output+="\nYou have a baby";
+        if(BoardGame.missionControl.players[playerturn].isPet())
+            output+="\nYou have a pet";
+        if(BoardGame.missionControl.players[playerturn].isHouse())
+            output+="\nYou have a house and it is worth $"+ housePrices[BoardGame.missionControl.players[playerturn].getHouseIndex()];
+        if(BoardGame.missionControl.players[playerturn].getBankLoans()>0)
+            output+="\nYou have " + BoardGame.missionControl.players[playerturn].getBankLoans() + " bank loans and owe $" + BoardGame.missionControl.players[playerturn].getBankLoans()*60000;
+        if(BoardGame.missionControl.players[playerturn].getPassPortTokens()>0)
+            output+="\nYou have " + BoardGame.missionControl.players[playerturn].getPassPortTokens() + " passport tokens";
+        if(BoardGame.missionControl.players[playerturn].isBoat())
+            output+="\nYou own a Boat";
+        if(BoardGame.missionControl.players[playerturn].isPlane())
+            output+="\nYou own a Plane";
+        
+        startScreen.myBoard.getjTextArea1().setText(output); 
+        
+        /*
+        String PlayerMoney=Integer.toString(BoardGame.missionControl.players[playerturn].getMoney());
         String PlayerPet=new Boolean (BoardGame.missionControl.players[playerturn].isPet()).toString();
         String PlayerSpouse=new Boolean (BoardGame.missionControl.players[playerturn].isSpouse()).toString();
-        String PlayerBaby=new Boolean (BoardGame.missionControl.players[playerturn].isSpouse()).toString();
+        String PlayerBaby=new Boolean (BoardGame.missionControl.players[playerturn].isBaby()).toString();
         String PlayerPosition;
         String PlayerIsland;
-       startScreen.myBoard.getjTextArea1().setText("\t"+label[1] +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
+        
+        startScreen.myBoard.getjTextArea1().setText("\t"+playerNames[playerturn].getText() +"\n Total money = " + PlayerMoney + "\n Player Pet = " +PlayerPet+"\n Player Spouse = " +PlayerSpouse+"\n Player Spouse = " +PlayerBaby);
+        */
 }
-
-
 
     public void setUp() {
 
@@ -411,7 +444,7 @@ public void playerstats(int playerturn){
             //code to set players salary 
             //****************************************************
             //TODO change these values back
-            int [] careerJobsSalary = {10000,10000,10000};
+            int [] careerJobsSalary = {10000,20000,30000};
             int [] collegeJobsSalary = {40000,50000,60000};
             double randomNumberSeed = Math.random();
             int randomIndexNumber;
@@ -430,7 +463,7 @@ public void playerstats(int playerturn){
                 
                 //set the inital house prices
                 setHousePrices();
-                
+                //playerstats(0);
                 //give each player their starting salary 
                 players[j].adjustMoney(players[j].getSalary());
             }
@@ -610,7 +643,7 @@ public void playerstats(int playerturn){
         }
     }
     
-    public int getLifespan() {
+    public int getLifespan()    {
         return lifespan;
     }
 
@@ -633,7 +666,7 @@ public void playerstats(int playerturn){
     
     public int returnLineCount() throws IOException{
         //  line counter vars
-        String file_name = "C:/story.txt";
+        String file_name ="C:/story.txt";
         FileReader counterFile = new FileReader(file_name);
         BufferedReader bufferReader = new BufferedReader (counterFile);
         
@@ -652,8 +685,7 @@ public void playerstats(int playerturn){
        // MessageBoxShow(Integer.toString(numberOfLines),"number of lines");
         //******************************************************************
         bufferReader.close();
-        return numberOfLines;
-        
+        return numberOfLines;  
     }
     
     
