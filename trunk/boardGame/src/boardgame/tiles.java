@@ -88,11 +88,12 @@ public class tiles{
                 else
                     BoardGame.missionControl.MessageBoxShow("You already have the maximum number of loans", "Bank Loans");
             }
-            //else exams are passed if spinnervalue is above 3 
-            else
-                BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setExamActive(false);
-                BoardGame.missionControl.MessageBoxShow("You passed your exams", "Exams Passed");
         }
+            //else exams are passed if spinnervalue is above 3 
+        else{
+                BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setExamActive(false);
+                BoardGame.missionControl.MessageBoxShow("You passed your exams", "Exams Passed");}
+        
         startScreen.myBoard.setButtons(false,true,false);
     }
 }
