@@ -55,6 +55,10 @@ public class Player {
         //starting promotion tokens 
         promotionTokens=0;
         
+        //set all islandTravelToArray to false
+        for(int i=0; i<islandTravelToArray.length-1;i++)
+            islandTravelToArray[i]=false;
+        
         bankLoans =0;
         
         spinToWin=0;
@@ -203,7 +207,7 @@ public class Player {
         int passportTokens=0;
         
         for(int i=0;i<islandTravelToArray.length;i++){
-            if(islandTravelToArray[i]=true)
+            if(islandTravelToArray[i]==true)
                 passportTokens++;
         }
         
@@ -218,12 +222,4 @@ public class Player {
         //value will either be 1 or -1
         this.bankLoans += value;
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }

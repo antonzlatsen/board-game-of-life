@@ -3065,11 +3065,9 @@ public class board extends javax.swing.JFrame {
             {
             MyExitGame.setVisible(true);
             this.setVisible(false);
-            
-            
-            
-            
             }
+            
+            
                     
             
                     }
@@ -3428,29 +3426,11 @@ public class board extends javax.swing.JFrame {
     public void setjLabel6(String jLabel6) {
         this.jLabel6.setText(jLabel6);
     }
-
-    public JLabel getjLabel1() {
-        return jLabel1;
-    }
-
-    public JLabel getjLabel2() {
-        return jLabel2;
-    }
-
-    public JLabel getjLabel3() {
-        return jLabel3;
-    }
-
-    public JLabel getjLabel4() {
-        return jLabel4;
-    }
-
-    public JLabel getjLabel5() {
-        return jLabel5;
-    }
-
-    public JLabel getjLabel6() {
-        return jLabel6;
+    
+    public JLabel[] getPlayerNames(){
+        //returns the players names 
+        JLabel [] labels = {jLabel1,jLabel2,jLabel3,jLabel4,jLabel5,jLabel6};
+        return labels;
     }
     
       public JTextArea getjTextArea1() {
@@ -3465,6 +3445,7 @@ public class board extends javax.swing.JFrame {
     
     public JLabel[] getLblPlayers(){
         
+        //these are player icons 
         JLabel[] labels = {lblPlayer1,lblPlayer2,jLabel11,jLabel12,jLabel13,jLabel14};
         
         return labels;
