@@ -301,56 +301,17 @@ public class startScreen extends javax.swing.JFrame {
                     }
                 }
                 
-                int numberOfPlayers = (int) spnNumberOfPlayers.getValue();
+                numberOfPlayers = (int) spnNumberOfPlayers.getValue();
                 boolean namesEntered =  false;
                 
-                //sets the names on the board 
-                switch(numberOfPlayers){
-                    case 2:
-                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals(""))) {
-                                namesEntered = true;
-                               } 
-                            else{
-                                //validation if textbox is empty
-                                 BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
-                                }
-                            break; 
-                    case 3:
-                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals(""))) {
-                                 namesEntered = true;
-                                } 
-                            else{ 
-                            //validation if textbox is empty
-                                BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
-                                }
-                            break;
-                   case 4:
-                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals("")) && !(jTextField4.getText().equals(""))) {
-                                 namesEntered = true;
-                                } 
-                            else{
-                            //validation if textbox is empty
-                                 BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
-                                }
-                            break; 
-                  case 5:
-                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals("")) && !(jTextField4.getText().equals("")) && !(jTextField5.getText().equals(""))) {
-                                namesEntered = true;
-                               } 
-                            else{
-                            //validation if textbox is empty
-                                BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
-                                }
-                            break; 
-                 case 6:
-                            if (!(jTextField1.getText().equals("")) && !(jTextField2.getText().equals("")) && !(jTextField3.getText().equals("")) && !(jTextField4.getText().equals("")) && !(jTextField5.getText().equals("")) && !(jTextField6.getText().equals(""))) {
-                                namesEntered = true;
-                                } 
-                            else{
-                            //validation if textbox is empty
-                                BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
-                                }
-                            break; 
+                for(int i=0;i<numberOfPlayers;i++){
+                    if(textFields[i].getText().equals("")){
+                        BoardGame.missionControl.MessageBoxShow("Please ensure all names are entered", "Validation Error");
+                        namesEntered=false;
+                        break;
+                    }
+                    else
+                        namesEntered=true;
                 }
                 
                 if (namesEntered==true)
