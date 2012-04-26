@@ -76,6 +76,25 @@ public class tiles{
         }
     
     }
+    
+    public void redExamTile(int spinnerValue){
+        
+        if(spinnerValue<=3){
+            if(BoardGame.missionControl.getUserInput("You failed your exams do you want to take out a loan to pass your exams \n note: if you dont you retake your exams next turn", "Exams Failed")){
+                //check to see if the player already has max number of bank loans
+                if(BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].getBankLoans()<4){
+                    BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setExamActive(false);
+                    BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustBankLoans(1);}
+                else
+                    BoardGame.missionControl.MessageBoxShow("You already have the maximum number of loans", "Bank Loans");
+            }
+            //else exams are passed if spinnervalue is above 3 
+            else
+                BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setExamActive(false);
+                BoardGame.missionControl.MessageBoxShow("You passed your exams", "Exams Passed");
+        }
+        startScreen.myBoard.setButtons(false,true,false);
+    }
 }
 
         
