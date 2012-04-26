@@ -362,15 +362,11 @@ public class startScreen extends javax.swing.JFrame {
                    BoardGame.missionControl.setUp();
                    myBoard.setVisible(true);
                     
-<<<<<<< .mine
-                   //Event Log Window set to visible
-                   myEventLog.setVisible(true);
-                   //  BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
-=======
-                 
-                    //  BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
->>>>>>> .r75
 
+                   //Event Log Window set to visible
+                   //myEventLog.setVisible(true);
+                   //BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
+                   //BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
                    dispose(); //  disposes the current form - in this case it is the start form when the user selects players and such.
                 
                 }
