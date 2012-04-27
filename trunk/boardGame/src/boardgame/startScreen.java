@@ -301,11 +301,9 @@ public class startScreen extends javax.swing.JFrame {
                     }
                 }
                 
-<<<<<<< .mine
-                
-=======
+
                 numberOfPlayers = (int) spnNumberOfPlayers.getValue();
->>>>>>> .r89
+
                 boolean namesEntered =  false;
                 
                 for(int i=0;i<numberOfPlayers;i++){

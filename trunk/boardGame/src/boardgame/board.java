@@ -214,6 +214,7 @@ public class board extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(java.awt.Color.white);
         setMinimumSize(new java.awt.Dimension(1280, 820));
+        setPreferredSize(new java.awt.Dimension(1284, 800));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1168,11 +1169,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(middle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 54, 54));
 
-        middle7.setBackground(new java.awt.Color(204, 204, 255));
+        middle7.setBackground(new java.awt.Color(0, 255, 0));
         middle7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle7.setMaximumSize(new java.awt.Dimension(54, 54));
         middle7.setMinimumSize(new java.awt.Dimension(54, 54));
-        middle7.setName("blank");
+        middle7.setName("payCollege");
 
         javax.swing.GroupLayout middle7Layout = new javax.swing.GroupLayout(middle7);
         middle7.setLayout(middle7Layout);
@@ -2910,7 +2911,7 @@ public class board extends javax.swing.JFrame {
         jLabel7.setInheritsPopupMenu(false);
         jLabel7.setMaximumSize(new java.awt.Dimension(54, 54));
         jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 740));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
