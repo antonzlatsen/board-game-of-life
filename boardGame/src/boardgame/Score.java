@@ -16,14 +16,14 @@ public class Score {
     //to do- need to output to appropriate labels in exitgame.java
    public Player[] playerarray= BoardGame.missionControl.players;
    
-    public void MessageBoxShow(String warning, String title){
+    /*public void MessageBoxShow(String warning, String title){
                     JFrame frame = null;
                     
                     JOptionPane.showMessageDialog(frame,
                     warning,
                     title,
                     JOptionPane.WARNING_MESSAGE);
-    }
+    }*/
    
     public void test(){
 
@@ -73,8 +73,6 @@ public class Score {
                 //access array here for house value
                 
                 Totals[i] = Totals[i]  + BoardGame.missionControl.getHousePrices(temp);
-                
-                
             }
             
             if(playerarray[i].getPassPortTokens()==4)
@@ -86,15 +84,11 @@ public class Score {
                 Totals[i] = Totals[i] + (playerarray[i].getPassPortTokens() * 100000);
             }
             
-            Totals[i] = Totals[i] - (playerarray[i].getBankLoans() * 60000);
-            
-            
-            
-            
-            
-            
-            
+            Totals[i] = Totals[i] - (playerarray[i].getBankLoans() * 60000);   
         }
+        
+        
+        
 
     }
     

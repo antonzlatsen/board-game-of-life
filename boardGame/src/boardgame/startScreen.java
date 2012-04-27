@@ -116,16 +116,22 @@ public class startScreen extends javax.swing.JFrame {
             }
         });
 
+        lblPlayer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_5.png"))); // NOI18N
         lblPlayer1.setText("Player 1");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_1.png"))); // NOI18N
         jLabel4.setText("Player 2");
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_2.png"))); // NOI18N
         jLabel5.setText("Player 3");
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_3.png"))); // NOI18N
         jLabel6.setText("Player 4");
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_4.png"))); // NOI18N
         jLabel7.setText("Player 5");
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_6.png"))); // NOI18N
         jLabel8.setText("Player 6");
 
         jLabel2.setText("Check to go to College");
@@ -212,7 +218,7 @@ public class startScreen extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

@@ -63,18 +63,18 @@ public static tiles boardTiles = new tiles();
         TODO    - College pay add a green tile that is pay college fees
         TODO    - Add spin to win functionality
 
-        TODO    - Lots of testing and adding more tiles -Ruairi
-        TODO    - Randomizing tiles needs tweaked so that pop ups are not showing up everywhere, e.g all tiles become a port (travel tile) -Ruairi
-        TODO    - Clean up the board.java code - very messy in there -Ruairi
-        TODO    - More outputs to tell us what is happening with each player -Ruairi
-        TODO    - Code for the exam red tile on the middle island -Ruairi
-        TODO    - Add code to find what tile the player has landed on -Ruairi
-        TODO    - Progress bar decreases when a 10 is rolled -Ruairi
-        TODO    - Scoring for when game is finished -Ruairi
-        TODO    - Player icons need slight formatting -Ruairi
-        TODO    - College pay add a green tile that is pay college fees -Ruairi
-        TODO    - Add spin to win functionality -Ruairi
-        TODO    - add pet tile -Ruairi
+        TODO    - Lots of testing and adding more tiles 
+        TODO    - Randomizing tiles needs tweaked so that pop ups are not showing up everywhere, e.g all tiles become a port (travel tile) 
+        TODO    - Clean up the board.java code - very messy in there 
+        TODO    - More outputs to tell us what is happening with each player 
+        TODO    - Code for the exam red tile on the middle island
+        TODO    - Add code to find what tile the player has landed on
+        TODO    - Progress bar decreases when a 10 is rolled
+        TODO    - Scoring for when game is finished
+        TODO    - Player icons need slight formatting
+        TODO    - College pay add a green tile that is pay college fees
+        TODO    - Add spin to win functionality
+        TODO    - add pet tile 
         TODO    - Rename class files with capital letters for first character
         TODO    - START screen text box char limit
         TODO    - exams volcano cant go off when uyou are doing exams

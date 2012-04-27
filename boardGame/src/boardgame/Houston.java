@@ -242,6 +242,8 @@ outerloop:
         
         String name = playerIslandArray[counter-1].getName();
         
+        BoardGame.boardTiles.setInfoTile(name,"");
+        
         if (name.equals("spinToWin"))
         {
             int numberofPlayers = startScreen.numberOfPlayers;
@@ -264,13 +266,14 @@ outerloop:
             int checker = randNumb % 2;
             
             if (checker != 0) {
-                MessageBoxShow("ODD", "ODD");
+                //MessageBoxShow("ODD", "ODD");
                 //******************************
                 {
                     try {
-                        MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
-                        MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
-                        MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
+                        //MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
+                        //MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
+                        BoardGame.boardTiles.setInfoTile(name,BoardGame.missionControl.readFile(randNumb));
+                       // MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
                     } catch (IOException ex) {
                         Logger.getLogger(Houston.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -278,18 +281,19 @@ outerloop:
             }
                 //******************************
             else{
-                MessageBoxShow("EVEN", "EVEN");
+               // MessageBoxShow("EVEN", "EVEN");
                 randNumb --;                  
                 try {
-                        MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
-                        MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
-                        MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
+                        //MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
+                        //MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
+                        BoardGame.boardTiles.setInfoTile(name,BoardGame.missionControl.readFile(randNumb));
+                        //MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
                 } catch (IOException ex) {
                     Logger.getLogger(Houston.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
-
+        
         
         
         //2
@@ -457,15 +461,13 @@ public void playerstats(int playerturn){
             
             //code to set players salary 
             //****************************************************
-            //TODO change these values back
             int [] careerJobsSalary = {10000,20000,30000};
             int [] collegeJobsSalary = {40000,50000,60000};
-            double randomNumberSeed = Math.random();
-            int randomIndexNumber;
+            Random randSeed = new Random();
             
             for(int j=0; j<=startScreen.numberOfPlayers; j++){
                 
-                randomIndexNumber = 0 + (int)(randomNumberSeed*2);
+                int randomIndexNumber = randSeed.nextInt(3);
                 
                 
                 if(players[j].getIsland()==1){
@@ -473,8 +475,7 @@ public void playerstats(int playerturn){
                 }
                 else{
                     players[j].setSalary(collegeJobsSalary[randomIndexNumber]);
-                }
-                
+                } 
                 //set the inital house prices
                 setHousePrices();
                 //playerstats(0);
