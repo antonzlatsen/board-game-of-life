@@ -101,11 +101,6 @@ public class board extends javax.swing.JFrame {
         middle11 = new javax.swing.JPanel();
         middle13 = new javax.swing.JPanel();
         middle18 = new javax.swing.JPanel();
-        valcano = new javax.swing.JPanel();
-        progressValcano = new javax.swing.JProgressBar();
-        btnValcano = new javax.swing.JButton();
-        labValcanoInfo = new javax.swing.JLabel();
-        labValcanoPay = new javax.swing.JLabel();
         middle5 = new javax.swing.JPanel();
         middle10 = new javax.swing.JPanel();
         middle21 = new javax.swing.JPanel();
@@ -174,6 +169,7 @@ public class board extends javax.swing.JFrame {
         bottomRight12 = new javax.swing.JPanel();
         bottomRight1 = new javax.swing.JPanel();
         bottomRight13 = new javax.swing.JPanel();
+        jProgressBar2 = new javax.swing.JProgressBar();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -183,7 +179,6 @@ public class board extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jProgressBar2 = new javax.swing.JProgressBar();
         btnSellHouse = new javax.swing.JButton();
         btnTakeOutLoan = new javax.swing.JButton();
         Start = new javax.swing.JPanel();
@@ -193,7 +188,6 @@ public class board extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         lblPlayer1 = new javax.swing.JLabel();
         lblPlayer2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         btnEndTurn = new javax.swing.JButton();
         btnRepayLoan = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -208,6 +202,11 @@ public class board extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        labValcanoPay = new javax.swing.JLabel();
+        btnValcano = new javax.swing.JButton();
+        progressValcano = new javax.swing.JProgressBar();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Game of Life!");
@@ -1233,7 +1232,7 @@ public class board extends javax.swing.JFrame {
                 onClickSpinner(evt);
             }
         });
-        getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 170, 50));
+        getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 170, 40));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
         middle3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1329,55 +1328,6 @@ public class board extends javax.swing.JFrame {
         );
 
         getContentPane().add(middle18, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 500, 54, 54));
-
-        valcano.setBackground(new java.awt.Color(153, 51, 0));
-        valcano.setMinimumSize(new java.awt.Dimension(50, 50));
-        valcano.setName("bigbeells");
-
-        progressValcano.setForeground(new java.awt.Color(255, 102, 0));
-        progressValcano.setMaximum(15);
-        progressValcano.setToolTipText("");
-
-        btnValcano.setText("Erupt!!");
-        btnValcano.setToolTipText("");
-        btnValcano.setEnabled(false);
-        btnValcano.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                onErupt(evt);
-            }
-        });
-
-        labValcanoInfo.setText("Spin until Valcano Erupts!!");
-
-        labValcanoPay.setText("Pay");
-
-        javax.swing.GroupLayout valcanoLayout = new javax.swing.GroupLayout(valcano);
-        valcano.setLayout(valcanoLayout);
-        valcanoLayout.setHorizontalGroup(
-            valcanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(progressValcano, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-            .addGroup(valcanoLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(btnValcano)
-                .addContainerGap())
-            .addComponent(labValcanoInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(labValcanoPay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        valcanoLayout.setVerticalGroup(
-            valcanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, valcanoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(progressValcano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labValcanoInfo)
-                .addGap(5, 5, 5)
-                .addComponent(btnValcano)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labValcanoPay)
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(valcano, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 170, 110));
 
         middle5.setBackground(new java.awt.Color(204, 204, 255));
         middle5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2446,7 +2396,7 @@ public class board extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jLabel8.setText("Life counter");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 100, 30));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 100, 30));
 
         bottomRight3.setBackground(new java.awt.Color(204, 204, 255));
         bottomRight3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2657,6 +2607,10 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(bottomRight13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 710, 54, 54));
 
+        jProgressBar2.setForeground(new java.awt.Color(0, 255, 0));
+        jProgressBar2.setValue(20);
+        getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 170, 10));
+
         jPanel9.setBackground(new java.awt.Color(204, 204, 204));
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
@@ -2705,10 +2659,6 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 360, 180));
 
-        jProgressBar2.setForeground(new java.awt.Color(0, 255, 0));
-        jProgressBar2.setValue(20);
-        getContentPane().add(jProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 170, 10));
-
         btnSellHouse.setText("Sell House");
         btnSellHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2726,63 +2676,32 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(btnTakeOutLoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 770, 90, -1));
 
         Start.setBackground(new java.awt.Color(204, 204, 204));
+        Start.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        Start.setMaximumSize(new java.awt.Dimension(54, 54));
+        Start.setMinimumSize(new java.awt.Dimension(54, 54));
+        Start.setPreferredSize(new java.awt.Dimension(54, 54));
+        Start.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_2.png"))); // NOI18N
+        Start.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 3, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_6.png"))); // NOI18N
+        Start.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 29, -1, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_4.png"))); // NOI18N
+        Start.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 30, -1, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_3.png"))); // NOI18N
+        Start.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 30, -1, -1));
 
         lblPlayer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_5.png"))); // NOI18N
+        Start.add(lblPlayer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 3, -1, -1));
 
         lblPlayer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Player_1.png"))); // NOI18N
         lblPlayer2.setText("jLabel10");
+        Start.add(lblPlayer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 2, 16, -1));
 
-        javax.swing.GroupLayout StartLayout = new javax.swing.GroupLayout(Start);
-        Start.setLayout(StartLayout);
-        StartLayout.setHorizontalGroup(
-            StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StartLayout.createSequentialGroup()
-                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPlayer1)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel13))
-                .addGap(35, 35, 35)
-                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(StartLayout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(StartLayout.createSequentialGroup()
-                        .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                            .addComponent(lblPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 36, 36))))
-        );
-        StartLayout.setVerticalGroup(
-            StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StartLayout.createSequentialGroup()
-                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPlayer1)
-                    .addComponent(lblPlayer2))
-                .addGap(25, 25, 25)
-                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12))
-                .addGap(18, 18, 18)
-                .addGroup(StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14))
-                .addGap(0, 18, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 110, 110));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/old_paper.jpg"))); // NOI18N
-        jLabel7.setMaximumSize(new java.awt.Dimension(54, 54));
-        jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 10));
+        getContentPane().add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 54, 54));
 
         btnEndTurn.setText("End Turn");
         btnEndTurn.addActionListener(new java.awt.event.ActionListener() {
@@ -2790,7 +2709,7 @@ public class board extends javax.swing.JFrame {
                 btnEndTurnActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEndTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 170, -1));
+        getContentPane().add(btnEndTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 90, -1));
 
         btnRepayLoan.setText("Repay Loan");
         btnRepayLoan.addActionListener(new java.awt.event.ActionListener() {
@@ -2963,6 +2882,36 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 150, 140, 200));
 
+        labValcanoPay.setText("Pay");
+        labValcanoPay.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(labValcanoPay, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 70, -1));
+
+        btnValcano.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        btnValcano.setText("Erupt");
+        btnValcano.setToolTipText("");
+        btnValcano.setEnabled(false);
+        btnValcano.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                onErupt(evt);
+            }
+        });
+        getContentPane().add(btnValcano, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 150, -1));
+
+        progressValcano.setForeground(new java.awt.Color(255, 102, 0));
+        progressValcano.setMaximum(15);
+        progressValcano.setToolTipText("");
+        progressValcano.setFocusable(false);
+        getContentPane().add(progressValcano, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 150, 20));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/volcano.png"))); // NOI18N
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/old_paper.jpg"))); // NOI18N
+        jLabel7.setInheritsPopupMenu(false);
+        jLabel7.setMaximumSize(new java.awt.Dimension(54, 54));
+        jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 740));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -2997,48 +2946,6 @@ public class board extends javax.swing.JFrame {
              btnEndTurn.setEnabled(true);
         }
     }//GEN-LAST:event_onClickSpinner
-
-    private void onErupt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onErupt
-        
-        //TODO comment this 
-        
-        int rand;
-        if(btnValcano.isEnabled()){
-            btnValcano.setEnabled(true);
-            rand = 1 + (int)(Math.random()*10);
-            valcanoTotal +=rand;
-            System.out.println(valcanoTotal);
-            progressValcano.setValue(valcanoTotal);
-            labValcanoPay.setText(""+(valcanoTotal*1000)+" Thousand");
-            
-            if(valcanoTotal>15){
-                
-                //if we are just setting up the game
-                if(settingUp){
-                    
-                    btnEndTurn.setEnabled(false);
-                    spinner.setEnabled(true);
-                    settingUp = false;
-                    btnValcano.setEnabled(false);
-                    valcanoTotal=0;
-                    progressValcano.setValue(0);
-                }
-                else{
-                    BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(valcanoTotal*1000);
-                    btnValcano.setEnabled(false);
-                    btnEndTurn.setEnabled(true);
-                    valcanoActive = false;
-                    valcanoTotal=0;
-                    progressValcano.setValue(0);}
-                
-                //randomise the tiles and set new colors based on what tile it is
-                BoardGame.boardTiles.randomiseTiles(getChangeableTiles());
-                BoardGame.boardTiles.changeTileColors(getChangeableTiles());
-                //house prices change when volcano erupts
-                BoardGame.missionControl.setHousePrices();
-            }    
-        }
-    }//GEN-LAST:event_onErupt
 
     private void btnEndTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEndTurnActionPerformed
         
@@ -3151,6 +3058,48 @@ public class board extends javax.swing.JFrame {
         else
             BoardGame.missionControl.MessageBoxShow("You do not have any loans to repay", "Bank Loan");    
     }//GEN-LAST:event_btnRepayLoanActionPerformed
+
+    private void onErupt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onErupt
+
+        //TODO comment this 
+
+        int rand;
+        if (btnValcano.isEnabled()) {
+            btnValcano.setEnabled(true);
+            rand = 1 + (int) (Math.random() * 10);
+            valcanoTotal += rand;
+            System.out.println(valcanoTotal);
+            progressValcano.setValue(valcanoTotal);
+            labValcanoPay.setText("" + (valcanoTotal * 1000) + " K");
+
+            if (valcanoTotal > 15) {
+
+                //if we are just setting up the game
+                if (settingUp) {
+
+                    btnEndTurn.setEnabled(false);
+                    spinner.setEnabled(true);
+                    settingUp = false;
+                    btnValcano.setEnabled(false);
+                    valcanoTotal = 0;
+                    progressValcano.setValue(0);
+                } else {
+                    BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].adjustMoney(valcanoTotal * 1000);
+                    btnValcano.setEnabled(false);
+                    btnEndTurn.setEnabled(true);
+                    valcanoActive = false;
+                    valcanoTotal = 0;
+                    progressValcano.setValue(0);
+                }
+
+                //randomise the tiles and set new colors based on what tile it is
+                BoardGame.boardTiles.randomiseTiles(getChangeableTiles());
+                BoardGame.boardTiles.changeTileColors(getChangeableTiles());
+                //house prices change when volcano erupts
+                BoardGame.missionControl.setHousePrices();
+            }
+        }
+    }//GEN-LAST:event_onErupt
 
     
      /*
@@ -3304,6 +3253,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -3317,7 +3267,6 @@ public class board extends javax.swing.JFrame {
     public static javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JLabel labValcanoInfo;
     private javax.swing.JLabel labValcanoPay;
     private javax.swing.JLabel lblPlayer1;
     private javax.swing.JLabel lblPlayer2;
@@ -3405,7 +3354,6 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel topRight7;
     private javax.swing.JPanel topRight8;
     private javax.swing.JPanel topRight9;
-    private javax.swing.JPanel valcano;
     // End of variables declaration//GEN-END:variables
 
 

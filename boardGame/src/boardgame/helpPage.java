@@ -35,6 +35,7 @@ public class helpPage extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(500, 0, 50, 0));
         setMinimumSize(new java.awt.Dimension(398, 289));
         setPreferredSize(new java.awt.Dimension(398, 589));
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("How to Play");

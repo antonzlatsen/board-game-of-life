@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.java2d.loops.Blit;
 
 /**
  *
@@ -668,8 +667,14 @@ public void playerstats(int playerturn){
     
     public int returnLineCount() throws IOException{
         //  line counter vars
+<<<<<<< .mine
+        String file_name = "/src/boardgame/story.txt";
+        //File inputFile = new File("time.txt");
+        FileReader counterFile = new FileReader("story.txt");
+=======
         String file_name ="C:/story.txt";
         FileReader counterFile = new FileReader(file_name);
+>>>>>>> .r89
         BufferedReader bufferReader = new BufferedReader (counterFile);
         
         
@@ -703,11 +708,12 @@ public void playerstats(int playerturn){
         int i;
         int workingVar = randomNumber;
         
-        String file_name = "C:/story.txt";
+        String file_name = "/src/boardgame/story.txt";
         //MessageBoxShow("hey","lo");
         
         //  story buffers;
-        FileReader myStoryFile = new FileReader(file_name);
+        
+        FileReader myStoryFile = new FileReader("story.txt");
         BufferedReader myStoryBuffer= new BufferedReader(myStoryFile);
         
         //  money buffer
