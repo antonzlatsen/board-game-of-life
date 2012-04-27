@@ -338,11 +338,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(botLeft25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 54, 54));
 
-        botLeft23.setBackground(new java.awt.Color(204, 204, 255));
+        botLeft23.setBackground(new java.awt.Color(255, 0, 0));
         botLeft23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft23.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft23.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft23.setName("blank");
+        botLeft23.setName("redMarriage");
 
         javax.swing.GroupLayout botLeft23Layout = new javax.swing.GroupLayout(botLeft23);
         botLeft23.setLayout(botLeft23Layout);
@@ -395,11 +395,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(botLeft1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 54, 54));
 
-        botLeft27.setBackground(new java.awt.Color(255, 255, 0));
+        botLeft27.setBackground(new java.awt.Color(255, 255, 102));
         botLeft27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         botLeft27.setMaximumSize(new java.awt.Dimension(54, 54));
         botLeft27.setMinimumSize(new java.awt.Dimension(54, 54));
-        botLeft27.setName("boatPort");
+        botLeft27.setName("airPort");
 
         javax.swing.GroupLayout botLeft27Layout = new javax.swing.GroupLayout(botLeft27);
         botLeft27.setLayout(botLeft27Layout);
@@ -794,11 +794,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topRight6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 80, 54, 54));
 
-        topRight8.setBackground(new java.awt.Color(204, 204, 255));
+        topRight8.setBackground(new java.awt.Color(255, 0, 0));
         topRight8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight8.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight8.setMinimumSize(new java.awt.Dimension(54, 54));
-        topRight8.setName("blank");
+        topRight8.setName("redMarriage");
 
         javax.swing.GroupLayout topRight8Layout = new javax.swing.GroupLayout(topRight8);
         topRight8.setLayout(topRight8Layout);
@@ -908,7 +908,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topLeft22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 54, 54));
 
-        topRight15.setBackground(new java.awt.Color(255, 255, 0));
+        topRight15.setBackground(new java.awt.Color(255, 255, 102));
         topRight15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topRight15.setMaximumSize(new java.awt.Dimension(54, 54));
         topRight15.setMinimumSize(new java.awt.Dimension(54, 54));
@@ -2976,7 +2976,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum = 1 + (int)(Math.random()*10);
+        int randomNum = 10; //1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -3023,15 +3023,16 @@ public class board extends javax.swing.JFrame {
         if(Integer.parseInt(getSpinner()) ==10){
             
             int i = jProgressBar2.getValue();
-            int temp = i -1;
+            int temp = i -10;
             i = temp;
             
             jProgressBar2.setValue(i);
             
             if(i==0)
             {
-            MyExitGame.setVisible(true);
-            this.setVisible(false);
+                MyExitGame.calculateScores();
+                MyExitGame.setVisible(true);
+                this.setVisible(false);
             }
                     }
         

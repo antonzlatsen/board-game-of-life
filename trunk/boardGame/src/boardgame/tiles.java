@@ -30,7 +30,7 @@ public class tiles{
     public void randomiseTiles(JPanel [] tiles){
         
         //types of tiles that can replace the changable tiles
-        String [] tileTypes ={"blank","redMarriage","getBaby","getPet","payday","paydayPromotion","spinToWin"};  
+        String [] tileTypes ={"blank","getBaby","getPet","payday","paydayPromotion","spinToWin"};  
         Random rand = new Random();
 
         for(int i=0; i<tiles.length;i++){
