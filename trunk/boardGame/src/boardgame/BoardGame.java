@@ -52,7 +52,6 @@ public static tiles boardTiles = new tiles();
 
 
 /**     
-<<<<<<< .mine
         TODO    - Lots of testing and adding more tiles
         TODO    - Randomizing tiles needs tweaked so that popups are not showing up everywhere, e.g all tiles become a port (travel tile)
         TODO    - Clean up the board.java code - very messy in there
@@ -61,12 +60,11 @@ public static tiles boardTiles = new tiles();
         TODO    - Add code to find what tile the player has landed on
         TODO    - Progress bar decreases when a 10 is rolled
         TODO    - Scoring for when game is finished
-        TODO    - Clean up volcano board buttons and look
         TODO    - Validation for entering player names 3,4,5,6 can be left blank
         TODO    - StartScreen needs a label to inform the player what the check boxes are for
         TODO    - College pay add a green tile that is pay college fees
         TODO    - Add spin to win functionality
-=======
+
         TODO    - Lots of testing and adding more tiles -Ruairi
         TODO    - Randomizing tiles needs tweaked so that pop ups are not showing up everywhere, e.g all tiles become a port (travel tile) -Ruairi
         TODO    - Clean up the board.java code - very messy in there -Ruairi
@@ -83,7 +81,6 @@ public static tiles boardTiles = new tiles();
         TODO    - College pay add a green tile that is pay college fees -Ruairi
         TODO    - Add spin to win functionality -Ruairi
         TODO    - add pet tile -Ruairi
->>>>>>> .r89
         TODO    - Rename class files with capital letters for first character
         TODO    - START screen text box char limit
         TODO    - exams volcano cant go off when uyou are doing exams
