@@ -63,7 +63,7 @@ public class tiles{
                 tiles[i].setBackground(new Color(102,255,102));
                 break;
             case "paydayPromotion":
-                //color is a dark green0
+                //color is a dark green
                 tiles[i].setBackground(new Color(0,255,0));
                 break;
             case "spinToWin":

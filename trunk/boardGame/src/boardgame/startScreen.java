@@ -14,12 +14,12 @@ import java.io.*;
  */
 public class startScreen extends javax.swing.JFrame {
 
-    //declare variables 
+    // declare variables 
     public static board myBoard = new board();
     
     public static int numberOfPlayers = 2;
     
-    //eventLog & helpPage declarations.
+    // helpPage declarations.
  
     public static helpPage myHelpPage = new helpPage(); 
     
@@ -329,7 +329,6 @@ public class startScreen extends javax.swing.JFrame {
                     
 
                    //Event Log Window set to visible
-                   //myEventLog.setVisible(true);
                    //BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
                    //BoardGame.missionControl.MessageBoxShow(Integer.toString(BoardGame.missionControl.getLifespan()), "Validation Error");
                    dispose(); //  disposes the current form - in this case it is the start form when the user selects players and such.

@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.Random;
 
 /**
  *
@@ -240,6 +241,17 @@ outerloop:
         
         
         String name = playerIslandArray[counter-1].getName();
+        
+        if (name.equals("spinToWin"))
+        {
+            int numberofPlayers = startScreen.numberOfPlayers;
+            Random randy = new Random();
+            int random = randy.nextInt(startScreen.numberOfPlayers+1);
+            JLabel[] playerNames = startScreen.myBoard.getPlayerNames();
+            MessageBoxShow(playerNames[random].getText()+" has won $75,000 ", "Spin To Win");
+            players[random].adjustMoney(75000);
+        }
+        
         if (name.equals("blank")){
             
             int randNumb = 0;
