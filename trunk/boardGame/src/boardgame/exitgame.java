@@ -28,13 +28,12 @@ public class exitgame extends javax.swing.JFrame {
     private void initComponents() {
 
         btnExit = new javax.swing.JButton();
-        lblPlayer1 = new javax.swing.JLabel();
         lblPlayer2 = new javax.swing.JLabel();
         lblPlayer3 = new javax.swing.JLabel();
         lblPlayer4 = new javax.swing.JLabel();
         lblPlayer5 = new javax.swing.JLabel();
         lblPlayer6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblPlayer1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +49,7 @@ public class exitgame extends javax.swing.JFrame {
 
         lblPlayer6.setText("jLabel6");
 
-        jLabel1.setText("jLabel1");
+        lblPlayer1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -60,7 +59,7 @@ public class exitgame extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(lblPlayer1)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -69,28 +68,25 @@ public class exitgame extends javax.swing.JFrame {
                             .addComponent(lblPlayer4)
                             .addComponent(lblPlayer3)
                             .addComponent(lblPlayer2)
-                            .addComponent(btnExit)
-                            .addComponent(lblPlayer1))
+                            .addComponent(btnExit))
                         .addContainerGap(295, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(17, 17, 17)
                 .addComponent(lblPlayer1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(lblPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(lblPlayer3)
                 .addGap(18, 18, 18)
                 .addComponent(lblPlayer4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPlayer5)
                 .addGap(18, 18, 18)
+                .addComponent(lblPlayer5)
+                .addGap(28, 28, 28)
                 .addComponent(lblPlayer6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(btnExit)
                 .addGap(31, 31, 31))
         );
@@ -144,7 +140,6 @@ public class exitgame extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblPlayer1;
     private javax.swing.JLabel lblPlayer2;
     private javax.swing.JLabel lblPlayer3;

@@ -209,6 +209,9 @@ public class board extends javax.swing.JFrame {
         progressValcano = new javax.swing.JProgressBar();
         jLabel19 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        lblInfoPanelText = new javax.swing.JTextArea();
+        lblInfoPanelIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Game of Life!");
@@ -2919,7 +2922,7 @@ public class board extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 140, 240));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 20, 140, 240));
 
         labValcanoPay.setText("Pay");
         labValcanoPay.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2951,6 +2954,21 @@ public class board extends javax.swing.JFrame {
         jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 50));
 
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(170, 170));
+
+        lblInfoPanelText.setColumns(20);
+        lblInfoPanelText.setLineWrap(true);
+        lblInfoPanelText.setRows(5);
+        lblInfoPanelText.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lblInfoPanelText.setCaretColor(new java.awt.Color(255, 255, 255));
+        lblInfoPanelText.setOpaque(false);
+        jScrollPane2.setViewportView(lblInfoPanelText);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 360, 290, 96));
+
+        lblInfoPanelIcon.setBackground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(lblInfoPanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 260, 110, 101));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -2958,7 +2976,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum = 4;//1 + (int)(Math.random()*10);
+        int randomNum = 1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -3015,10 +3033,6 @@ public class board extends javax.swing.JFrame {
             MyExitGame.setVisible(true);
             this.setVisible(false);
             }
-            
-            
-                    
-            
                     }
         
         
@@ -3310,8 +3324,11 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     public static javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel labValcanoPay;
+    private javax.swing.JLabel lblInfoPanelIcon;
+    private javax.swing.JTextArea lblInfoPanelText;
     private javax.swing.JLabel lblPlayer1;
     private javax.swing.JLabel lblPlayer2;
     private javax.swing.JPanel middle1;
@@ -3538,6 +3555,13 @@ public class board extends javax.swing.JFrame {
                                     bottomRight1,bottomRight4,bottomRight13,bottomRight20};
         
         return changeableTiles;
+    }
+    
+    public void setInfoPanel(String text,ImageIcon img){
+     
+        lblInfoPanelIcon.setIcon(img);
+        lblInfoPanelText.setText(text);
+        
     }
     
     //      END ARRAY SECTION

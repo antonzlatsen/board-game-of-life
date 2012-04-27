@@ -5,7 +5,7 @@
 package boardgame;
 
 import java.awt.Color;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.util.Random;
 
 /**
@@ -13,6 +13,19 @@ import java.util.Random;
  * @author Team Liquid
  */
 public class tiles{
+    
+    //ride in the images 
+    private ImageIcon house = new ImageIcon("src/boardgame/tileIcons/house.png");
+    private ImageIcon airPort = new ImageIcon("src/boardgame/tileIcons/airPort.png");
+    private ImageIcon boatPort = new ImageIcon("src/boardgame/tileIcons/boatPort.png");
+    private ImageIcon getBaby = new ImageIcon("src/boardgame/tileIcons/getBaby.png");
+    private ImageIcon getPet = new ImageIcon("src/boardgame/tileIcons/getPet.png");
+    private ImageIcon paydayPromotion = new ImageIcon("src/boardgame/tileIcons/paydayPromotion.png");
+    private ImageIcon payday = new ImageIcon("src/boardgame/tileIcons/payday.png");
+    private ImageIcon redMarriage = new ImageIcon("src/boardgame/tileIcons/redMarriage.png");
+    private ImageIcon spinToWin = new ImageIcon("src/boardgame/tileIcons/spinToWin.png");
+    private ImageIcon blank = new ImageIcon("src/boardgame/tileIcons/blank.png");
+    
     
     public void randomiseTiles(JPanel [] tiles){
         
@@ -71,9 +84,7 @@ public class tiles{
                 tiles[i].setBackground(new Color(102,102,0));
                 break;
             }
-        
         }
-    
     }
     
     public void redExamTile(int spinnerValue){
@@ -95,6 +106,51 @@ public class tiles{
         
         startScreen.myBoard.setButtons(false,true,false);
     }
+    
+    public void setInfoTile(String tileType, String optionalStory){
+        
+        
+        switch(tileType){
+            
+            case "blank":
+                startScreen.myBoard.setInfoPanel(optionalStory,blank);
+                break;
+            case "redMarriage":
+                startScreen.myBoard.setInfoPanel("You are getting married or celebrating your annivesary",redMarriage);
+                break;
+            case "airPort":
+                startScreen.myBoard.setInfoPanel("You are on an airport, Take Off!!",airPort);
+                break;
+            case "boatPort":
+                startScreen.myBoard.setInfoPanel("You are on a boat port, Set Sail!!",boatPort);
+                break;
+            case "getBaby":
+                startScreen.myBoard.setInfoPanel("You are having a baby",getBaby);
+                break;
+            case "getPet":
+                startScreen.myBoard.setInfoPanel("You have got a new dog",getPet);
+                break;
+            case "payday":
+                startScreen.myBoard.setInfoPanel("Its payday collect you salary",payday);
+                break;
+            case "paydayPromotion":
+                startScreen.myBoard.setInfoPanel("You have been promoted, congratz!!!",paydayPromotion);
+                break;
+            case "spinToWin":
+                startScreen.myBoard.setInfoPanel("Someone has won the spin to win jackpot!!",spinToWin);
+                break;
+            case "redExam":
+                startScreen.myBoard.setInfoPanel("Time to take your exams spin a 3 are above to pass",blank);
+                break;
+        }
+        
+        if(tileType.substring(0,5).equals("house")){
+            startScreen.myBoard.setInfoPanel("You are on a house Tile",house);
+        }
+        
+        
+    }
+    
 }
 
         
