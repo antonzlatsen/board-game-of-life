@@ -667,14 +667,14 @@ public void playerstats(int playerturn){
     
     public int returnLineCount() throws IOException{
         //  line counter vars
-<<<<<<< .mine
+
         String file_name = "/src/boardgame/story.txt";
         //File inputFile = new File("time.txt");
         FileReader counterFile = new FileReader("story.txt");
-=======
-        String file_name ="C:/story.txt";
-        FileReader counterFile = new FileReader(file_name);
->>>>>>> .r89
+
+        //String file_name ="C:/story.txt";
+        //FileReader counterFile = new FileReader(file_name);
+
         BufferedReader bufferReader = new BufferedReader (counterFile);
         
         
