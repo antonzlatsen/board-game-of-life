@@ -15,6 +15,7 @@ public class Score {
     
     //to do- need to output to appropriate labels in exitgame.java
    public Player[] playerarray= BoardGame.missionControl.players;
+   exitgame game = new exitgame();
    
     /*public void MessageBoxShow(String warning, String title){
                     JFrame frame = null;
@@ -25,16 +26,16 @@ public class Score {
                     JOptionPane.WARNING_MESSAGE);
     }*/
    
-    public void test(){
+    public void calculateScores(){
 
         //for(i=playerarray.length()){
 
         int[] Totals;
-        Totals = new int[playerarray.length];
+        Totals = new int[startScreen.numberOfPlayers];
         
         //loop used to get the final amount of money for each individual player- david
         
-        for(int i =0; i < playerarray.length; i++)
+        for(int i =0; i < startScreen.numberOfPlayers; i++)
         {
             Totals[i] = playerarray[i].getMoney();
             
@@ -87,9 +88,7 @@ public class Score {
             Totals[i] = Totals[i] - (playerarray[i].getBankLoans() * 60000);   
         }
         
-        
-        
-
+        game.setPlayerScores(Totals);
     }
     
     
