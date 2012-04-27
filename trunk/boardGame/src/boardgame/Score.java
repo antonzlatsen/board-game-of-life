@@ -27,6 +27,9 @@ public class Score {
    
     public void test(){
         
+<<<<<<< .mine
+        //for(i=playerarray.length()){
+=======
         int[] Totals;
         Totals = new int[playerarray.length];
         
@@ -93,6 +96,7 @@ public class Score {
             
             
         }
+>>>>>>> .r89
     }
     
     
