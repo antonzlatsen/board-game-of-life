@@ -202,6 +202,8 @@ public class board extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        middle43 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
         labValcanoPay = new javax.swing.JLabel();
         btnValcano = new javax.swing.JButton();
         progressValcano = new javax.swing.JProgressBar();
@@ -1233,7 +1235,12 @@ public class board extends javax.swing.JFrame {
                 onClickSpinner(evt);
             }
         });
-        getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 170, 40));
+        spinner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                spinnerActionPerformed(evt);
+            }
+        });
+        getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 170, 40));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
         middle3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1353,7 +1360,7 @@ public class board extends javax.swing.JFrame {
         middle10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle10.setMaximumSize(new java.awt.Dimension(54, 54));
         middle10.setMinimumSize(new java.awt.Dimension(54, 54));
-        middle10.setName("blank");
+        middle10.setName("spinToWin");
 
         javax.swing.GroupLayout middle10Layout = new javax.swing.GroupLayout(middle10);
         middle10.setLayout(middle10Layout);
@@ -2740,7 +2747,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 21, Short.MAX_VALUE)
         );
 
-        jLabel9.setText("jLabel9");
+        jLabel9.setText("Blank");
 
         middle39.setBackground(new java.awt.Color(0, 255, 0));
         middle39.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -2810,17 +2817,37 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 21, Short.MAX_VALUE)
         );
 
-        jLabel10.setText("jLabel10");
+        jLabel10.setText("Payday");
 
-        jLabel15.setText("jLabel15");
+        jLabel15.setText("Port");
 
-        jLabel16.setText("jLabel16");
+        jLabel16.setText("Random");
 
-        jLabel17.setText("jLabel17");
+        jLabel17.setText("House");
+        jLabel17.setToolTipText("");
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel18.setText("KEY");
         jLabel18.setName("");
+
+        middle43.setBackground(new java.awt.Color(102, 102, 0));
+        middle43.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        middle43.setMaximumSize(new java.awt.Dimension(25, 25));
+        middle43.setMinimumSize(new java.awt.Dimension(25, 25));
+        middle43.setName("blank");
+
+        javax.swing.GroupLayout middle43Layout = new javax.swing.GroupLayout(middle43);
+        middle43.setLayout(middle43Layout);
+        middle43Layout.setHorizontalGroup(
+            middle43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 21, Short.MAX_VALUE)
+        );
+        middle43Layout.setVerticalGroup(
+            middle43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 21, Short.MAX_VALUE)
+        );
+
+        jLabel20.setText("Spin to Win");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -2846,23 +2873,34 @@ public class board extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel17))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(middle43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel20))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel18)
                             .addComponent(middle38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel9)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addComponent(middle43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel20)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(middle38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(middle39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
@@ -2881,7 +2919,7 @@ public class board extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 150, 140, 200));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 140, 240));
 
         labValcanoPay.setText("Pay");
         labValcanoPay.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2920,7 +2958,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum =1 + (int)(Math.random()*10);
+        int randomNum = 4;//1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -2966,7 +3004,7 @@ public class board extends javax.swing.JFrame {
         
         if(Integer.parseInt(getSpinner()) ==10){
             
-            int i =jProgressBar2.getValue();
+            int i = jProgressBar2.getValue();
             int temp = i -1;
             i = temp;
             
@@ -3101,6 +3139,10 @@ public class board extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_onErupt
+
+    private void spinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinnerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_spinnerActionPerformed
 
     
      /*
@@ -3256,6 +3298,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -3307,6 +3350,7 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JPanel middle40;
     private javax.swing.JPanel middle41;
     private javax.swing.JPanel middle42;
+    private javax.swing.JPanel middle43;
     private javax.swing.JPanel middle5;
     private javax.swing.JPanel middle6;
     private javax.swing.JPanel middle7;

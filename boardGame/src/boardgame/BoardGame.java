@@ -58,9 +58,7 @@ public static tiles boardTiles = new tiles();
         TODO    - More outputs to tell us what is happening with each player
         TODO    - Code for the exam red tile on the middle island
         TODO    - Add code to find what tile the player has landed on
-        TODO    - Progress bar decreases when a 10 is rolled
         TODO    - Scoring for when game is finished
-        TODO    - Validation for entering player names 3,4,5,6 can be left blank
         TODO    - StartScreen needs a label to inform the player what the check boxes are for
         TODO    - College pay add a green tile that is pay college fees
         TODO    - Add spin to win functionality
@@ -73,11 +71,7 @@ public static tiles boardTiles = new tiles();
         TODO    - Add code to find what tile the player has landed on -Ruairi
         TODO    - Progress bar decreases when a 10 is rolled -Ruairi
         TODO    - Scoring for when game is finished -Ruairi
-        TODO    - Clean up volcano board buttons and look -Ruairi
         TODO    - Player icons need slight formatting -Ruairi
-        TODO    - Validation for entering player names 3,4,5,6 can be left blank -Ruairi
-        TODO    - StartScreen needs a label to inform the player what the check boxes are for -Ruairi
-        TODO    - Set help screen to non-re-sizable -Ruairi
         TODO    - College pay add a green tile that is pay college fees -Ruairi
         TODO    - Add spin to win functionality -Ruairi
         TODO    - add pet tile -Ruairi
