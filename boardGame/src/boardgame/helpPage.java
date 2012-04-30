@@ -78,7 +78,16 @@ public class helpPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void closeHelpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeHelpButtonActionPerformed
-        BoardGame.missionControl.MessageBoxShow("Team Liquid is made up of\n" + "Darren Murray\n" + "David Gray\n" + "Don Davies\n" + "Paddy McMahon\n" + "Ruairi\n\n" + "Software used - PLXR, PHOTOSHOP and NETBEANS\n\n" + "Credit to KNUCKLES T15 & NINTENDO for the sprites used\nhttp://www.spriteresource.com/", "Credits"); 
+        BoardGame.missionControl.MessageBoxShow("TEAM LIQUID is\n************************\n" + "Darren Murray\n" + "David Gray\n" + "Don Davies\n" + "Paddy McMahon\n" + "Ruairi\n************************\n"
+                + "Software used\npixlr - http://pixlr.com/\n" 
+                + "Netbeans - http://www.netbeans.org/\n"
+                + "Google Code - http://code.google.com/p/board-game-of-life/\n"
+                + "Team Viewer - http://www.teamviewer.com/en/index.aspx?cdsplit=D\n"
+                + "Skype - http://www.skype.com/intl/en-gb/home\n"
+                + "JAVA - http://java.com/en/\n"
+                + "Tortoise SVN - http://tortoisesvn.net/\n\n"
+                
+                + "Credit to KNUCKLES T15 & NINTENDO for the sprites used\nhttp://www.spriteresource.com/", "Credits"); 
     }//GEN-LAST:event_closeHelpButtonActionPerformed
 
     /**
