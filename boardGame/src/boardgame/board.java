@@ -208,18 +208,19 @@ public class board extends javax.swing.JFrame {
         btnValcano = new javax.swing.JButton();
         progressValcano = new javax.swing.JProgressBar();
         jLabel19 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         lblInfoPanelText = new javax.swing.JTextArea();
         lblInfoPanelIcon = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Game of Life!");
         setBackground(new java.awt.Color(153, 153, 153));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(java.awt.Color.white);
-        setMinimumSize(new java.awt.Dimension(1280, 820));
-        setPreferredSize(new java.awt.Dimension(1284, 800));
+        setMaximumSize(new java.awt.Dimension(1310, 840));
+        setMinimumSize(new java.awt.Dimension(1310, 840));
+        setPreferredSize(new java.awt.Dimension(1310, 840));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1231,7 +1232,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(middle25, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 440, 54, 54));
 
-        spinner.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        spinner.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         spinner.setText("Spinner");
         spinner.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -2404,7 +2405,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(bottomRight2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 470, 54, 54));
 
-        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel8.setText("Life counter");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 100, 30));
@@ -2626,6 +2627,7 @@ public class board extends javax.swing.JFrame {
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -2670,6 +2672,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 360, 180));
 
+        btnSellHouse.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         btnSellHouse.setText("Sell House");
         btnSellHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2678,6 +2681,7 @@ public class board extends javax.swing.JFrame {
         });
         getContentPane().add(btnSellHouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 770, 120, -1));
 
+        btnTakeOutLoan.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         btnTakeOutLoan.setText("Get A Loan");
         btnTakeOutLoan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2714,6 +2718,7 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 54, 54));
 
+        btnEndTurn.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         btnEndTurn.setText("End Turn");
         btnEndTurn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2722,6 +2727,7 @@ public class board extends javax.swing.JFrame {
         });
         getContentPane().add(btnEndTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 90, -1));
 
+        btnRepayLoan.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         btnRepayLoan.setText("Repay Loan");
         btnRepayLoan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2750,6 +2756,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 21, Short.MAX_VALUE)
         );
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel9.setText("Blank");
 
         middle39.setBackground(new java.awt.Color(0, 255, 0));
@@ -2820,16 +2827,20 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 21, Short.MAX_VALUE)
         );
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel10.setText("Payday");
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel15.setText("Port");
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel16.setText("Random");
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel17.setText("House");
         jLabel17.setToolTipText("");
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel18.setText("KEY");
         jLabel18.setName("");
 
@@ -2850,6 +2861,7 @@ public class board extends javax.swing.JFrame {
             .addGap(0, 21, Short.MAX_VALUE)
         );
 
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel20.setText("Spin to Win");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -2885,7 +2897,7 @@ public class board extends javax.swing.JFrame {
                             .addComponent(middle38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel9)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2894,7 +2906,7 @@ public class board extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(middle43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -2948,17 +2960,13 @@ public class board extends javax.swing.JFrame {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/volcano.png"))); // NOI18N
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/old_paper.jpg"))); // NOI18N
-        jLabel7.setInheritsPopupMenu(false);
-        jLabel7.setMaximumSize(new java.awt.Dimension(54, 54));
-        jLabel7.setMinimumSize(new java.awt.Dimension(54, 54));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 50, 50));
-
         jScrollPane2.setPreferredSize(new java.awt.Dimension(170, 170));
 
         lblInfoPanelText.setColumns(20);
+        lblInfoPanelText.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         lblInfoPanelText.setLineWrap(true);
         lblInfoPanelText.setRows(5);
+        lblInfoPanelText.setWrapStyleWord(true);
         lblInfoPanelText.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lblInfoPanelText.setCaretColor(new java.awt.Color(255, 255, 255));
         lblInfoPanelText.setOpaque(false);
@@ -2969,7 +2977,13 @@ public class board extends javax.swing.JFrame {
         lblInfoPanelIcon.setBackground(new java.awt.Color(255, 51, 51));
         getContentPane().add(lblInfoPanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 260, 110, 101));
 
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/simple-ubuntu.png"))); // NOI18N
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        java.awt.Dimension dialogSize = getSize();
+        setLocation((screenSize.width-dialogSize.width)/2,(screenSize.height-dialogSize.height)/2);
     }// </editor-fold>//GEN-END:initComponents
 
     private void onClickSpinner(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onClickSpinner
@@ -3314,11 +3328,11 @@ public class board extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
