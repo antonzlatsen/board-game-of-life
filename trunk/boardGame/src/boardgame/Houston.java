@@ -2,6 +2,7 @@ package boardgame;
 
 import javax.swing.*;
 import java.awt.Color;
+import java.awt.Font;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -270,7 +271,7 @@ outerloop:
                 //******************************
                 {
                     try {
-                        //MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
+                        //MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), null);
                         //MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
                         BoardGame.boardTiles.setInfoTile(name,BoardGame.missionControl.readFile(randNumb));
                        // MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
@@ -284,7 +285,7 @@ outerloop:
                // MessageBoxShow("EVEN", "EVEN");
                 randNumb --;                  
                 try {
-                        //MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), "FUCK");
+                        //MessageBoxShow("starting blalance is \n" + (players[playerTurn].getMoney()), null);
                         //MessageBoxShow(BoardGame.missionControl.readFile(randNumb),"yo");
                         BoardGame.boardTiles.setInfoTile(name,BoardGame.missionControl.readFile(randNumb));
                         //MessageBoxShow("new " + (players[playerTurn].getMoney()), "end MONEY");
@@ -314,12 +315,12 @@ outerloop:
 
     }
     
-    public void MessageBoxShow(String warning, String title){
+    public void MessageBoxShow(String BODY, String TITLE){
                     JFrame frame = null;
                     
                     JOptionPane.showMessageDialog(frame,
-                    warning,
-                    title,
+                    BODY,
+                    TITLE,
                     JOptionPane.WARNING_MESSAGE);
     }
     

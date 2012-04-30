@@ -98,7 +98,8 @@ public class islandSelectGUI extends javax.swing.JFrame {
                 .addGap(0, 13, Short.MAX_VALUE))
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-416)/2, (screenSize.height-187)/2, 416, 187);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTopLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTopLeftActionPerformed

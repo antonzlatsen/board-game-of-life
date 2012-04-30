@@ -30,57 +30,55 @@ public class helpPage extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         closeHelpButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("HELP");
         setBounds(new java.awt.Rectangle(500, 0, 50, 0));
-        setMinimumSize(new java.awt.Dimension(398, 289));
-        setPreferredSize(new java.awt.Dimension(398, 589));
+        setMaximumSize(new java.awt.Dimension(1145, 404));
+        setMinimumSize(new java.awt.Dimension(1145, 404));
+        setName("Help");
         setResizable(false);
+        setType(java.awt.Window.Type.UTILITY);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("How to Play");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/How to play.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, -1, 90));
 
         jTextArea2.setColumns(20);
+        jTextArea2.setEditable(false);
+        jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea2.setRows(5);
-        jTextArea2.setText("On your turn: 1 Click spinner button and move around the board.\n\t      2 Follow the instructions on the space you land\n\t      3 Your turn is over. The next player now takes \n\t\ttheir turn\n\nSpecial Spins: When you spin a 1 click the erupt button on \n\t       the volcano until it erupts and collect the\n\t       amount shown. Then move one space.\n\t       When you spin a 10, another decade is added to\n\t       the age, if the retirement token is reached, \n\t       the game is over. Move your car 10 spaces.\n\t        \nGame Over: When the age reaches its limit the game is over.\n\t\t\n\n@TODO: complete this page for the game rules in our version.");
+        jTextArea2.setText("On your turn:         1 Click spinner button and move around the board.\n\t      2 Follow the instructions on the space you land.\n\t      3 Your turn is over so click the 'End Turn' button.\n\t\tThe next player now takes their turn.\n\nSpecial Spins:           When you spin a '1' click the erupt button on \n\t       the volcano until it erupts and collect the\n\t       amount shown.\n\t       When you spin a 10, each player is one step closer to\n\t       retirement!\n               \t       If the life bar depletes - it's Game Over.\n\t       Move your car 10 spaces.\n\t        \nGame Over:         When the age reaches its limit the game is over."); // NOI18N
         jScrollPane1.setViewportView(jTextArea2);
 
-        closeHelpButton.setText("Close help");
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 510, 290));
+
+        closeHelpButton.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        closeHelpButton.setText("CREDITS");
         closeHelpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeHelpButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(closeHelpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 380, 121, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
-                .addComponent(closeHelpButton)
-                .addGap(24, 24, 24))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(closeHelpButton))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/helpScreenTitleTRANS.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1143, 11, -1, -1));
 
-        pack();
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/old_paper.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-1159)/2, (screenSize.height-460)/2, 1159, 460);
     }// </editor-fold>//GEN-END:initComponents
 
     private void closeHelpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeHelpButtonActionPerformed
-       startScreen.myHelpPage.setVisible(false);
+        BoardGame.missionControl.MessageBoxShow("Team Liquid is made up of\n" + "Darren Murray\n" + "David Gray\n" + "Don Davies\n" + "Paddy McMahon\n" + "Ruairi\n\n" + "Software used - PLXR, PHOTOSHOP and NETBEANS\n\n" + "Credit to KNUCKLES T15 & NINTENDO for the sprites used\nhttp://www.spriteresource.com/", "Credits"); 
     }//GEN-LAST:event_closeHelpButtonActionPerformed
 
     /**
@@ -127,6 +125,9 @@ public class helpPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton closeHelpButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
