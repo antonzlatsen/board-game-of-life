@@ -1,9 +1,9 @@
 #summary One-sentence summary of this page.
-#labels Featured
+#labels Featured,Phase-Requirements
 
 = Introduction =
 
-<insert project brief.
+Will be a good idea to blast a few things in here - will look good for the end project when submitted.
 
 
 = Details =
