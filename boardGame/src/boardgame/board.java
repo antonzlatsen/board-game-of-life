@@ -2975,7 +2975,7 @@ public class board extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 360, 290, 96));
 
         lblInfoPanelIcon.setBackground(new java.awt.Color(255, 51, 51));
-        getContentPane().add(lblInfoPanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 260, 110, 101));
+        getContentPane().add(lblInfoPanelIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 260, 140, 101));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/simple-ubuntu.png"))); // NOI18N
         getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -2990,7 +2990,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum = 10; //1 + (int)(Math.random()*10);
+        int randomNum = 1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -3010,8 +3010,6 @@ public class board extends javax.swing.JFrame {
         
         if(!BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
             spinner.setEnabled(false);
-        
-     
          
          if(!valcanoActive && !BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
              btnEndTurn.setEnabled(true);

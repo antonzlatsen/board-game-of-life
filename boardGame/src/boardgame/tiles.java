@@ -23,6 +23,7 @@ public class tiles{
     private ImageIcon paydayPromotion = new ImageIcon("src/boardgame/tileIcons/paydayPromotion.png");
     private ImageIcon payday = new ImageIcon("src/boardgame/tileIcons/payday.png");
     private ImageIcon redMarriage = new ImageIcon("src/boardgame/tileIcons/redMarriage.png");
+    private ImageIcon redExam = new ImageIcon("src/boardgame/tileIcons/redExam.png");
     private ImageIcon spinToWin = new ImageIcon("src/boardgame/tileIcons/spinToWin.png");
     private ImageIcon blank = new ImageIcon("src/boardgame/tileIcons/blank.png");
     
@@ -140,10 +141,9 @@ public class tiles{
                 startScreen.myBoard.setInfoPanel("Someone has won the spin to win jackpot!!",spinToWin);
                 break;
             case "redExam":
-                startScreen.myBoard.setInfoPanel("Time to take your exams spin a 3 are above to pass",blank);
+                startScreen.myBoard.setInfoPanel("Time to take your exams spin a 3 are above to pass",redExam);
                 break;
         }
-        
         if(tileType.substring(0,5).equals("house")){
             startScreen.myBoard.setInfoPanel("You are on a house Tile",house);
         }
