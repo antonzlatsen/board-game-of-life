@@ -11,9 +11,6 @@ package boardgame;
 
 
 public class Player {
-    
-    //  declare variables 
-    
     /*********************************************************
     *   @ DON - comment
     *   island will show which section of the board they are in 
@@ -21,7 +18,7 @@ public class Player {
     *   position will show where the player is on his/her island
     **********************************************************
     */
-    private int island, position, money,salary,promotionTokens,houseIndex=-1,bankLoans; 
+    private int island,position,money,salary,promotionTokens,houseIndex=-1,bankLoans; 
     private boolean pet=false; 
     private boolean baby=false;
     private boolean spouse=false;

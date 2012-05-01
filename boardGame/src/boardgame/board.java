@@ -2984,8 +2984,7 @@ public class board extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void onClickSpinner(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onClickSpinner
-        // TODO change the name of the spinnerbutton - to btnSpinner
-        
+
         if(spinner.isEnabled()){
         int randomNum =1 + (int)(Math.random()*10);
         
@@ -3181,8 +3180,6 @@ public class board extends javax.swing.JFrame {
     // ************************************************************************
     //                  MAIN METHOD STARTS
     public static void main(String args[]) {
-        //TODO remove this
-        BoardGame.missionControl.MessageBoxShow("heel", "hi");
         jProgressBar2.setValue(BoardGame.missionControl.getLifespan());
         /*
          * Set the Nimbus look and feel
@@ -3218,8 +3215,6 @@ public class board extends javax.swing.JFrame {
 
             public void run() {
                 new board().setVisible(true);
-                //TODO remove this
-                BoardGame.missionControl.MessageBoxShow("heel", "hi");
             }
         });
     }
@@ -3499,7 +3494,7 @@ public class board extends javax.swing.JFrame {
         
         return bottomLeft;
     }
-    
+    //          bottom left alt path
     public JPanel[] getBottomLeftIslandPath1(){
         
         JPanel bottomLeftPath1[] = {botLeft8,botLeft15};
@@ -3514,7 +3509,7 @@ public class board extends javax.swing.JFrame {
         
         return BottomRightIsland;
     }
-
+    //          bottom right alt path 
         public JPanel[] getBottomRightIslandPath1(){
         
         JPanel BottomRightIslandPath1[] = {bottomRight14,bottomRight21};
@@ -3529,8 +3524,8 @@ public class board extends javax.swing.JFrame {
         
         return topRightIsland;
     }
-        
-        public JPanel[] getTopRightIslandPath1(){ // alternate path player can make
+    //          alternative path top right
+        public JPanel[] getTopRightIslandPath1(){ 
             JPanel topRightIslandPath1[] = {topRight3, topRight17, topRight18, topRight19};
                     return topRightIslandPath1;
         }
@@ -3544,14 +3539,14 @@ public class board extends javax.swing.JFrame {
             middle31,middle32,middle33,middle34,middle35,middle36};
         return middleIslandArray;
         }
-    
+    //career path on the middle island
     public JPanel[] getMiddleIslandCareer(){
         
         JPanel middleIslandCareer [] = {middle2, middle4, middle6,middle8,middle10,middle12,middle14,middle16};
         
         return middleIslandCareer;
     }
-    
+    //college path on the middle island
     public JPanel[] getMiddleIslandCollege(){    
         JPanel middleIslandCollege [] = {middle1,middle3,middle5,middle7,middle9,middle11,middle13,middle15,middle17,middle19,middle21,middle23,middle25};     
         return middleIslandCollege;       
@@ -3566,7 +3561,7 @@ public class board extends javax.swing.JFrame {
         
         return changeableTiles;
     }
-    
+    //method to set the info panel on the board 
     public void setInfoPanel(String text,ImageIcon img){
      
         lblInfoPanelIcon.setIcon(img);

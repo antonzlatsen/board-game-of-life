@@ -292,8 +292,7 @@ outerloop:
         playerstats(playerTurn);
         startScreen.myBoard.repaint();
         
-        //************************************ finish the movePlayer method **************************
-
+        /************************************ finish the movePlayer method **************************/
     }
     
     public void MessageBoxShow(String BODY, String TITLE){

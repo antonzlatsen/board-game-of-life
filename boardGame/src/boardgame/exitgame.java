@@ -15,8 +15,6 @@ public class exitgame extends javax.swing.JFrame {
      * Creates new form exitgame
      */
     
-    
-    
     public exitgame() {
         initComponents();
     }
