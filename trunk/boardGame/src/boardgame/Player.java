@@ -35,7 +35,7 @@ public class Player {
     *   
     *   Sets the various defaults that the player will need -
     *   
-    *   @TODO Include other such items that the player will need such as
+    *   Includes other such items that the player will need such as
     *   Currency, pets, spouse and so on
     **********************************************************
     */

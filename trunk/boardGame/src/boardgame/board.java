@@ -1235,11 +1235,6 @@ public class board extends javax.swing.JFrame {
                 onClickSpinner(evt);
             }
         });
-        spinner.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                spinnerActionPerformed(evt);
-            }
-        });
         getContentPane().add(spinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 170, 40));
 
         middle3.setBackground(new java.awt.Color(204, 204, 255));
@@ -2990,7 +2985,7 @@ public class board extends javax.swing.JFrame {
         
         spinner.setText(""+randomNum);
         
-        //TODO examActive is false movePlayer around the board, otherwise pass random number into redExamTile, 
+        //examActive is false movePlayer around the board, otherwise pass random number into redExamTile, 
         if(!BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].isExamActive())
             {
                 BoardGame.missionControl.movePlayer(randomNum);
@@ -3123,11 +3118,8 @@ public class board extends javax.swing.JFrame {
 
     private void onErupt(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_onErupt
 
-        //TODO comment this 
-
         int rand;
         if (btnValcano.isEnabled()) {
-            btnValcano.setEnabled(true);
             rand = 1 + (int) (Math.random() * 10);
             valcanoTotal += rand;
             System.out.println(valcanoTotal);
@@ -3163,19 +3155,8 @@ public class board extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_onErupt
 
-    private void spinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spinnerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_spinnerActionPerformed
+    
 
-    
-     /*
-     * OMFG THIS IS SO DAMN MESSY!
-     * @TODO CLEAN UP CODE AND COMMENT!!!!!!!
-     */   
-    
-    /**
-     * @param args the command line arguments
-     */
     
     // ************************************************************************
     //                  MAIN METHOD STARTS
