@@ -33,6 +33,8 @@ public class islandSelectGUI extends javax.swing.JFrame {
         btnBottomRight = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setType(java.awt.Window.Type.UTILITY);
+        setUndecorated(true);
 
         lblIslandSelectHeader.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblIslandSelectHeader.setText("Choose an Island to travel to");
@@ -99,7 +101,7 @@ public class islandSelectGUI extends javax.swing.JFrame {
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-416)/2, (screenSize.height-187)/2, 416, 187);
+        setBounds((screenSize.width-400)/2, (screenSize.height-149)/2, 400, 149);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTopLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTopLeftActionPerformed

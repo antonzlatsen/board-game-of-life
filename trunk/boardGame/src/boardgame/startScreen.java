@@ -272,8 +272,10 @@ public class startScreen extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        pack();
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-385)/2, (screenSize.height-352)/2, 385, 352);
+        java.awt.Dimension dialogSize = getSize();
+        setLocation((screenSize.width-dialogSize.width)/2,(screenSize.height-dialogSize.height)/2);
     }// </editor-fold>//GEN-END:initComponents
 
     
