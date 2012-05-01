@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class tiles{
     
-    //ride in the images 
+    //Load in the images 
     private ImageIcon house = new ImageIcon("src/boardgame/tileIcons/house.png");
     private ImageIcon airPort = new ImageIcon("src/boardgame/tileIcons/airPort.png");
     private ImageIcon boatPort = new ImageIcon("src/boardgame/tileIcons/boatPort.png");
@@ -33,7 +33,7 @@ public class tiles{
         //types of tiles that can replace the changable tiles
         String [] tileTypes ={"blank","getBaby","getPet","payday","paydayPromotion","spinToWin"};  
         Random rand = new Random();
-
+        //randomly set the names of the tiles
         for(int i=0; i<tiles.length;i++){
             
             int num = rand.nextInt(tileTypes.length)+0;
@@ -44,6 +44,7 @@ public class tiles{
     
     public void changeTileColors(JPanel[] tiles){
         
+        //this method changes the color of the tile depending on the name of it
         for(int i=0;i<tiles.length;i++){
         String name = tiles[i].getName();
         
@@ -90,6 +91,7 @@ public class tiles{
     
     public void redExamTile(int spinnerValue){
         
+        //if they spin below 3 the player fails there exams
         if(spinnerValue<=3){
             if(BoardGame.missionControl.getUserInput("You failed your exams do you want to take out a loan to pass your exams \n note: if you dont you retake your exams next turn", "Exams Failed")){
                 //check to see if the player already has max number of bank loans
@@ -100,7 +102,7 @@ public class tiles{
                     BoardGame.missionControl.MessageBoxShow("You already have the maximum number of loans", "Bank Loans");
             }
         }
-            //else exams are passed if spinnervalue is above 3 
+            //else exams are passed if spinnervalue is above 3 they pass there exams
         else{
                 BoardGame.missionControl.players[BoardGame.missionControl.playerTurn].setExamActive(false);
                 BoardGame.missionControl.MessageBoxShow("You passed your exams", "Exams Passed");}
@@ -110,6 +112,7 @@ public class tiles{
     
     public void setInfoTile(String tileType, String optionalStory){
         
+        //depending on the tile output the relevant info to the information panel
         
         switch(tileType){
             
@@ -144,11 +147,10 @@ public class tiles{
                 startScreen.myBoard.setInfoPanel("Time to take your exams spin a 3 are above to pass",redExam);
                 break;
         }
+        //house is seperate because house name tiles have numbers at the end to indicate there index in the houseprices array and houseTaken array
         if(tileType.substring(0,5).equals("house")){
             startScreen.myBoard.setInfoPanel("You are on a house Tile",house);
         }
-        
-        
     }
     
 }
