@@ -574,8 +574,15 @@ public void playerstats(int playerturn){
          * array Object options
          */
         
+        //check to see if the user clicks the x button, this avoids out of bounds exception error and randomly selects their island
+        if(returnValue==-1)
+            returnValue=0;
+        
         //change the object selected to a string so it can be compared 
         String selected = options[returnValue].toString();
+        
+        
+        
         
         //find out what was selected and set the appropiate island and
         //set that the player has travelled to this island 
