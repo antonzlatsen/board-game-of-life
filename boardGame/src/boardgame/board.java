@@ -4,10 +4,6 @@
  */
 package boardgame;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 
 /**
@@ -738,11 +734,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(topRight9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 260, 54, 54));
 
-        topLeft1.setBackground(java.awt.Color.green);
+        topLeft1.setBackground(new java.awt.Color(204, 204, 255));
         topLeft1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft1.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft1.setMinimumSize(new java.awt.Dimension(54, 54));
-        topLeft1.setName("payday");
+        topLeft1.setName("blank");
 
         javax.swing.GroupLayout topLeft1Layout = new javax.swing.GroupLayout(topLeft1);
         topLeft1.setLayout(topLeft1Layout);
@@ -1364,7 +1360,7 @@ public class board extends javax.swing.JFrame {
         middle10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         middle10.setMaximumSize(new java.awt.Dimension(54, 54));
         middle10.setMinimumSize(new java.awt.Dimension(54, 54));
-        middle10.setName("spinToWin");
+        middle10.setName("blank");
 
         javax.swing.GroupLayout middle10Layout = new javax.swing.GroupLayout(middle10);
         middle10.setLayout(middle10Layout);
@@ -1835,11 +1831,11 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(botLeft17, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 700, 54, 54));
 
-        topLeft2.setBackground(new java.awt.Color(204, 204, 255));
+        topLeft2.setBackground(new java.awt.Color(0, 255, 0));
         topLeft2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         topLeft2.setMaximumSize(new java.awt.Dimension(54, 54));
         topLeft2.setMinimumSize(new java.awt.Dimension(54, 54));
-        topLeft2.setName("blank");
+        topLeft2.setName("payday");
 
         javax.swing.GroupLayout topLeft2Layout = new javax.swing.GroupLayout(topLeft2);
         topLeft2.setLayout(topLeft2Layout);
@@ -2581,8 +2577,9 @@ public class board extends javax.swing.JFrame {
 
         getContentPane().add(bottomRight12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 710, 54, 54));
 
-        bottomRight1.setBackground(new java.awt.Color(0, 153, 153));
+        bottomRight1.setBackground(new java.awt.Color(204, 204, 255));
         bottomRight1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bottomRight1.setToolTipText("");
         bottomRight1.setMaximumSize(new java.awt.Dimension(54, 54));
         bottomRight1.setMinimumSize(new java.awt.Dimension(54, 54));
         bottomRight1.setName("blank");
@@ -2990,7 +2987,7 @@ public class board extends javax.swing.JFrame {
         // TODO change the name of the spinnerbutton - to btnSpinner
         
         if(spinner.isEnabled()){
-        int randomNum = 1 + (int)(Math.random()*10);
+        int randomNum =1 + (int)(Math.random()*10);
         
         spinner.setText(""+randomNum);
         
@@ -3035,7 +3032,7 @@ public class board extends javax.swing.JFrame {
         if(Integer.parseInt(getSpinner()) ==10){
             
             int i = jProgressBar2.getValue();
-            int temp = i -10;
+            int temp = i -1;
             i = temp;
             
             jProgressBar2.setValue(i);
@@ -3565,7 +3562,7 @@ public class board extends javax.swing.JFrame {
         JPanel changeableTiles [] = {topLeft4,topLeft12,topLeft16,topLeft17,topLeft18,
                                     botLeft6,botLeft9,botLeft16,botLeft19,botLeft20,botLeft25,
                                     topRight6,topRight10,topRight16,topRight17,topRight18,
-                                    bottomRight1,bottomRight4,bottomRight13,bottomRight20};
+                                    bottomRight4,bottomRight13,bottomRight20};
         
         return changeableTiles;
     }
