@@ -21,7 +21,7 @@ public class Player {
     *   position will show where the player is on his/her island
     **********************************************************
     */
-    private int island, position, money, spinToWin,salary,promotionTokens,houseIndex=-1,bankLoans; 
+    private int island, position, money,salary,promotionTokens,houseIndex=-1,bankLoans; 
     private boolean pet=false; 
     private boolean baby=false;
     private boolean spouse=false;
@@ -60,8 +60,6 @@ public class Player {
             islandTravelToArray[i]=false;
         
         bankLoans =0;
-        
-        spinToWin=0;
        
     }
     
@@ -104,10 +102,6 @@ public class Player {
     
     public int getMoney(){
         return this.money;
-    }
-    
-    public void setSpinToWin(int value){
-        this.spinToWin=value;
     }
 
     public boolean isBaby() {

@@ -255,7 +255,6 @@ public void setPlayerScores(int [] scores){
   public void calculateScores(){
 
       Player[] playerarray= BoardGame.missionControl.players;
-        //for(i=playerarray.length()){
 
         int[] Totals;
         Totals = new int[playerarray.length];

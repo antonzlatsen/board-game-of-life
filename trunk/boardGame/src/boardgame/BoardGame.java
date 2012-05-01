@@ -1,6 +1,4 @@
 package boardgame;
-import java.io.IOException;
-import javax.swing.*;
 
 public class BoardGame {
     
